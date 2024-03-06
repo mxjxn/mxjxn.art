@@ -2,7 +2,6 @@
 import React, { Suspense } from "react";
 import { ConnectButton } from "@/components/ConnectButton";
 import { Rankings } from "./Rankings";
-const BASE_URL = process.env.VERCEL_URL || "http://localhost:3000";
 
 import { RankCheckResponse } from "./types";
 
@@ -12,7 +11,7 @@ interface ApiResponse {
 }
 
 async function getData(): Promise<ApiResponse> {
-  const response = await fetch(`${BASE_URL}/api/rank-check`, {
+  const response = await fetch(`/api/rank-check`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

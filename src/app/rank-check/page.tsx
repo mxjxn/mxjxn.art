@@ -1,3 +1,4 @@
+"use server"
 import React, { Suspense } from "react";
 import { ConnectButton } from "@/components/ConnectButton";
 import { Rankings } from "./Rankings";
@@ -24,17 +25,17 @@ async function getData(): Promise<ApiResponse> {
 }
 
 export default async function RankCheckPage() {
-  const { rankings, time } = await getData();
+  const rankCheckResults = await getData();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="fixed top-0 w-full p-4 bg-black">
         <div className="w-full flex flex-row-reverse">
-        <ConnectButton />
+          <ConnectButton />
         </div>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
-        <Rankings rankings={rankings} time={time} />
+        <Rankings data={rankCheckResults} />
       </Suspense>
     </main>
   );

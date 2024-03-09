@@ -28,7 +28,7 @@ async function getData(): Promise<ApiResponse> {
     console.error("Error fetching data:", error);
     return {
       rankings: [],
-      time: new Date().toISOString(),
+      time: Number(new Date()),
     };
   }
 }

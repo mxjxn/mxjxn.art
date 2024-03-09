@@ -27,7 +27,6 @@ async function getData(): Promise<ApiResponse> {
 
 export default async function RankCheckPage() {
   const rankCheckResults = await getData();
-console.log({ rankCheckResults})
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -36,9 +35,7 @@ console.log({ rankCheckResults})
           <ConnectButton />
         </div>
       </div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Rankings data={rankCheckResults} />
-      </Suspense>
+      <Rankings data={rankCheckResults} />
     </main>
   );
 }

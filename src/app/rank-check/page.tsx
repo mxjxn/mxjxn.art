@@ -21,7 +21,8 @@ async function getData(): Promise<ApiResponse> {
       revalidate: 60 * 15,
     },
   });
-  return await response.json();
+
+  return response.json();
 }
 
 export default async function RankCheckPage() {

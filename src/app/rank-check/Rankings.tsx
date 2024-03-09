@@ -4,7 +4,7 @@ import { useAccount } from "wagmi";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { RankCheckResponse } from "./types";
 
-async function Rankings({
+function Rankings({
   data,
 }: {
   data: {

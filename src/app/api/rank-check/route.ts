@@ -16,38 +16,45 @@ const museContract = {
 };
 
 async function getTimeBalances() {
-  const supplyDetail: any = await client.readContract({
-    address: `0x${museContract.address}`,
-    abi: museContract.abi,
-    functionName: "supplyDetail",
-  });
-  // coerce supplyDetail[0] to number to avoid issues with arithmetic
-  const supplyDetail0 = Number(supplyDetail[0]);
-  const totalSupply = Number(supplyDetail0);
-
   const balances: { [key: string]: number } = {};
-  for (let i = 1; i <= totalSupply; i++) {
-    const owner: any = await client.readContract({
+  try {
+    const supplyDetail: any = await client.readContract({
       address: `0x${museContract.address}`,
       abi: museContract.abi,
-      functionName: "ownerOf",
-      args: [i],
+      functionName: "supplyDetail",
     });
-    console.log("owner", owner);
-    const balance = await client.readContract({
-      address: `0x${museContract.address}`,
-      abi: museContract.abi,
-      functionName: "balanceOf",
-      args: [owner],
-    });
-    console.log("balance", balance);
-    const balanceInHours = Number(balance) / 60 / 60;
-    // coerce owner to string to avoid issues with object keys
-    const ownerString = owner.toString();
-    balances[ownerString] = balanceInHours;
-    await new Promise((resolve) => setTimeout(resolve, 50));
-  }
+    // coerce supplyDetail[0] to number to avoid issues with arithmetic
+    const supplyDetail0 = Number(supplyDetail[0]);
+    const totalSupply = Number(supplyDetail0);
 
+    for (let i = 1; i <= totalSupply; i++) {
+      const owner: any = await client.readContract({
+        address: `0x${museContract.address}`,
+        abi: museContract.abi,
+        functionName: "ownerOf",
+        args: [i],
+      });
+      console.log("owner", owner);
+      const balance = await client.readContract({
+        address: `0x${museContract.address}`,
+        abi: museContract.abi,
+        functionName: "balanceOf",
+        args: [owner],
+      });
+      console.log("balance", balance);
+      const balanceInHours = Number(balance) / 60 / 60;
+      // coerce owner to string to avoid issues with object keys
+      const ownerString = owner.toString();
+      balances[ownerString] = balanceInHours;
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      rankings: [],
+      time: new Date().toISOString(),
+    };
+  }
   return balances;
 }
 
@@ -75,4 +82,4 @@ export async function GET(request: Request) {
   return NextResponse.json({ rankings, time: new Date().toISOString() });
 }
 
-export const dynamic = "force-dynamic"
+export const dynamic = "force-dynamic";

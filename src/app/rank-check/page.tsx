@@ -12,13 +12,23 @@ interface ApiResponse {
 }
 
 async function getData(): Promise<ApiResponse> {
-  const response = await fetch(`${BASE_URL}/api/rank-check`, {
+  try {
+  const response:Response = await fetch(`${BASE_URL}/api/rank-check`, {
     next: {
       revalidate: 60 * 15,
     },
+    headers: {
+      "Content-Type": "application/json",
+    }
   });
-
   return response.json();
+
+} catch (error) {
+  console.error("Error fetching data:", error);
+  return {
+    rankings: [],
+    time: new Date().toISOString(),
+  };
 }
 
 export default async function RankCheckPage() {

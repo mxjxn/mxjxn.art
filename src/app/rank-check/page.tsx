@@ -13,10 +13,6 @@ interface ApiResponse {
 
 async function getData(): Promise<ApiResponse> {
   const response = await fetch(`${BASE_URL}/api/rank-check`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
     next: {
       revalidate: 60 * 15,
     },

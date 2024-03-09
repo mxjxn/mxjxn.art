@@ -2,7 +2,7 @@
 import React, { Suspense } from "react";
 import { ConnectButton } from "@/components/ConnectButton";
 import { Rankings } from "./Rankings";
-const BASE_URL = `https://${process.env.VERCEL_URL}` || "http://localhost:3000";
+const BASE_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000";
 
 import { RankCheckResponse } from "./types";
 

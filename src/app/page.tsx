@@ -1,19 +1,23 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-export default function Home() {
+import Link from "next/link";
+import SubscriptionStatus from "@/components/subscriptionStatus";
+
+function App() {
   return (
-    <main className="main-page flex min-h-screen flex-col items-center justify-between p-24">
-      <ul>
-        <li>
-          <a href="https://hypersub.withfabric.xyz/collection/muse-token-10tgfr94805j4">
-            Subscribe to Muse
-          </a>
-        </li>
-        <li>
-          <Link href="/rank-check">rank-check</Link>
-        </li>
-      </ul>
-    </main>
+    <div>
+      <div className="flex flex-row">
+        <div className="px-4 w-128 flex flex-col items-start gap-8">
+          <Link href="/subscribe">
+            <div className="lg:text-8xl text-5xl py-4">
+              Muse Studio is an art subscription service.
+            </div>
+          </Link>
+          <SubscriptionStatus />
+        </div>
+      </div>
+    </div>
   );
 }
+
+export default App;

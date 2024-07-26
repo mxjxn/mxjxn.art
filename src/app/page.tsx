@@ -1,16 +1,26 @@
 "use client";
-
+import { Header } from "@/components/header";
 import Link from "next/link";
 import SubscriptionStatus from "@/components/subscriptionStatus";
 
 function App() {
   return (
-    <div>
-      <div className="flex flex-row">
-        <div className="px-4 w-128 flex flex-col items-start gap-8">
+    <div className="eightbit">
+      <Header />
+      <div className="flex flex-row w-full justify-end">
+        <div className="px-4 flex flex-col items-center md:items-start gap-8 w-full">
+          <div className="text-green-500 w-full text-3xl pt-4 text-center md:text-left">
+            MXJXN is 
+            <Link href="/art"><span className="border border-red-500 hover:text-fuchsia-500 hover:border-yellow-500 transition-colors p-2 mx-2">finding forms</span></Link>
+            between dimensions
+          </div>
           <Link href="/subscribe">
-            <div className="lg:text-8xl text-5xl py-4">
-              Muse Studio is an art subscription service.
+            <div className="w-full text-2xl pt-4 text-center md:text-left text-slate-500">
+              <span className="text-teal-500">Join Muse Studio</span> to follow
+              my journey
+            </div>
+            <div className="w-full text-2xl pt-4 text-center md:text-left text-slate-500">
+              A New Artwork airdropped every week to your wallet
             </div>
           </Link>
           <SubscriptionStatus />

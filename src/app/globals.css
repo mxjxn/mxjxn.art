@@ -29,3 +29,16 @@ ul.cold li::marker {
     color: #181818;
   }
 }
+
+@font-face {
+  font-family: "eightbit";
+  src: url("/ColorBasic.otf") format(opentype);
+}
+
+a {
+  font-weight: bold;
+}
+
+.eightbit {
+  font-family: "eightbit";
+}

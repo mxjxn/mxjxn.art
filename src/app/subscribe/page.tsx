@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { Header } from "@/components/header"
 
 import MintSubscriptionButton from "@/components/MintSubscriptionButton";
 
@@ -10,19 +12,20 @@ export const metadata: Metadata = {
 export default function SubscribePage() {
   return (
     <div>
+      <Header />
       <div
         className="w-full min-h-[80%] absolute top-0 -z-10 bg-cover bg-top"
         style={{ backgroundImage: "url(phoenix.gif)" }}
       >
         <div className="w-full h-full absolute bg-gradient-to-b from-[#00000044] to-[#000000ff] -z-10"></div>
       </div>
-      <div className="w-full mx-auto my-12 blur-sm">
+      <div className="w-full mx-auto my-12">
         <div className="transition-all lg:text-[12.5em] md:text-[8em] sm:text-[6em] text-[5em] leading-[0.45] pb-10 text-center">
           <div className="w-full text-white tracking-[-0.1em]">Muse Studio</div>
-          <div className="w-full text-blue-500 opacity-90 tracking-[-0.06em] font-bold">
+          <div className="w-full text-blue-500 opacity-90 tracking-[-0.06em] font-bold blur-sm">
             on chain art
           </div>
-          <div className="w-full text-green-500 opacity-70 tracking-[-0.09em]">
+          <div className="w-full text-green-500 opacity-70 tracking-[-0.09em] blur-sm">
             Subscription
           </div>
         </div>
@@ -30,8 +33,9 @@ export default function SubscribePage() {
       <div className="flex w-full xl:flex-row flex-col px-16 gap-6">
         <div className="text-xl xl:w-3/6 lg:w-9/12 md:w-11/12 mx-auto my-12 flex flex-col gap-6">
           <div>
-            <div className="text-red-600 xl:text-6xl md:text-7xl sm:text-4xl pb-5">
-              Dont just mint, be a patron.
+            <div className="text-red-600 xl:text-4xl md:text-5xl sm:text-4xl pb-5 eightbit">
+              Dont just mint,
+              <br /> become a patron.
             </div>{" "}
             Mint a Patron tier NFT for one year.
           </div>
@@ -71,6 +75,7 @@ export default function SubscribePage() {
                   <div className="pt-3">
                     <MintSubscriptionButton
                       tier={1}
+                      months={4}
                       className="text-slate-100 pb-2 border border-slate-700 px-3 py-2 bg-gradient-to-b from-slate-800 to-slate-900"
                     />
                     <div className="mx-3">
@@ -100,7 +105,8 @@ export default function SubscribePage() {
                   />
                   <div className="pt-3">
                     <MintSubscriptionButton
-                      tier="2"
+                      tier={2}
+                      months={4}
                       className="text-slate-100 pb-2  px-3 py-2 bg-gradient-to-b from-slate-900 to-slate-950"
                     />
                     <div className="mx-3">
@@ -121,13 +127,17 @@ export default function SubscribePage() {
           </div>
         </div>
       </div>
-      <div className="p-16">
-      <div
-        className="w-full h-96 top-0 -z-10 bg-cover bg-top flex flex-col items-center justify-center"
-        style={{ backgroundImage: "url(evolution.jpg)" }}
-      >
-        <h2 className="w-full text-center text-7xl text-red-300 p-8 bg-[#00000088]">See all Muse Studio Drops</h2>
-      </div>
+      <div className="py-16">
+        <Link href="https://hypersub.withfabric.xyz/s/muse/drops">
+          <div
+            className="w-full h-96 top-0 -z-10 flex flex-col items-center justify-center bg-[url('/evolution.jpg')] bg-bottom"
+            
+          >
+            <h2 className="w-full py-12 text-center text-4xl text-slate-200 p-0 bg-[#000000bc] eightbit">
+              See all muse studio drops
+            </h2>
+          </div>
+        </Link>
       </div>
     </div>
   );

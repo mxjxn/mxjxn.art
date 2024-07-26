@@ -37,14 +37,14 @@ importers:
         specifier: ^20.12.10
         version: 20.14.10
       '@types/react':
-        specifier: ^18.3.1
+        specifier: ^18.3.3
         version: 18.3.3
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
       '@wagmi/cli':
         specifier: latest
-        version: 2.1.14(bufferutil@4.0.8)(typescript@5.5.3)(utf-8-validate@5.0.10)
+        version: 2.1.15(bufferutil@4.0.8)(typescript@5.5.3)(utf-8-validate@5.0.10)
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.39)
@@ -1656,8 +1656,8 @@ packages:
   '@types/yargs@17.0.32':
     resolution: {integrity: sha512-xQ67Yc/laOG5uMfX/093MRlGGCIBzZMarVa+gfNKJxWAIgykYpVGkBdbqEzGDDfCrVUj6Hiff4mTZ5BA6TmAog==}
 
-  '@wagmi/cli@2.1.14':
-    resolution: {integrity: sha512-VNge0KoXXtzS9t1r7xYhu+5VIqOxctfcIN1U/n6+iv5nLqakuQiNZEX01i0DbuvqwaHnFKCRAnZ3qQ1jy5+kZg==}
+  '@wagmi/cli@2.1.15':
+    resolution: {integrity: sha512-mtTxbuCDRRSd/2tPAklM+4vFOq5E/0zS5OfLE3Ax2KcUWciOnjLJ0m6BAQ6HzqY9YfWo8DXa7UqxzUBkvPYltg==}
     hasBin: true
     peerDependencies:
       typescript: '>=5.0.4'
@@ -6568,7 +6568,7 @@ snapshots:
     dependencies:
       '@types/yargs-parser': 21.0.3
 
-  '@wagmi/cli@2.1.14(bufferutil@4.0.8)(typescript@5.5.3)(utf-8-validate@5.0.10)':
+  '@wagmi/cli@2.1.15(bufferutil@4.0.8)(typescript@5.5.3)(utf-8-validate@5.0.10)':
     dependencies:
       abitype: 1.0.5(typescript@5.5.3)(zod@3.23.8)
       bundle-require: 4.2.1(esbuild@0.19.12)

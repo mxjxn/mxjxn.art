@@ -19,15 +19,11 @@ export default function SubscribePage() {
       >
         <div className="w-full h-full absolute bg-gradient-to-b from-[#00000044] to-[#000000ff] -z-10"></div>
       </div>
-      <div className="w-full mx-auto my-12">
+      <div className="w-full mx-auto mt-12">
         <div className="transition-all lg:text-[12.5em] md:text-[8em] sm:text-[6em] text-[5em] leading-[0.45] pb-10 text-center">
-          <div className="w-full text-white tracking-[-0.1em]">Muse Studio</div>
-          <div className="w-full text-blue-500 opacity-90 tracking-[-0.06em] font-bold blur-sm">
-            on chain art
-          </div>
-          <div className="w-full text-green-500 opacity-70 tracking-[-0.09em] blur-sm">
-            Subscription
-          </div>
+          <div className="w-full text-white tracking-[-0.12em] pb-3">Muse Studio</div>
+          <div className="w-full text-blue-500 opacity-90 tracking-[-0.09em] font-bold blur-0 md:blur-sm">onchain art</div>
+          <div className="w-full text-green-500 opacity-70 tracking-[-0.06em] blur-0 md:blur-sm">experience</div>
         </div>
       </div>
       <div className="flex w-full xl:flex-row flex-col px-16 gap-6">

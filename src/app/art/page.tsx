@@ -17,7 +17,7 @@ const ArtCard = ({
   className?: string;
 }) => {
   let classes =
-    "basis-3/6 lg:basis-2/6 max-w-xs p-1 bg-slate-800 rounded-lg transition-transform hover:scale-110 " +
+    "basis-full md:basis-3/6 lg:basis-2/6 max-w-xs p-1 bg-slate-700 rounded-lg transition-transform hover:scale-110 " +
     className;
   return (
     <div className={classes}>
@@ -31,7 +31,7 @@ const ArtCard = ({
             alt={description || ""}
           />
         </div>
-        <div className="px-1 py-2">{title}</div>
+        <div className="py-2 px-3 rounded-md mt-1 bg-gradient-to-b from-transparent to-slate-600">{title}</div>
       </a>
     </div>
   );
@@ -49,16 +49,19 @@ const VideoCard = ({
   description?: string;
 }) => {
   return (
-    <div className="basis-3/6 lg:basis-2/6 max-w-xs p-1 bg-slate-800 rounded-lg transition-transform hover:scale-110">
+    <div className="basis-full md:basis-3/6 lg:basis-2/6 max-w-xs p-1 bg-slate-700 rounded-lg transition-transform scale-100 hover:scale-110">
       <a href={link}>
+<div className="h-72 relative">
         <video
-          className="relative w-full h-72 overflow-hidden rounded-lg"
+          className="overflow-hidden rounded-lg absolute top-0 left-0 w-full h-full object-cover"
+          width="320"
           autoPlay
           loop
         >
           <source src={artHref} type="video/mp4" />
         </video>
-        <div className="px-1 py-2">{title}</div>
+</div>
+        <div className="py-2 px-3 rounded-md mt-1 bg-gradient-to-b from-transparent to-slate-600">{title}</div>
       </a>
     </div>
   );
@@ -66,13 +69,13 @@ const VideoCard = ({
 
 const Art: NextPage = () => {
   return (
-    <div className="p-10">
+    <div className="px-8">
       <div className="bg-secondary eightbit p-8">
         <h1 className="text-4xl pb-8 text-red-500">Max Jackson</h1>
         <h1 className="text-4xl text-fuchsia-500">Selected Onchain Artworks</h1>
       </div>
 
-      <div className="p-8 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
+      <div className="py-8 px-2 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
         <h2 className="text-5xl eightbit text-teal-500">Muse Editions</h2>
         <div className="max-w-10/12 my-8">
           <p>

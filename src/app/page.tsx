@@ -9,9 +9,9 @@ function App() {
       <Header />
       <div className="flex flex-row w-full justify-end">
         <div className="px-4 flex flex-col items-center md:items-start gap-8 w-full">
-          <div className="text-green-500 w-full text-3xl pt-4 text-center md:text-left">
+          <div className="text-green-500 w-full text-3xl pt-4 text-center md:text-left leading-10">
             MXJXN is 
-            <Link href="/art"><span className="border border-red-500 hover:text-fuchsia-500 hover:border-yellow-500 transition-colors p-2 mx-2">finding forms</span></Link>
+            <Link href="/art"><span className="inline-block my-8 md:inline border border-red-500 hover:text-fuchsia-500 hover:border-yellow-500 transition-colors p-2 mx-2">finding forms</span></Link>
             between dimensions
           </div>
           <Link href="/subscribe">

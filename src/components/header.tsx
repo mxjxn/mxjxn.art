@@ -35,10 +35,7 @@ const Header = () => {
                   <div>{short}</div>
                 </>
               ) : (
-                <>
-                  <div>⛓️‍💥</div>
-                  <div>Not Connected to wallet</div>
-                </>
+                <div>⛓️‍💥</div>
               )}
             </div>
             {!address && <div className="px-2 text-green-400">Connect</div>}

@@ -15,7 +15,7 @@ import { shortAddress } from "@/utils/address";
 const Header = () => {
   const account = useAccount();
   const address = account?.address;
-  const { connectors, connect, status, error } = useConnect();
+  const { connectors, connect } = useConnect();
   const { disconnect } = useDisconnect();
   const short = address ? shortAddress(address) : "not connected";
   console.log(address);

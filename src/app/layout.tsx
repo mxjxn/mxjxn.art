@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 import { type ReactNode } from "react";
 import { cookieToInitialState } from "wagmi";
-
+import { Footer } from "@/components/Footer";
 import { config } from "../wagmi";
 import { Providers } from "./providers";
 
@@ -21,9 +21,12 @@ export default function RootLayout(props: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers initialState={initialState}>
-          {props.children}
-        </Providers>
+        <div className="min-h-screen flex flex-col justify-between">
+          <div className="flex-grow">
+            <Providers initialState={initialState}>{props.children}</Providers>
+          </div>
+            <Footer />
+        </div>
       </body>
     </html>
   );

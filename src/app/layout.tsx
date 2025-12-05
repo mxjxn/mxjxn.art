@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { useRouter } from "next/router";
 import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 import { type ReactNode } from "react";

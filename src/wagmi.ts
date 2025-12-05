@@ -1,5 +1,6 @@
 import { http, cookieStorage, createConfig, createStorage } from "wagmi";
 import { mainnet, sepolia, base } from "wagmi/chains";
+import { farcasterFrame } from "@farcaster/miniapp-wagmi-connector";
 import { coinbaseWallet, injected, walletConnect } from "wagmi/connectors";
 import { configureFabricSDK } from "@withfabric/protocol-sdks";
 
@@ -12,8 +13,9 @@ export const config = createConfig({
   },
   ssr: true,
   connectors: [
+    farcasterFrame(),
+    coinbaseWallet(),
     injected(),
-    coinbaseWallet() /*walletConnect({ projectId: process.env.NEXT_PUBLIC_WC_PROJECT_ID }),*/,
   ],
   storage: createStorage({ storage: cookieStorage }),
 });

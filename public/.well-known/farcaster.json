@@ -1,0 +1,27 @@
+{
+  "miniapp": {
+    "version": "1",
+    "name": "MXJXN",
+    "homeUrl": "https://mxjxn.art",
+    "iconUrl": "https://mxjxn.art/icon.png",
+    "splashBackgroundColor": "#000000",
+    "subtitle": "Art by Max Jackson",
+    "description": "Artist, developer, and musician exploring forms between dimensions. Subscribe to Muse Studio for weekly art airdrops.",
+    "primaryCategory": "art-creativity",
+    "tags": [
+      "art",
+      "nft",
+      "cryptoart",
+      "music",
+      "creative"
+    ],
+    "tagline": "artist • developer • musician",
+    "ogTitle": "MXJXN",
+    "ogDescription": "Art by Max Jackson. Artist, developer, and musician.",
+    "ogImageUrl": "https://mxjxn.art/opengraph-image",
+    "requiredChains": [
+      "eip155:8453"
+    ]
+  }
+}
+

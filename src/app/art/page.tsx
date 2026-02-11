@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 
@@ -69,28 +68,26 @@ const VideoCard = ({
 
 const Art: NextPage = () => {
   return (
-    <div className="px-8">
-      <div className="bg-secondary eightbit p-8">
-        <h1 className="text-4xl pb-8 text-red-500">Max Jackson</h1>
+    <div className="px-8 max-w-7xl mx-auto">
+      <div className="bg-secondary eightbit p-8 mb-12">
+        <h1 className="text-5xl pb-4 text-red-500">Max Jackson</h1>
         <h1 className="text-4xl text-fuchsia-500">Selected Onchain Artworks</h1>
       </div>
 
       <div className="py-8 px-2 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
-        <h2 className="text-5xl eightbit text-teal-500">Muse Editions</h2>
+        <h2 className="text-5xl eightbit text-teal-500 mb-8">Muse Editions</h2>
         <div className="max-w-10/12 my-8">
-          <p>
-            Muse Editions are weekly artworks airdropped to my{" "}
-            <Link href="/subscribe">Muse Studio Patrons</Link>. They can be
-            bought and sold on{" "}
+          <p className="text-lg text-slate-300">
+            A collection of weekly artworks exploring digital aesthetics. Available on{" "}
             <a
-              className="underline"
+              className="underline text-teal-400 hover:text-teal-300"
               href="https://sudoswap.xyz/#/browse/base/buy/0x528fD133D6fB004FAccC08b70E04186299Eba176"
             >
               Sudoswap
             </a>{" "}
-            and viewed on{" "}
+            and{" "}
             <a
-              className="underline"
+              className="underline text-teal-400 hover:text-teal-300"
               href="https://opensea.io/collection/muse-editions"
             >
               OpenSea
@@ -127,11 +124,11 @@ const Art: NextPage = () => {
         </div>
       </div>
       <div className="p-8 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
-        <h2 className="text-5xl eightbit text-teal-500">Meditative Blackletter</h2>
+        <h2 className="text-5xl eightbit text-teal-500 mb-8">Meditative Blackletter</h2>
         <div className="max-w-10/12 my-8">
-          <p>
-            These physical artworks are available as 1/1 NFTs on Ethereum. The
-            first buyer of an NFT is entitled to the framed physical.
+          <p className="text-lg text-slate-300">
+            Physical artworks available as 1/1 NFTs on Ethereum. The
+            first buyer of an NFT is entitled to the framed physical artwork.
           </p>
         </div>
         <div className="p-4 flex flex-row flex-wrap justify-around gap-8">
@@ -168,11 +165,11 @@ const Art: NextPage = () => {
         </div>
       </div>
       <div className="p-8 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
-        <div className="max-w-10/12 text-5xl eightbit text-teal-500">Reaching The Source</div>
-        <p className="max-w-10/12 my-8">
-          My first experiments with AI in early 2021. I trained a GAN model on
-          roughly 100 of my calligraphic, 3d and glitch artworks. The results
-          were curated and manipulated, and minted via charged.fi.
+        <h2 className="text-5xl eightbit text-teal-500 mb-8">Reaching The Source</h2>
+        <p className="max-w-10/12 my-8 text-lg text-slate-300">
+          Early experiments with AI in 2021. A GAN model trained on
+          roughly 100 calligraphic, 3D and glitch artworks. The results
+          were curated and manipulated, minted via charged.fi.
         </p>
         <div className="p-4 flex flex-row flex-wrap justify-around gap-8">
           <ArtCard
@@ -193,8 +190,8 @@ const Art: NextPage = () => {
         </div>
       </div>
       <div className="p-8 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
-        <div className="max-w-10/12 text-5xl  eightbit text-teal-500">Calligra Pics</div>
-        <p className="max-w-10/12 my-8">
+        <h2 className="text-5xl eightbit text-teal-500 mb-8">Calligra Pics</h2>
+        <p className="max-w-10/12 my-8 text-lg text-slate-300">
           A series of 100 calligraphic abstracts, made and minted in the summer
           of 2021.
         </p>
@@ -231,9 +228,9 @@ const Art: NextPage = () => {
           />
         </div>
 
-      <div className="p-4 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
-        <div className="max-w-10/12 text-5xl eightbit text-teal-500">Pure AI series</div>
-        <p className="max-w-10/12 my-8">Collections made using Stable Diffusion, Midjourney and DALLE3</p>
+      <div className="p-8 mt-16 card bg-gradient-to-b from-slate-900 to-transparent rounded-t-3xl">
+        <h2 className="text-5xl eightbit text-teal-500 mb-8">Pure AI Series</h2>
+        <p className="max-w-10/12 my-8 text-lg text-slate-300">Collections made using Stable Diffusion, Midjourney and DALLE3</p>
         <div className="p-4 flex flex-row flex-wrap justify-around gap-8">
           <ArtCard
             artHref="/hyper-ghouls/weeping-crimson-ceremony.png"

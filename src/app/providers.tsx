@@ -8,7 +8,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
-import { type ReactNode } from "react";
+import { type ReactNode, useMemo } from "react";
 import { type State, WagmiProvider } from "wagmi";
 import { config } from "@/wagmi";
 
@@ -54,7 +54,7 @@ export function Providers(props: {
   initialState?: State;
 }) {
   const queryClient = getQueryClient();
-  const authKitConfig = getAuthKitConfig();
+  const authKitConfig = useMemo(() => getAuthKitConfig(), []);
 
   return (
     <QueryClientProvider client={queryClient}>

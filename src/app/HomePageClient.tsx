@@ -1,7 +1,6 @@
 "use client";
-import { Header } from "@/components/header";
 import Link from "next/link";
-import SubscriptionStatus from "@/components/subscriptionStatus";
+import { Header } from "@/components/header";
 
 export default function HomePageClient() {
   return (
@@ -19,17 +18,6 @@ export default function HomePageClient() {
             between dimensions
           </div>
             <div className="w-full text-2xl pt-8 text-center md:text-left text-slate-500">
-              <span className="inline-block md:inline border border-red-500 text-teal-500 hover:text-fuchsia-500 hover:border-yellow-500 transition-colors p-2 mx-2">
-          <Link href="/subscribe">
-                Join Muse Studio
-          </Link>
-              </span>{" "}
-              to follow my journey
-            </div>
-            <div className="w-full text-2xl text-center md:text-left text-slate-500">
-              A New Artwork airdropped every week to your wallet
-            </div>
-            <div className="w-full text-2xl pt-8 text-center md:text-left text-slate-500">
               <span className="inline-block md:inline border border-red-500 text-green-500 hover:text-fuchsia-500 hover:border-yellow-500 transition-colors p-2 mx-2">
                 <Link href="https://cryptoart.social" target="_blank" rel="noopener noreferrer">
                   Cryptoart Mini-App
@@ -37,7 +25,6 @@ export default function HomePageClient() {
               </span>{" "}
               — Create auctions, bid on art, and curate culture
             </div>
-          <SubscriptionStatus />
         </div>
       </div>
     </div>

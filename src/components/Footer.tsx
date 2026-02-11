@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ComputerText from "@/components/ComputerText";
 
 const Footer = () => {
   return (

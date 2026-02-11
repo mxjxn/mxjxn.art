@@ -1,9 +1,11 @@
 "use client";
 import Link from "next/link";
+import { Header } from "@/components/header";
 
 export default function HomePageClient() {
   return (
     <div className="eightbit">
+      <Header />
       <div className="flex flex-row w-full justify-end">
         <div className="px-4 flex flex-col items-center md:items-start gap-8 w-full">
           <div className="text-green-500 w-full text-3xl pt-4 text-center md:text-left leading-10">

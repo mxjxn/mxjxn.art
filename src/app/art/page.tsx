@@ -1,6 +1,8 @@
+"use client";
 import type { NextPage } from "next";
 import Image from "next/image";
 import Head from "next/head";
+import { Header } from "@/components/header";
 
 const ArtCard = ({
   artHref,
@@ -68,7 +70,9 @@ const VideoCard = ({
 
 const Art: NextPage = () => {
   return (
-    <div className="px-8 max-w-7xl mx-auto">
+    <div>
+      <Header />
+      <div className="px-8 max-w-7xl mx-auto">
       <div className="bg-secondary eightbit p-8 mb-12">
         <h1 className="text-5xl pb-4 text-red-500">Max Jackson</h1>
         <h1 className="text-4xl text-fuchsia-500">Selected Onchain Artworks</h1>
@@ -255,10 +259,9 @@ const Art: NextPage = () => {
         </div>
         </div>
       </div>
+      </div>
     </div>
   );
 };
-
-export const dynamic = "force-static";
 
 export default Art;

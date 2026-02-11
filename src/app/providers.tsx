@@ -1,32 +1,26 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { MiniAppProvider } from "@neynar/react";
 import { AuthKitProvider } from "@farcaster/auth-kit";
 import "@farcaster/auth-kit/styles.css";
-import { ANALYTICS_ENABLED, RETURN_URL, APP_URL } from "@/constants";
+import { APP_URL } from "@/constants";
 import {
   isServer,
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
-import { type ReactNode, useState } from "react";
+import { type ReactNode, useMemo } from "react";
 import { type State, WagmiProvider } from "wagmi";
 import { config } from "@/wagmi";
 
-const WagmiProviderComponent = dynamic(
-  () => Promise.resolve(WagmiProvider),
-  {
-    ssr: false,
-  }
-);
-
 // AuthKit configuration for web-based Farcaster sign-in
-const authKitConfig = {
-  rpcUrl: process.env.NEXT_PUBLIC_OP_RPC_URL || "https://mainnet.optimism.io",
-  domain: typeof window !== "undefined" ? window.location.host : "localhost:3000",
-  siweUri: APP_URL,
-};
+// Using function to defer window access until runtime
+function getAuthKitConfig() {
+  return {
+    rpcUrl: process.env.NEXT_PUBLIC_OP_RPC_URL || "https://mainnet.optimism.io",
+    domain: typeof window !== "undefined" ? window.location.host : "localhost:3000",
+    siweUri: APP_URL,
+  };
+}
 
 function makeQueryClient() {
   return new QueryClient({
@@ -60,20 +54,15 @@ export function Providers(props: {
   initialState?: State;
 }) {
   const queryClient = getQueryClient();
+  const authKitConfig = useMemo(() => getAuthKitConfig(), []);
 
   return (
-    <WagmiProviderComponent config={config} initialState={props.initialState}>
-      <AuthKitProvider config={authKitConfig}>
-        <MiniAppProvider
-          analyticsEnabled={ANALYTICS_ENABLED}
-          backButtonEnabled={true}
-          returnUrl={RETURN_URL}
-        >
-          <QueryClientProvider client={queryClient}>
-            {props.children}
-          </QueryClientProvider>
-        </MiniAppProvider>
-      </AuthKitProvider>
-    </WagmiProviderComponent>
+    <QueryClientProvider client={queryClient}>
+      <WagmiProvider config={config} initialState={props.initialState}>
+        <AuthKitProvider config={authKitConfig}>
+          {props.children}
+        </AuthKitProvider>
+      </WagmiProvider>
+    </QueryClientProvider>
   );
 }

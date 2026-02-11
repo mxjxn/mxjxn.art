@@ -2,7 +2,13 @@ const MUSEV2_ADDRESS = "0xf806084aAa167c5B6ad9827BFDBd15E754C6d415";
 
 // App configuration for mini-app
 const getBaseUrl = (): string => {
-  const url = process.env.NEXT_PUBLIC_URL || (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000');
+  // Only access window during client-side execution
+  if (typeof window !== 'undefined') {
+    const url = window.location.origin;
+    return url.endsWith('/') ? url.slice(0, -1) : url;
+  }
+  // Server-side: use environment variable or default
+  const url = process.env.NEXT_PUBLIC_URL || 'http://localhost:3000';
   return url.endsWith('/') ? url.slice(0, -1) : url;
 };
 

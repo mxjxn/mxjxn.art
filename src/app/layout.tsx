@@ -2,11 +2,13 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { type ReactNode } from "react";
 import { Footer } from "@/components/Footer";
+import { Header } from "@/components/header";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mxjxn.art"),
-  title: "MXJXN",
-  description: "Art by Max Jackson",
+  title: { default: "MXJXN — Art by Max Jackson", template: "%s — MXJXN" },
+  description:
+    "Calligraphic forms, digital spaces, and moving images. Art by Max Jackson.",
   openGraph: {
     title: "MXJXN",
     description: "Art by Max Jackson",
@@ -17,11 +19,13 @@ export const metadata: Metadata = {
 export default function RootLayout(props: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
-        <div className="min-h-screen flex flex-col justify-between">
-          <div className="flex-grow">{props.children}</div>
-          <Footer />
-        </div>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <Header />
+        {props.children}
+        <Footer />
       </body>
     </html>
   );

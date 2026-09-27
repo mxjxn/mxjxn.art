@@ -1,0 +1,24 @@
+{
+  "slug": "respiration",
+  "title": "Respiration",
+  "series": "the-process-of-exploration",
+  "description": "Day 8 of Render till December.",
+  "year": 2026,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://arweave.net/n3AURawhuJH8XtVibhLWksPZCs9f79Ua7Vg6WPsnkn8",
+      "poster": "/posters/daily-8.jpg"
+    }
+  ],
+  "thumbnail": "/posters/daily-8.jpg",
+  "animatedImage": false,
+  "width": 1080,
+  "height": 1080,
+  "provenance": {
+    "chain": "ethereum",
+    "contract": "0xa80664f124b37b9f1ecbc6bccc5cdc9f8afb15bb",
+    "tokenId": "1",
+    "url": "https://etherscan.io/nft/0xa80664f124b37b9f1ecbc6bccc5cdc9f8afb15bb/1"
+  }
+}

@@ -16,16 +16,16 @@ import { ArchiveGrid } from "@/components/ArchiveGrid";
 export function generateStaticParams() {
   return series.map((item) => ({ slug: item.slug }));
 }
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const item = findSeries(params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const item = findSeries((await params).slug);
   return item ? { title: item.name, description: item.description } : {};
 }
-export default function SeriesPage({ params }: { params: { slug: string } }) {
-  const item = findSeries(params.slug);
+export default async function SeriesPage({ params }: { params: Promise<{ slug: string }> }) {
+  const item = findSeries((await params).slug);
   if (!item) notFound();
   if (isCollectionOnly(item.slug)) {
     const cover = findArtwork(collectionOnly[item.slug])!;

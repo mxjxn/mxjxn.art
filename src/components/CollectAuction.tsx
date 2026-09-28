@@ -102,7 +102,7 @@ function Auction() {
   const [result, setResult] = useState("");
   const [now, setNow] = useState(Date.now());
   const polling = useRef(false);
-  const handled = useRef<Hex>();
+  const handled = useRef<Hex | undefined>(undefined);
   const receipt = useWaitForTransactionReceipt({
     hash,
     chainId: mainnet.id,

@@ -58,7 +58,7 @@ Known content limits:
 
 The production build compiles, type-checks, and generates all portfolio routes. Local HTTP checks cover the homepage, archive, representative artwork and series pages, About, a missing artwork (404), and the optimized hero image. Browser checks cover the full-screen homepage, artwork selection and motion pause, the daily archive and search, and the artwork viewer with Escape dismissal and focus restoration. Desktop and 390px phone layouts were visually reviewed.
 
-The redesign branch is `codex/art-portfolio-redesign`. A branch push is separate from merging to the production branch (`main`); Vercel preview availability depends on the connected project's settings. The repository's existing Next.js 14.2.4 dependency reports known security issues at install time and should be upgraded and revalidated before a public deployment. This visual pass preserves the framework version and the existing social-preview image route.
+The redesign branch is `codex/art-portfolio-redesign`. A branch push is separate from merging to the production branch (`main`); Vercel preview availability depends on the connected project's settings. The security refresh uses Next.js 16.3.6, React 19, and Wagmi 3 on Node 22. Unused legacy social and subscription SDKs have been removed. Build and development explicitly use webpack, retaining the existing bundler while upgrading the framework. The social-preview image route is preserved.
 
 ## Homepage and media hosting
 

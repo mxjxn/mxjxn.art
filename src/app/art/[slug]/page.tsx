@@ -11,12 +11,12 @@ import { ArtworkMedia } from "@/components/ArtworkMedia";
 export function generateStaticParams() {
   return artworks.map((work) => ({ slug: work.slug }));
 }
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const work = findArtwork(params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const work = findArtwork((await params).slug);
   if (work && isCollectionOnly(work.series))
     return {
       title: findSeries(work.series)?.name,
@@ -31,8 +31,8 @@ export function generateMetadata({
       }
     : {};
 }
-export default function ArtworkPage({ params }: { params: { slug: string } }) {
-  const work = findArtwork(params.slug);
+export default async function ArtworkPage({ params }: { params: Promise<{ slug: string }> }) {
+  const work = findArtwork((await params).slug);
   if (!work) notFound();
   if (isCollectionOnly(work.series))
     permanentRedirect(`/series/${work.series}`);

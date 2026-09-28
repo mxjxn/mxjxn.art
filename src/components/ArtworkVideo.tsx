@@ -22,7 +22,7 @@ export function ArtworkVideo({
   onPreviewLoaded?: () => void;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
-  const playerRef = useRef<import("hls.js").default>();
+  const playerRef = useRef<import("hls.js").default | undefined>(undefined);
   const activeRef = useRef(active);
   activeRef.current = active;
   const [failed, setFailed] = useState(false);

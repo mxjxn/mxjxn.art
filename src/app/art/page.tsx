@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { findArtwork, findSeries } from "@/lib/artworks";
+import { findArtwork, findSeries, publicUrl } from "@/lib/artworks";
 import { SelectedArtwork } from "@/components/SelectedArtwork";
 export const metadata: Metadata = {
   title: "Selected work",
@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 // Provisional curatorial order: change these slugs to reshape the exhibition.
 const selection = [
-  { slug: "muse-editions-30", position: "opening" },
+  { slug: "muse-editions-61", position: "opening" },
   { slug: "meditative-blackletter-6", position: "left" },
   { slug: "daily-48", position: "wide" },
-  { slug: "reaching-the-source-47", position: "right" },
+  { slug: "muse-editions-30", position: "right" },
   { slug: "daily-50", position: "closing" },
 ];
 export default function Work() {
@@ -37,11 +37,11 @@ export default function Work() {
       </div>
       <section className="practice-entry" aria-labelledby="practice-title">
         <p className="section-label">An ongoing practice</p>
-        <Link href="/series/render-till-december">
+        <Link href="/series/100-days-of-blender">
           <h2 id="practice-title">
-            Render till
+            100 Days
             <br />
-            December <span aria-hidden="true">↗</span>
+            of Blender <span aria-hidden="true">↗</span>
           </h2>
         </Link>
         <div className="practice-strip">
@@ -49,7 +49,11 @@ export default function Work() {
             const work = findArtwork(slug)!;
             return (
               <Link key={slug} href={`/art/${slug}`}>
-                <img src={work.thumbnail!} alt={work.title} loading="lazy" />
+                <img
+                  src={publicUrl(work.thumbnail!)}
+                  alt={work.title}
+                  loading="lazy"
+                />
                 <span>{work.title}</span>
               </Link>
             );
@@ -58,10 +62,9 @@ export default function Work() {
         <div className="practice-caption">
           <p>
             One day, another experiment.
-            <br />
-            An ongoing daily practice in Blender.
+            <br />A completed daily practice in Blender.
           </p>
-          <Link href="/series/render-till-december">Enter the series ↗</Link>
+          <Link href="/series/100-days-of-blender">Enter the series ↗</Link>
         </div>
       </section>
       <nav className="selected-end" aria-label="Explore more">

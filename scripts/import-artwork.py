@@ -32,10 +32,10 @@ for w in daily['works']:
  day=w['catalog_day']; seen[day]=seen.get(day,0)+1
  slug=f'daily-{day}'+(f'-{seen[day]}' if seen[day]>1 else '')
  media=[{'type':'hls' if m['type']=='video' else 'image','src':f'/daily/day-{day}.jpg' if i==0 and m['type']=='image' and day in [5,40,48,50,59] else m['url']} for i,m in enumerate(w['media'])]
- works.append({'slug':slug,'title':f'Day {day}','series':'render-till-december','description':w['caption'],'year':2026,'media':media,'thumbnail':next((m['src'] for m in media if m['type']=='image'),None),'animatedImage':False,'source':w['url']})
-for num in [26,62,74,58,95,100]:
- path=f'/calligrapics/c{num}.'+('png' if num==74 else 'jpg')
- works.append({'slug':f'calligra-pic-{num}','title':f'Calligra Pic {num}','series':'calligra-pics','description':'From a series of 100 calligraphic abstracts made in the summer of 2021.','year':2021,'media':[{'type':'image','src':path}],'thumbnail':path,'animatedImage':False})
+ works.append({'slug':slug,'title':f'Day {day}','series':'100-days-of-blender','description':w['caption'],'year':2026,'media':media,'thumbnail':next((m['src'] for m in media if m['type']=='image'),None),'animatedImage':False,'source':w['url']})
+# Calligra Pics (full 100) are maintained separately via OpenSea shared-storefront metadata;
+# do not replace them with the small local subset here.
+
 for slug,title,series,path,desc in [('ethereal-realm-viii','Ethereal Realm VIII','ethereal-realms','/ethereal-realms/ethereal-realm-viii.png','From Ethereal Realms.'),('weeping-crimson-ceremony','Weeping Crimson Ceremony','hyper-ghouls','/hyper-ghouls/weeping-crimson-ceremony.png','From Hyper Ghouls.')]:
  works.append({'slug':slug,'title':title,'series':series,'description':desc,'year':None,'media':[{'type':'image','src':path}],'thumbnail':path,'animatedImage':False})
 first=['daily-48','muse-editions-33','meditative-blackletter-6','daily-50','reaching-the-source-47','calligra-pic-58','muse-editions-30','daily-59']

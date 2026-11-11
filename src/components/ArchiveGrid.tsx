@@ -1,10 +1,17 @@
 "use client";
 import Link from "next/link";
-import { type CSSProperties, useEffect, useMemo, useState } from "react";
+import {
+  type CSSProperties,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import type { Artwork } from "@/lib/artworks";
 import { publicUrl } from "@/lib/artworks";
 import { ArtworkImage } from "./ArtworkImage";
 import { ArtworkVideo } from "./ArtworkVideo";
+
 export type ArchiveItem = Pick<
   Artwork,
   | "slug"
@@ -17,28 +24,43 @@ export type ArchiveItem = Pick<
   | "width"
   | "height"
 > & { seriesName: string };
+
+const PAGE = 24;
+
 export function ArchiveArtwork({ work }: { work: ArchiveItem }) {
+  const cardRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
+  const [near, setNear] = useState(false);
   const [playback, setPlayback] = useState<"loading" | "playing" | "failed">(
     "loading",
   );
   const [progress, setProgress] = useState(0);
   const [hasLoaded, setHasLoaded] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
   const active = hovered || focused;
-  useEffect(() => {
-    if (active) setHasStarted(true);
-    if (!active) {
-      setPlayback("loading");
-    }
-  }, [active]);
+
   const film = work.media.find(
     (media) =>
       !media.unavailable && (media.type === "video" || media.type === "hls"),
   );
+
+  useEffect(() => {
+    if (!film) return;
+    const node = cardRef.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setNear(true);
+      },
+      { rootMargin: "280px" },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [film]);
+
   const allowMotion = () =>
     !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   return (
     <Link
       href={`/art/${work.slug}`}
@@ -49,6 +71,7 @@ export function ArchiveArtwork({ work }: { work: ArchiveItem }) {
       onBlur={() => setFocused(false)}
     >
       <div
+        ref={cardRef}
         className="archive-artwork"
         onPointerEnter={(event) => {
           if (event.pointerType === "mouse" && allowMotion()) setHovered(true);
@@ -63,7 +86,7 @@ export function ArchiveArtwork({ work }: { work: ArchiveItem }) {
             natural
             width={work.width}
             height={work.height}
-            sizes="(max-width:600px) 90vw, (max-width:900px) 80vw, 50vw"
+            sizes="(max-width:600px) 92vw, (max-width:900px) 45vw, 320px"
           />
         ) : (
           <div
@@ -80,7 +103,7 @@ export function ArchiveArtwork({ work }: { work: ArchiveItem }) {
             />
           </div>
         )}
-        {film && (active || hasStarted) && (
+        {film && near && (
           <ArtworkVideo
             src={publicUrl(film.src)}
             title={work.title}
@@ -126,15 +149,20 @@ export function ArchiveArtwork({ work }: { work: ArchiveItem }) {
     </Link>
   );
 }
+
 export function ArchiveGrid({
   items,
   hideSeries = false,
+  showAll = false,
 }: {
   items: ArchiveItem[];
   hideSeries?: boolean;
+  showAll?: boolean;
 }) {
-  const [query, setQuery] = useState(""),
-    [limit, setLimit] = useState(24);
+  const [query, setQuery] = useState("");
+  const [limit, setLimit] = useState(showAll ? items.length : PAGE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+
   const visible = useMemo(
     () =>
       items.filter((work) =>
@@ -144,6 +172,22 @@ export function ArchiveGrid({
       ),
     [items, query],
   );
+
+  useEffect(() => {
+    if (showAll) return;
+    const node = sentinelRef.current;
+    if (!node || limit >= visible.length) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting)
+          setLimit((n) => Math.min(n + PAGE, visible.length));
+      },
+      { rootMargin: "600px 0px" },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [limit, visible.length, showAll]);
+
   return (
     <>
       <div className="archive-toolbar">
@@ -154,7 +198,7 @@ export function ArchiveGrid({
             value={query}
             onChange={(event) => {
               setQuery(event.target.value);
-              setLimit(24);
+              setLimit(showAll ? items.length : PAGE);
             }}
             placeholder="Find an artwork…"
           />
@@ -164,7 +208,7 @@ export function ArchiveGrid({
         </p>
       </div>
       <div className="archive-grid">
-        {visible.slice(0, limit).map((work) => (
+        {visible.slice(0, showAll ? visible.length : limit).map((work) => (
           <article
             key={work.slug}
             className="work-card"
@@ -189,14 +233,12 @@ export function ArchiveGrid({
           No works found. Try a different title or series.
         </p>
       )}
-      {limit < visible.length && (
-        <button
-          className="load-more"
-          type="button"
-          onClick={() => setLimit((n) => n + 24)}
-        >
-          More works
-        </button>
+      {!showAll && limit < visible.length && (
+        <div
+          ref={sentinelRef}
+          className="load-more-sentinel"
+          aria-hidden="true"
+        />
       )}
     </>
   );

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import {
-  artworks,
   findArtwork,
   findSeries,
-  isCollectionOnly,
+  isDemotedSeries,
+  publicArtworks,
 } from "@/lib/artworks";
 import { ArtworkMedia } from "@/components/ArtworkMedia";
 export function generateStaticParams() {
-  return artworks.map((work) => ({ slug: work.slug }));
+  return publicArtworks.map((work) => ({ slug: work.slug }));
 }
 export async function generateMetadata({
   params,
@@ -17,27 +17,23 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const work = findArtwork((await params).slug);
-  if (work && isCollectionOnly(work.series))
-    return {
-      title: findSeries(work.series)?.name,
-      alternates: { canonical: `/series/${work.series}` },
-    };
-  return work
-    ? {
-        title: work.title,
-        description:
-          work.description.slice(0, 160) ||
-          `${work.title}, an artwork by Max Jackson.`,
-      }
-    : {};
+  if (!work || isDemotedSeries(work.series)) return {};
+  return {
+    title: work.title,
+    description:
+      work.description.slice(0, 160) ||
+      `${work.title}, an artwork by Max Jackson.`,
+  };
 }
-export default async function ArtworkPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ArtworkPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const work = findArtwork((await params).slug);
-  if (!work) notFound();
-  if (isCollectionOnly(work.series))
-    permanentRedirect(`/series/${work.series}`);
+  if (!work || isDemotedSeries(work.series)) notFound();
   const collection = findSeries(work.series),
-    siblings = artworks.filter((item) => item.series === work.series),
+    siblings = publicArtworks.filter((item) => item.series === work.series),
     index = siblings.indexOf(work);
   const previous = siblings[index - 1],
     next = siblings[index + 1];

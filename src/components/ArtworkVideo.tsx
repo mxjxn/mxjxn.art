@@ -1,5 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+
+let hlsImport: Promise<typeof import("hls.js")> | null = null;
+function loadHls() {
+  return (hlsImport ??= import("hls.js"));
+}
+
 export function ArtworkVideo({
   src,
   title,
@@ -29,9 +35,13 @@ export function ArtworkVideo({
   const [playing, setPlaying] = useState(false);
   const stateCallback = useRef(onPreviewState);
   stateCallback.current = onPreviewState;
+  const loadedCallback = useRef(onPreviewLoaded);
+  loadedCallback.current = onPreviewLoaded;
+
   useEffect(() => {
     if (failed) stateCallback.current?.("failed");
   }, [failed]);
+
   useEffect(() => {
     const video = ref.current;
     if (!video) return;
@@ -41,6 +51,14 @@ export function ArtworkVideo({
     let player: import("hls.js").default | undefined;
     setFailed(false);
     setPlaying(false);
+
+    const tryPlay = () => {
+      if (stopped || !motionPreview || !activeRef.current) return;
+      void video.play().catch(() => {
+        if (!stopped && activeRef.current) setFailed(true);
+      });
+    };
+
     const start = async () => {
       if (stopped || started) return;
       started = true;
@@ -48,7 +66,7 @@ export function ArtworkVideo({
         src.includes(".m3u8") &&
         !video.canPlayType("application/vnd.apple.mpegurl")
       ) {
-        const { default: Hls } = await import("hls.js");
+        const { default: Hls } = await loadHls();
         if (stopped) return;
         if (!Hls.isSupported()) {
           setFailed(true);
@@ -56,6 +74,7 @@ export function ArtworkVideo({
         }
         player = new Hls({
           capLevelToPlayerSize: true,
+          startLevel: 0,
           maxBufferLength: preview ? 2 : 20,
           maxMaxBufferLength: preview ? 4 : 30,
           backBufferLength: motionPreview ? 30 : 0,
@@ -64,27 +83,36 @@ export function ArtworkVideo({
         player.on(Hls.Events.ERROR, (_, event) => {
           if (event.fatal) setFailed(true);
         });
+        player.on(Hls.Events.MANIFEST_PARSED, () => {
+          if (!motionPreview || activeRef.current) return;
+          // Warm the first fragment, then pause network until hover.
+          player?.once(Hls.Events.FRAG_BUFFERED, () => {
+            if (!activeRef.current) player?.stopLoad();
+          });
+        });
         player.loadSource(src);
         player.attachMedia(video);
       } else {
         video.src = src;
       }
     };
-    const loaded = () => {
+
+    const onReady = () => {
+      loadedCallback.current?.();
       if (motionPreview) {
-        if (!activeRef.current) {
-          player?.stopLoad();
-          return;
-        }
-        void video.play().catch(() => {
-          if (!stopped && activeRef.current) setFailed(true);
-        });
-      } else if (preview) {
+        if (activeRef.current) tryPlay();
+        else player?.stopLoad();
+        return;
+      }
+      if (preview) {
         video.currentTime = Math.min(0.1, video.duration / 2 || 0.1);
         player?.stopLoad();
       }
     };
-    video.addEventListener("loadeddata", loaded, { once: true });
+
+    video.addEventListener("loadeddata", onReady);
+    video.addEventListener("canplay", tryPlay);
+
     if (preview && !motionPreview) {
       observer = new IntersectionObserver(
         (entries) => {
@@ -97,10 +125,12 @@ export function ArtworkVideo({
       );
       observer.observe(video);
     } else void start().catch(() => setFailed(true));
+
     return () => {
       stopped = true;
       observer?.disconnect();
-      video.removeEventListener("loadeddata", loaded);
+      video.removeEventListener("loadeddata", onReady);
+      video.removeEventListener("canplay", tryPlay);
       player?.destroy();
       playerRef.current = undefined;
       video.pause();
@@ -108,6 +138,7 @@ export function ArtworkVideo({
       video.load();
     };
   }, [src, preview, motionPreview]);
+
   useEffect(() => {
     if (!motionPreview) return;
     const video = ref.current;
@@ -116,8 +147,10 @@ export function ArtworkVideo({
       video.pause();
       playerRef.current?.stopLoad();
       setPlaying(false);
+      stateCallback.current?.("loading");
       return;
     }
+    stateCallback.current?.("loading");
     playerRef.current?.startLoad(-1);
     if (video.readyState >= 2) {
       void video.play().catch(() => {
@@ -125,6 +158,7 @@ export function ArtworkVideo({
       });
     }
   }, [active, motionPreview]);
+
   return (
     <div
       className={
@@ -142,7 +176,6 @@ export function ArtworkVideo({
         muted={preview || motionPreview}
         tabIndex={motionPreview ? -1 : undefined}
         aria-hidden={motionPreview || undefined}
-        onLoadedData={onPreviewLoaded}
         onPlaying={() => {
           setPlaying(true);
           onPreviewState?.("playing");
@@ -157,7 +190,7 @@ export function ArtworkVideo({
         }}
         playsInline
         loop
-        preload="metadata"
+        preload={motionPreview ? "auto" : "metadata"}
         aria-label={title}
         onError={() => setFailed(true)}
       />

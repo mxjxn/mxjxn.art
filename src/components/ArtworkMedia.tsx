@@ -27,7 +27,7 @@ export function ArtworkMedia({ work }: { work: Artwork }) {
           key={src}
           src={src}
           title={work.title}
-          poster={media.poster || work.thumbnail}
+          poster={publicUrl(media.poster || work.thumbnail || "") || null}
         />
       )}
       {(media.type === "interactive" || media.type === "model") &&
@@ -43,8 +43,13 @@ export function ArtworkMedia({ work }: { work: Artwork }) {
         <iframe
           src={src}
           title={work.title}
-          sandbox="allow-scripts allow-pointer-lock"
+          sandbox={
+            src.startsWith("/")
+              ? "allow-scripts allow-pointer-lock allow-same-origin"
+              : "allow-scripts allow-pointer-lock"
+          }
           referrerPolicy="no-referrer"
+          allow="fullscreen"
         />
       )}
     </div>
@@ -88,9 +93,16 @@ export function ArtworkMedia({ work }: { work: Artwork }) {
             </p>
           ) : (
             !launched && (
-              <button type="button" onClick={() => setLaunched(true)}>
-                Experience the interactive work
-              </button>
+              <div className="interactive-actions">
+                <button type="button" onClick={() => setLaunched(true)}>
+                  Experience the interactive work
+                </button>
+                {work.slug === "muse-editions-61" && (
+                  <a className="text-link" href="/wheelgen">
+                    Open WheelGen studio ↗
+                  </a>
+                )}
+              </div>
             )
           )}
         </div>

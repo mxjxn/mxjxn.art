@@ -26,6 +26,18 @@ export type Artwork = {
   };
 };
 export const artworks = [respiration, ...data] as Artwork[];
+
+/** Series kept out of the public portfolio (wallet-scrape / AI NFT experiments). Data remains in artworks.json. */
+export const demotedSeries = [
+  "degen-ghouls",
+  "degen-cats",
+  "ethereal-realms",
+  "hyper-ghouls",
+] as const;
+export type DemotedSeries = (typeof demotedSeries)[number];
+export const isDemotedSeries = (slug: string): slug is DemotedSeries =>
+  (demotedSeries as readonly string[]).includes(slug);
+
 export const series = [
   {
     slug: "the-process-of-exploration",
@@ -33,16 +45,16 @@ export const series = [
     description: "Works from an ongoing practice of digital exploration.",
   },
   {
-    slug: "render-till-december",
-    name: "Render till December",
+    slug: "100-days-of-blender",
+    name: "100 Days of Blender",
     description:
-      "An ongoing daily practice in Blender. Experiments with calligraphy, geometry, materials, and motion.",
+      "A completed daily practice in Blender: one hundred days of calligraphy, geometry, materials, and motion.",
   },
   {
     slug: "muse-editions",
     name: "Muse Editions",
     description:
-      "An evolving collection of digital works, moving between calligraphic forms, generative processes, and imagined spaces.",
+      "Weekly editions from Muse Studio—calligraphic forms, generative processes, imagined spaces, and moving image.",
   },
   {
     slug: "meditative-blackletter",
@@ -60,46 +72,59 @@ export const series = [
     slug: "calligra-pics",
     name: "Calligra Pics",
     description:
-      "A selection from 100 calligraphic abstracts made in the summer of 2021.",
-  },
-  {
-    slug: "degen-ghouls",
-    name: "DegenGhouls",
-    description:
-      "A cast of imagined characters, created with generative image tools.",
-  },
-  {
-    slug: "degen-cats",
-    name: "DegenCats",
-    description: "An exploration of character and digital image making.",
-  },
-  {
-    slug: "ethereal-realms",
-    name: "Ethereal Realms",
-    description: "Imagined worlds, made with generative image tools.",
-  },
-  {
-    slug: "hyper-ghouls",
-    name: "Hyper Ghouls",
-    description: "An exploration of uncanny characters and imagined forms.",
+      "One hundred calligraphic abstracts made in the summer of 2021—my first out collection on Ethereum.",
   },
 ];
+
+export const publicArtworks = artworks.filter(
+  (work) => !isDemotedSeries(work.series),
+);
+
 export const findArtwork = (slug: string) =>
   artworks.find((work) => work.slug === slug);
 export const findSeries = (slug: string) =>
   series.find((item) => item.slug === slug);
-export function publicUrl(src: string) {
-  return src.startsWith("ipfs://")
-    ? "https://ipfs.io/ipfs/" + src.slice(7).replace(/^ipfs\//, "")
-    : src;
+/** Local public paths that are served from Vercel Blob in production. */
+const BLOB_PREFIXES = [
+  "/calligrapics/",
+  "/muse-editions/",
+  "/daily/",
+  "/posters/",
+  "/meditations/",
+  "/wheelgen/poster.png",
+  "/srclensx.jpg",
+  "/srclensz.jpg",
+  "/source.jpg",
+  "/evolution.jpg",
+  "/phoenix.gif",
+  "/muse-patron.gif",
+  "/muse-pass.png",
+];
+
+function isBlobBackedPath(src: string) {
+  return BLOB_PREFIXES.some(
+    (prefix) => src === prefix || src.startsWith(prefix),
+  );
 }
 
-// These projects are presented as collections, never as individual portfolio entries.
-export const collectionOnly = {
-  "degen-ghouls": "degen-ghouls-99",
-  "degen-cats": "degen-cats-44",
-} as const;
-export const isCollectionOnly = (
-  slug: string,
-): slug is keyof typeof collectionOnly =>
-  Object.prototype.hasOwnProperty.call(collectionOnly, slug);
+/**
+ * Resolve a media src for display.
+ * - ipfs:// → gateway
+ * - http(s) → unchanged
+ * - blob-backed local paths → NEXT_PUBLIC_MEDIA_BASE_URL + path (when set)
+ * - otherwise local /public path
+ */
+export function publicUrl(src: string) {
+  if (src.startsWith("ipfs://")) {
+    return (
+      "https://ipfs.io/ipfs/" + src.slice(7).replace(/^ipfs\//, "")
+    );
+  }
+  if (src.startsWith("http://") || src.startsWith("https://")) return src;
+  const base = process.env.NEXT_PUBLIC_MEDIA_BASE_URL?.replace(/\/$/, "");
+  if (base && isBlobBackedPath(src)) {
+    // Blob pathnames have no leading slash; catalog paths do.
+    return `${base}/${src.replace(/^\//, "")}`;
+  }
+  return src;
+}

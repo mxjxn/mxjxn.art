@@ -122,7 +122,7 @@ export function WorkIndex({ items }: { items: Entry[] }) {
   );
   for (const group of ordered)
     group.items.sort((a, b) =>
-      a.series === "render-till-december" && b.series === a.series
+      a.series === "100-days-of-blender" && b.series === a.series
         ? Number(b.slug.split("-")[1]) - Number(a.slug.split("-")[1])
         : Number(!!b.thumbnail?.startsWith("/")) -
             Number(!!a.thumbnail?.startsWith("/")) ||

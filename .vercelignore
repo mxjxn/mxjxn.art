@@ -1,0 +1,28 @@
+# Local masters — served from Vercel Blob via NEXT_PUBLIC_MEDIA_BASE_URL
+public/calligrapics
+public/muse-editions
+public/daily
+public/posters
+public/meditations
+public/degenghouls
+public/degencats
+public/ethereal-realms
+public/hyper-ghouls
+public/wheelgen/poster.png
+public/srclensx.jpg
+public/srclensz.jpg
+public/source.jpg
+public/evolution.jpg
+public/phoenix.gif
+public/muse-patron.gif
+public/muse-pass.png
+
+# Build / deps
+node_modules
+.next
+.next-dev
+.git
+*.tsbuildinfo
+.DS_Store
+scripts/blob-upload.log
+scripts/hypersnap-mxjxn-casts-120d.json

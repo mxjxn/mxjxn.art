@@ -8,3 +8,29 @@ public/.DS_Store
 .next/
 .next-dev/
 *.tsbuildinfo
+
+# Heavy portfolio masters live in Vercel Blob (see scripts/upload-media-to-blob.mjs)
+public/calligrapics/
+public/muse-editions/
+public/daily/
+public/posters/
+public/meditations/
+public/degenghouls/
+public/degencats/
+public/ethereal-realms/
+public/hyper-ghouls/
+public/wheelgen/poster.png
+public/srclensx.jpg
+public/srclensz.jpg
+public/source.jpg
+public/evolution.jpg
+public/phoenix.gif
+public/muse-patron.gif
+public/muse-pass.png
+
+# Keep the self-hosted WheelGen app in git (single HTML ~1MB)
+!public/wheelgen/
+!public/wheelgen/app/
+!public/wheelgen/app/**
+.vercel
+.env*

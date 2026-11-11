@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { publicUrl } from "@/lib/artworks";
 export const metadata: Metadata = {
   title: "About",
   description:
@@ -28,8 +29,9 @@ export default function About() {
             together selected pieces and ongoing projects from that practice.
           </p>
           <p>
-            Render till December is my current daily project: a new render each
-            day, with room to follow an idea and see where it leads.
+            100 Days of Blender was a completed daily project: a new render each
+            day, with room to follow an idea and see where it leads. Selected
+            days will join the minted works available to collect.
           </p>
           <a href="mailto:mjackson84@gmail.com" className="text-link">
             Get in touch ↗
@@ -42,7 +44,7 @@ export default function About() {
             aria-label="View Azure Heat"
           >
             <Image
-              src="/meditations/m6.png"
+              src={publicUrl("/meditations/m6.png")}
               alt="Azure Heat, a calligraphic composition in watercolor ink on paper."
               fill
               sizes="(max-width:600px) 88vw, 44vw"

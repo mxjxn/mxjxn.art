@@ -2,27 +2,28 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { publicUrl } from "@/lib/artworks";
 const selection = [
   {
     slug: "muse-editions-30",
     title: "Phoenix Lens",
     series: "Muse Editions",
-    image: "/posters/phoenix-lens.jpg",
-    video: "/muse-editions/phoenixlens.mp4",
+    image: publicUrl("/posters/phoenix-lens.jpg"),
+    video: publicUrl("/muse-editions/phoenixlens.mp4"),
     fit: "contain",
   },
   {
     slug: "daily-48",
     title: "Day 48",
-    series: "Render till December · 2026",
-    image: "/daily/day-48.jpg",
+    series: "100 Days of Blender · 2026",
+    image: publicUrl("/daily/day-48.jpg"),
     fit: "cover",
   },
   {
     slug: "daily-50",
     title: "Day 50",
-    series: "Render till December · 2026",
-    image: "/daily/day-50.jpg",
+    series: "100 Days of Blender · 2026",
+    image: publicUrl("/daily/day-50.jpg"),
     fit: "contain",
   },
 ];

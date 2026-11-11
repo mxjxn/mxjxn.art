@@ -7,8 +7,13 @@ export const metadata: Metadata = {
     "Explore the collections and ongoing art practice of Max Jackson.",
 };
 const picks: Record<string, string[]> = {
-  "render-till-december": ["daily-60", "daily-48", "daily-50", "daily-59"],
-  "muse-editions": ["muse-editions-30", "muse-editions-31", "muse-editions-29"],
+  "100-days-of-blender": ["daily-100", "daily-80", "daily-48", "daily-60"],
+  "muse-editions": [
+    "muse-editions-61",
+    "muse-editions-30",
+    "muse-editions-43",
+    "muse-editions-33",
+  ],
   "meditative-blackletter": [
     "meditative-blackletter-6",
     "meditative-blackletter-1",
@@ -19,21 +24,20 @@ const picks: Record<string, string[]> = {
     "reaching-the-source-49",
     "reaching-the-source-60",
   ],
-  "calligra-pics": ["calligra-pic-58", "calligra-pic-74", "calligra-pic-95"],
-  "degen-ghouls": ["degen-ghouls-99"],
-  "degen-cats": ["degen-cats-44"],
+  "calligra-pics": [
+    "calligra-pic-58",
+    "calligra-pic-74",
+    "calligra-pic-95",
+    "calligra-pic-26",
+  ],
 };
 const order = [
-  "render-till-december",
+  "100-days-of-blender",
   "muse-editions",
   "meditative-blackletter",
   "reaching-the-source",
   "the-process-of-exploration",
   "calligra-pics",
-  "ethereal-realms",
-  "hyper-ghouls",
-  "degen-ghouls",
-  "degen-cats",
 ];
 export default function Archive() {
   return (

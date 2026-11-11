@@ -2,7 +2,7 @@
   {
     "slug": "daily-48",
     "title": "Day 48",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 48",
     "year": 2026,
     "media": [
@@ -26,21 +26,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/g2AJSdx4lw9E8cQklBu5r36k-v9MA_v1p7YGDYm5xMs",
-        "poster": "/muse-editions/chromaticsymphony.gif",
+        "src": "/muse-editions/muse-editions-33-animation.mp4",
+        "poster": "/posters/muse-editions-33.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "/muse-editions/chromaticsymphony.gif",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-33.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "33",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/33"
     },
-    "width": 320,
-    "height": 180
+    "width": 1920,
+    "height": 1080
   },
   {
     "slug": "meditative-blackletter-6",
@@ -68,7 +68,7 @@
   {
     "slug": "daily-50",
     "title": "Day 50",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 50 of doing renders every day in Blender",
     "year": 2026,
     "media": [
@@ -119,23 +119,6 @@
     "height": 600
   },
   {
-    "slug": "calligra-pic-58",
-    "title": "Calligra Pic 58",
-    "series": "calligra-pics",
-    "description": "From a series of 100 calligraphic abstracts made in the summer of 2021.",
-    "year": 2021,
-    "media": [
-      {
-        "type": "image",
-        "src": "/calligrapics/c58.jpg"
-      }
-    ],
-    "thumbnail": "/calligrapics/c58.jpg",
-    "animatedImage": false,
-    "width": 3464,
-    "height": 3463
-  },
-  {
     "slug": "muse-editions-30",
     "title": "Phoenix Lens",
     "series": "muse-editions",
@@ -144,7 +127,7 @@
     "media": [
       {
         "type": "video",
-        "src": "/muse-editions/phoenixlens.mp4",
+        "src": "/muse-editions/muse-editions-30-animation.mp4",
         "poster": "/posters/muse-editions-30.jpg",
         "unavailable": false
       }
@@ -163,7 +146,7 @@
   {
     "slug": "daily-59",
     "title": "Day 59",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 59 geometry nodes and modeling assisted by Codex while I rewrite mxjxn.com and its contents",
     "year": 2026,
     "media": [
@@ -187,10 +170,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/HdXd-jbbXDMOxPg512nTovpyYlSXeWc6yzDJcydNgxg"
+        "src": "/muse-editions/muse-editions-63-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/HdXd-jbbXDMOxPg512nTovpyYlSXeWc6yzDJcydNgxg",
+    "thumbnail": "/muse-editions/muse-editions-63-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -210,10 +193,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/24-7_q-RUOiuVzs7uRyx4jc_SiOIsyFMVKswy6Gju5E"
+        "src": "/muse-editions/muse-editions-62-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/24-7_q-RUOiuVzs7uRyx4jc_SiOIsyFMVKswy6Gju5E",
+    "thumbnail": "/muse-editions/muse-editions-62-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -228,17 +211,17 @@
     "slug": "muse-editions-61",
     "title": "WheelGen",
     "series": "muse-editions",
-    "description": "Muse Editions 61 is a generative artwork that uses a grammar to emulate my calligraphic abstract art process. Use the controls to generate your own artwork.",
+    "description": "A generative artwork that uses a grammar to emulate my calligraphic abstract art process. Use the controls to generate your own artwork. Hosted on mxjxn.art/wheelgen — independent of Arweave.",
     "year": null,
     "media": [
       {
         "type": "interactive",
-        "src": "https://arweave.net/vhuE60d9myqRgrtT2sn3jZrIPHmIDEBmk2_Pxju1fvM",
-        "poster": "https://arweave.net/XYLsA-QMnPBWWx-0jknwCcZkEeWWrP7oqMvsBQ_xs8g",
-        "unavailable": true
+        "src": "/wheelgen/app/",
+        "poster": "/wheelgen/poster.png",
+        "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/XYLsA-QMnPBWWx-0jknwCcZkEeWWrP7oqMvsBQ_xs8g",
+    "thumbnail": "/wheelgen/poster.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -258,10 +241,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/gxjE4eps8I8F1S6Q5LiWtznLUmcS2l16VNU5rr5GxC0"
+        "src": "/muse-editions/muse-editions-60-image.png"
       }
     ],
-    "thumbnail": "https://arweave.net/gxjE4eps8I8F1S6Q5LiWtznLUmcS2l16VNU5rr5GxC0",
+    "thumbnail": "/muse-editions/muse-editions-60-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -281,10 +264,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/1K0-Uw7MjogbrSmK75a2mZS8QVWqDVeWKDpztYr760M"
+        "src": "/muse-editions/muse-editions-59-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/1K0-Uw7MjogbrSmK75a2mZS8QVWqDVeWKDpztYr760M",
+    "thumbnail": "/muse-editions/muse-editions-59-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -304,21 +287,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/K5TQ7UOwtGpUcAHdcrHVvg9XhVOqy4UTly2n12ejsYQ",
-        "poster": "https://arweave.net/c-15wrnOUqdlQLXzS6D4OCWlnqaXt4e2umFqnpU0TwA",
+        "src": "/muse-editions/muse-editions-57-animation.mp4",
+        "poster": "/posters/muse-editions-57.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/c-15wrnOUqdlQLXzS6D4OCWlnqaXt4e2umFqnpU0TwA",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-57.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "57",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/57"
     },
-    "width": 300,
-    "height": 169
+    "width": 1920,
+    "height": 1080
   },
   {
     "slug": "muse-editions-56",
@@ -329,21 +312,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/Omlswwkt9a2bUsiHg_BQ1GrmL15HpRYwN40LdorW48E",
-        "poster": "https://arweave.net/lSUXEYnNCIp3doX2tGexEVb9sfceWI-WDO4Wv_FPw8M",
+        "src": "/muse-editions/muse-editions-56-animation.mp4",
+        "poster": "/posters/muse-editions-56.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/lSUXEYnNCIp3doX2tGexEVb9sfceWI-WDO4Wv_FPw8M",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-56.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "56",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/56"
     },
-    "width": 320,
-    "height": 180
+    "width": 1920,
+    "height": 1080
   },
   {
     "slug": "muse-editions-55",
@@ -354,10 +337,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/AbFyeYggobTPNglMGv8SHN67IJwCFwwvMxUiKOPsIbM"
+        "src": "/muse-editions/muse-editions-55-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/AbFyeYggobTPNglMGv8SHN67IJwCFwwvMxUiKOPsIbM",
+    "thumbnail": "/muse-editions/muse-editions-55-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -377,10 +360,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/ZUzG95RO61Igt6HPm-7MyNxzWQJr12NSnnzL6BA7DZc"
+        "src": "/muse-editions/muse-editions-54-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/ZUzG95RO61Igt6HPm-7MyNxzWQJr12NSnnzL6BA7DZc",
+    "thumbnail": "/muse-editions/muse-editions-54-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -400,10 +383,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/umoVqRlDGqwm48qCJ14Ef0z0pMdH2uHIluudfVeT-gw"
+        "src": "/muse-editions/muse-editions-53-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/umoVqRlDGqwm48qCJ14Ef0z0pMdH2uHIluudfVeT-gw",
+    "thumbnail": "/muse-editions/muse-editions-53-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -423,10 +406,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/E7R3XcIP3TK72R9df26gyl0ndE7_Ah3wqKi5kJHA7IY"
+        "src": "/muse-editions/muse-editions-52-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/E7R3XcIP3TK72R9df26gyl0ndE7_Ah3wqKi5kJHA7IY",
+    "thumbnail": "/muse-editions/muse-editions-52-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -446,10 +429,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/QXKVmDXZ6yliLhSDwuB9cbWAB3pVqZ6JlB33B-jtfXc"
+        "src": "/muse-editions/muse-editions-51-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/QXKVmDXZ6yliLhSDwuB9cbWAB3pVqZ6JlB33B-jtfXc",
+    "thumbnail": "/muse-editions/muse-editions-51-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -469,10 +452,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/TNI19qKIwrIHFKiacHxBw14jrFAsx3DggmlUgcNjxxU"
+        "src": "/muse-editions/muse-editions-50-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/TNI19qKIwrIHFKiacHxBw14jrFAsx3DggmlUgcNjxxU",
+    "thumbnail": "/muse-editions/muse-editions-50-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -492,10 +475,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/P0O28nGXwOsZZ4Gjx0CCumJtVs9IhITUrf4Oft5C5Dg"
+        "src": "/muse-editions/muse-editions-49-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/P0O28nGXwOsZZ4Gjx0CCumJtVs9IhITUrf4Oft5C5Dg",
+    "thumbnail": "/muse-editions/muse-editions-49-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -515,10 +498,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/HZ_tczY_3DPY69CFXu9uHOWhAsmYjcmrHIG7jF1aq5I"
+        "src": "/muse-editions/muse-editions-48-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/HZ_tczY_3DPY69CFXu9uHOWhAsmYjcmrHIG7jF1aq5I",
+    "thumbnail": "/muse-editions/muse-editions-48-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -538,10 +521,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/jgmXyMT8zKV44ZHizzKh7zDCzeTnpz0YmpEWZNPe5Aw"
+        "src": "/muse-editions/muse-editions-47-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/jgmXyMT8zKV44ZHizzKh7zDCzeTnpz0YmpEWZNPe5Aw",
+    "thumbnail": "/muse-editions/muse-editions-47-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -556,15 +539,15 @@
     "slug": "muse-editions-46",
     "title": "Nightmare Vectors",
     "series": "muse-editions",
-    "description": "",
+    "description": "The simple command is given in ink with the broad pen. \nA dark scene is summoned and its essence corrupted.  \nWhat emerges from the dark are known as Nightmare Vectors",
     "year": null,
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/MbmMg2oQLHej2QoELIo8hkXX_W3am2USg-5ciCIf-ro"
+        "src": "/muse-editions/muse-editions-46-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/MbmMg2oQLHej2QoELIo8hkXX_W3am2USg-5ciCIf-ro",
+    "thumbnail": "/muse-editions/muse-editions-46-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -584,21 +567,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/vju5_Pa51AHi_zxFhUuFzHIaDlAEfvk6XBaKW0pUgyI",
-        "poster": "https://arweave.net/rl8lwMwPV4Up1q6O22VI1Mm7dOMX0V3nAyFJR2oZWEk",
+        "src": "/muse-editions/muse-editions-45-animation.mp4",
+        "poster": "/posters/muse-editions-45.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/rl8lwMwPV4Up1q6O22VI1Mm7dOMX0V3nAyFJR2oZWEk",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-45.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "45",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/45"
     },
-    "width": 320,
-    "height": 320
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-44",
@@ -609,10 +592,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/spMIaSE6ABVqBNA8a6iTYa6AV4GuQNjs_Id1tVXfd6I"
+        "src": "/muse-editions/muse-editions-44-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/spMIaSE6ABVqBNA8a6iTYa6AV4GuQNjs_Id1tVXfd6I",
+    "thumbnail": "/muse-editions/muse-editions-44-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -632,21 +615,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/0Uw2hmAIoKWljOsm3GMPA7CfdZnB80avYJfvGBEsIFQ",
-        "poster": "https://arweave.net/X8oYDqCSRAvJeQptb-bpz4-fqUGA2PBuso20rbA1Bqw",
+        "src": "/muse-editions/muse-editions-43-animation.mp4",
+        "poster": "/posters/muse-editions-43.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/X8oYDqCSRAvJeQptb-bpz4-fqUGA2PBuso20rbA1Bqw",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-43.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "43",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/43"
     },
-    "width": 480,
-    "height": 480
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-42",
@@ -657,21 +640,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/s9wEilyPtWXMNfhzOD596r5bCDmkspDg2jYK4UyRi4M",
-        "poster": "https://arweave.net/eISW4dERDDbLYQqVFLE9FZQFA4y0DxyzjPD5nk8RRXY",
+        "src": "/muse-editions/muse-editions-42-animation.mp4",
+        "poster": "/posters/muse-editions-42.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/eISW4dERDDbLYQqVFLE9FZQFA4y0DxyzjPD5nk8RRXY",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-42.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "42",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/42"
     },
-    "width": 320,
-    "height": 320
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-41",
@@ -682,21 +665,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/Ea8aB1Re-nQ4XBBg-oCE4HPWN-PZpvouWjpN7Mmmsnw",
-        "poster": "https://arweave.net/xsQTdN_GAdE7u3MxXbFehLj58OWD7Q4brav-2s5yN6I",
+        "src": "/muse-editions/muse-editions-41-animation.mp4",
+        "poster": "/posters/muse-editions-41.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/xsQTdN_GAdE7u3MxXbFehLj58OWD7Q4brav-2s5yN6I",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-41.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "41",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/41"
     },
-    "width": 512,
-    "height": 512
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-40",
@@ -707,21 +690,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/bLF5N8DyCmkPoJM4opNc_0DQfmMj7CmVZo3BoLY0ZTQ",
-        "poster": "https://arweave.net/PAP4YtRsFx-y2uJWLtE7FCaLvzTOUoIfWPW1fIBOxc4",
+        "src": "/muse-editions/muse-editions-40-animation.mp4",
+        "poster": "/posters/muse-editions-40.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/PAP4YtRsFx-y2uJWLtE7FCaLvzTOUoIfWPW1fIBOxc4",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-40.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "40",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/40"
     },
-    "width": 256,
-    "height": 256
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-39",
@@ -732,10 +715,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/ir8MHvJZPbp_Qa3l0LZ9eG0afk7JeuDAnWDtqe85JXM"
+        "src": "/muse-editions/muse-editions-39-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/ir8MHvJZPbp_Qa3l0LZ9eG0afk7JeuDAnWDtqe85JXM",
+    "thumbnail": "/muse-editions/muse-editions-39-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -755,21 +738,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/xPPfbizZhYGdk_wtOh-07Qv-88g5SggujZlo1PioI98",
-        "poster": "https://arweave.net/dIEbtW9r1mioW3JN8tcFF818i7rcaL65_b-MYPt1-ho",
+        "src": "/muse-editions/muse-editions-38-animation.mp4",
+        "poster": "/posters/muse-editions-38.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/dIEbtW9r1mioW3JN8tcFF818i7rcaL65_b-MYPt1-ho",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-38.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "38",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/38"
     },
-    "width": 420,
-    "height": 420
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-37",
@@ -780,21 +763,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/XUnm25J90wvn8E0lu2DjsRbkr6C3HTpIdYvnoLAy5ng",
-        "poster": "https://arweave.net/UhSkayrb4Yvqk6hUDAaFig5oU0SXuAWtfgE-C5xbyQw",
+        "src": "/muse-editions/muse-editions-37-animation.mp4",
+        "poster": "/posters/muse-editions-37.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/UhSkayrb4Yvqk6hUDAaFig5oU0SXuAWtfgE-C5xbyQw",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-37.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "37",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/37"
     },
-    "width": 480,
-    "height": 480
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-36",
@@ -805,10 +788,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/s_rhG56zyBb94biN2JxbXd-uiJOyg9yn2kJ6eeGkfuM"
+        "src": "/muse-editions/muse-editions-36-image.png"
       }
     ],
-    "thumbnail": "https://arweave.net/s_rhG56zyBb94biN2JxbXd-uiJOyg9yn2kJ6eeGkfuM",
+    "thumbnail": "/muse-editions/muse-editions-36-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -828,10 +811,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/mzAPCM-nYf86jXr1_U_mGXnO6qXdYywi81WKzcpQ7c4"
+        "src": "/muse-editions/muse-editions-35-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/mzAPCM-nYf86jXr1_U_mGXnO6qXdYywi81WKzcpQ7c4",
+    "thumbnail": "/muse-editions/muse-editions-35-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -851,10 +834,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/RO7Gryzr-6KfUlEjIiIDjfFk8nBLYLELaIT7-gaIQ0g"
+        "src": "/muse-editions/muse-editions-34-image.png"
       }
     ],
-    "thumbnail": "https://arweave.net/RO7Gryzr-6KfUlEjIiIDjfFk8nBLYLELaIT7-gaIQ0g",
+    "thumbnail": "/muse-editions/muse-editions-34-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -874,21 +857,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/1V7zKJMA8OWag5dxuCn-Zu-FnGvTfQMZU1MvvU1MWhc",
-        "poster": "https://arweave.net/6pVC9ZHV04nJl8gmRXkKOWESQWnmO7qLLcQ6tQAoa10",
+        "src": "/muse-editions/muse-editions-32-animation.mp4",
+        "poster": "/posters/muse-editions-32.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/6pVC9ZHV04nJl8gmRXkKOWESQWnmO7qLLcQ6tQAoa10",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-32.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "32",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/32"
     },
-    "width": 720,
-    "height": 720
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-31",
@@ -899,10 +882,10 @@
     "media": [
       {
         "type": "image",
-        "src": "/muse-editions/forgedimbalance.jpg"
+        "src": "/muse-editions/muse-editions-31-image.jpg"
       }
     ],
-    "thumbnail": "/muse-editions/forgedimbalance.jpg",
+    "thumbnail": "/muse-editions/muse-editions-31-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -922,10 +905,10 @@
     "media": [
       {
         "type": "image",
-        "src": "/muse-editions/obsidianbloom.jpg"
+        "src": "/muse-editions/muse-editions-29-image.jpg"
       }
     ],
-    "thumbnail": "/muse-editions/obsidianbloom.jpg",
+    "thumbnail": "/muse-editions/muse-editions-29-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -945,13 +928,13 @@
     "media": [
       {
         "type": "video",
-        "src": "/muse-editions/processmorph.mp4",
-        "poster": "https://arweave.net/3oH5zIlYhmo5S5UFxImSjyy87BL1Y2XkBOoTIQrDeo8",
+        "src": "/muse-editions/muse-editions-28-animation.mp4",
+        "poster": "/posters/muse-editions-28.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/3oH5zIlYhmo5S5UFxImSjyy87BL1Y2XkBOoTIQrDeo8",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-28.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
@@ -970,10 +953,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/g4i5NMsPOMNvMJ8gIXdi6aOSSiYhbwAoxnDTbTfyZnI"
+        "src": "/muse-editions/muse-editions-27-image.png"
       }
     ],
-    "thumbnail": "https://arweave.net/g4i5NMsPOMNvMJ8gIXdi6aOSSiYhbwAoxnDTbTfyZnI",
+    "thumbnail": "/muse-editions/muse-editions-27-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -993,10 +976,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/O0EyYZnZtWGpIhy8OCMq2Ql0o9sxuaMu5qlqynJZF2I"
+        "src": "/muse-editions/muse-editions-26-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/O0EyYZnZtWGpIhy8OCMq2Ql0o9sxuaMu5qlqynJZF2I",
+    "thumbnail": "/muse-editions/muse-editions-26-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1016,10 +999,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/3nZkhQdap7_1x2HITsOVyerE6zxbFdH5WGtml4aqH-E"
+        "src": "/muse-editions/muse-editions-25-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/3nZkhQdap7_1x2HITsOVyerE6zxbFdH5WGtml4aqH-E",
+    "thumbnail": "/muse-editions/muse-editions-25-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1039,10 +1022,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/IsuUjI0e5fw-Kj7Yk9H3c_cGnXgexUtWzi2079NTXcs"
+        "src": "/muse-editions/muse-editions-24-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/IsuUjI0e5fw-Kj7Yk9H3c_cGnXgexUtWzi2079NTXcs",
+    "thumbnail": "/muse-editions/muse-editions-24-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1062,10 +1045,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/JZzjcNzJo_f1-rTMiCnvg6rN6tC3zmheffz5gdLg2Gk"
+        "src": "/muse-editions/muse-editions-23-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/JZzjcNzJo_f1-rTMiCnvg6rN6tC3zmheffz5gdLg2Gk",
+    "thumbnail": "/muse-editions/muse-editions-23-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1085,10 +1068,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/yzIkik3xcT394TbKHXJ9JGM9h2Y3I-U7hr6hU3dICPA"
+        "src": "/muse-editions/muse-editions-22-image.png"
       }
     ],
-    "thumbnail": "https://arweave.net/yzIkik3xcT394TbKHXJ9JGM9h2Y3I-U7hr6hU3dICPA",
+    "thumbnail": "/muse-editions/muse-editions-22-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1108,10 +1091,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/RidgAjSGAb84XrxiuP3x9N4qfzr00_hPn9H703-irF0"
+        "src": "/muse-editions/muse-editions-21-image.gif"
       }
     ],
-    "thumbnail": "https://arweave.net/RidgAjSGAb84XrxiuP3x9N4qfzr00_hPn9H703-irF0",
+    "thumbnail": "/muse-editions/muse-editions-21-image.gif",
     "animatedImage": true,
     "provenance": {
       "chain": "base",
@@ -1131,10 +1114,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/2XtpxTID4jSEYsrb3aUwHa5eW0sC7lQZsIJ96gRWfNk"
+        "src": "/muse-editions/muse-editions-20-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/2XtpxTID4jSEYsrb3aUwHa5eW0sC7lQZsIJ96gRWfNk",
+    "thumbnail": "/muse-editions/muse-editions-20-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1154,10 +1137,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/0rDD_jOEPV3qk6udQYrHsgilFyM_GCdvKOKYdIoiK1Q"
+        "src": "/muse-editions/muse-editions-19-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/0rDD_jOEPV3qk6udQYrHsgilFyM_GCdvKOKYdIoiK1Q",
+    "thumbnail": "/muse-editions/muse-editions-19-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1177,10 +1160,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/_EXcvUKHyeTiXQ0KsUmzkXI3hxR5GUV-J2ggeF9e8b0"
+        "src": "/muse-editions/muse-editions-18-image.png"
       }
     ],
-    "thumbnail": "https://arweave.net/_EXcvUKHyeTiXQ0KsUmzkXI3hxR5GUV-J2ggeF9e8b0",
+    "thumbnail": "/muse-editions/muse-editions-18-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1200,12 +1183,12 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/UTPaYNc_gKoBUkef0RLHz2dLLn5GZTXPedGvZqwlfEk",
-        "poster": "https://arweave.net/OGpOxgFH_zGk3t5Su8eFBru8igsqjOFP9bPLyTHib6U",
+        "src": "/muse-editions/muse-editions-17-animation.mp4",
+        "poster": "/posters/muse-editions-17.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/OGpOxgFH_zGk3t5Su8eFBru8igsqjOFP9bPLyTHib6U",
+    "thumbnail": "/posters/muse-editions-17.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1213,8 +1196,8 @@
       "tokenId": "17",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/17"
     },
-    "width": 1344,
-    "height": 1344
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-16",
@@ -1225,21 +1208,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/5BAPxOekBwjX_cP2Pk99u24MMn3NNio7UQXQqJ244A4",
-        "poster": "https://arweave.net/3489Jht1qpihr_DuGuUiNWfhRhd-ZSMed-UNqUgagHQ",
+        "src": "/muse-editions/muse-editions-16-animation.mp4",
+        "poster": "/posters/muse-editions-16.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/3489Jht1qpihr_DuGuUiNWfhRhd-ZSMed-UNqUgagHQ",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-16.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "16",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/16"
     },
-    "width": 320,
-    "height": 320
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-15",
@@ -1250,21 +1233,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/5MYH9cj7-VKhRVj95XeD_wfXQ0LmVCKmDNh4M8HUGdk",
-        "poster": "https://arweave.net/80c-U283Q60X9VR_s1JqVUaaT3c8WZ07rw2kVs_6_OU",
+        "src": "/muse-editions/muse-editions-15-animation.mp4",
+        "poster": "/posters/muse-editions-15.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/80c-U283Q60X9VR_s1JqVUaaT3c8WZ07rw2kVs_6_OU",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-15.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "15",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/15"
     },
-    "width": 250,
-    "height": 250
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-14",
@@ -1275,21 +1258,21 @@
     "media": [
       {
         "type": "video",
-        "src": "https://arweave.net/7hYcOXLc7ybgFIOl9OOQy-wF-1L8iyCfKRMme_FEmOY",
-        "poster": "https://arweave.net/JKhARvV8l_no-ZUrvroDtaMrXoN-EmdKDrHEPuCeWyA",
+        "src": "/muse-editions/muse-editions-14-animation.mp4",
+        "poster": "/posters/muse-editions-14.jpg",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/JKhARvV8l_no-ZUrvroDtaMrXoN-EmdKDrHEPuCeWyA",
-    "animatedImage": true,
+    "thumbnail": "/posters/muse-editions-14.jpg",
+    "animatedImage": false,
     "provenance": {
       "chain": "base",
       "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
       "tokenId": "14",
       "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/14"
     },
-    "width": 320,
-    "height": 320
+    "width": 1080,
+    "height": 1080
   },
   {
     "slug": "muse-editions-13",
@@ -1300,10 +1283,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/aMuQd6dde_rEUQsftUDpuNJ1MN-F3opM1UFA-30F668"
+        "src": "/muse-editions/muse-editions-13-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/aMuQd6dde_rEUQsftUDpuNJ1MN-F3opM1UFA-30F668",
+    "thumbnail": "/muse-editions/muse-editions-13-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1323,10 +1306,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/Y25ZVV3UQ4ZIS5A5DCv7HNyFAfzLGSLnXnl63jA-14Y"
+        "src": "/muse-editions/muse-editions-12-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/Y25ZVV3UQ4ZIS5A5DCv7HNyFAfzLGSLnXnl63jA-14Y",
+    "thumbnail": "/muse-editions/muse-editions-12-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1346,10 +1329,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/n6xht5VFrlA9aqBldzHcVEdqBk0Jb9oo28OpBBJQI9A"
+        "src": "/muse-editions/muse-editions-11-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/n6xht5VFrlA9aqBldzHcVEdqBk0Jb9oo28OpBBJQI9A",
+    "thumbnail": "/muse-editions/muse-editions-11-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1369,10 +1352,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/huU3N6p8ITBm0hqQiCDV2Pp50Ko84FapSndAXXQkCY4"
+        "src": "/muse-editions/muse-editions-10-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/huU3N6p8ITBm0hqQiCDV2Pp50Ko84FapSndAXXQkCY4",
+    "thumbnail": "/muse-editions/muse-editions-10-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1392,10 +1375,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/RdK5ijAHv9g3NPJDqxFq5Kk1wFEBpQ2xicDSiWRR9UU"
+        "src": "/muse-editions/muse-editions-9-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/RdK5ijAHv9g3NPJDqxFq5Kk1wFEBpQ2xicDSiWRR9UU",
+    "thumbnail": "/muse-editions/muse-editions-9-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1415,10 +1398,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/2RKFM8w9KazhFB8LNi_7WkKVSZWcEl7Qc-eohN52WsA"
+        "src": "/muse-editions/muse-editions-8-image.gif"
       }
     ],
-    "thumbnail": "https://arweave.net/2RKFM8w9KazhFB8LNi_7WkKVSZWcEl7Qc-eohN52WsA",
+    "thumbnail": "/muse-editions/muse-editions-8-image.gif",
     "animatedImage": true,
     "provenance": {
       "chain": "base",
@@ -1438,12 +1421,12 @@
     "media": [
       {
         "type": "model",
-        "src": "https://arweave.net/YlnDLzjMx4QSg1yDbyxFVgEA8aGOxGFuKBESCSZrFk8",
-        "poster": "https://arweave.net/_15vXqAJM-jX_BDeF_tnjySfvaAUkc3kuPGCu3zS2bc",
+        "src": "/muse-editions/muse-editions-7-animation.glb",
+        "poster": "/muse-editions/muse-editions-7-image.png",
         "unavailable": false
       }
     ],
-    "thumbnail": "https://arweave.net/_15vXqAJM-jX_BDeF_tnjySfvaAUkc3kuPGCu3zS2bc",
+    "thumbnail": "/muse-editions/muse-editions-7-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1463,10 +1446,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/X2X5k-Yapa2TFCwqgvcMngQU1skm-1vvvWLEX3v30G4"
+        "src": "/muse-editions/muse-editions-6-image.png"
       }
     ],
-    "thumbnail": "https://arweave.net/X2X5k-Yapa2TFCwqgvcMngQU1skm-1vvvWLEX3v30G4",
+    "thumbnail": "/muse-editions/muse-editions-6-image.png",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1486,10 +1469,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/mPvAbuRNudwqUGmvKdoDU3PiWGteBCQZXIAotoefM2w"
+        "src": "/muse-editions/muse-editions-5-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/mPvAbuRNudwqUGmvKdoDU3PiWGteBCQZXIAotoefM2w",
+    "thumbnail": "/muse-editions/muse-editions-5-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1509,10 +1492,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/zyR09C4iOF9lxD87O_VuT4bnIThhR3rSE7qqaCagdKw"
+        "src": "/muse-editions/muse-editions-4-image.gif"
       }
     ],
-    "thumbnail": "https://arweave.net/zyR09C4iOF9lxD87O_VuT4bnIThhR3rSE7qqaCagdKw",
+    "thumbnail": "/muse-editions/muse-editions-4-image.gif",
     "animatedImage": true,
     "provenance": {
       "chain": "base",
@@ -1532,10 +1515,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/eooiRX8DOGG2i45w74TDXha7t8u0WxLwFC223FxI2JE"
+        "src": "/muse-editions/muse-editions-3-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/eooiRX8DOGG2i45w74TDXha7t8u0WxLwFC223FxI2JE",
+    "thumbnail": "/muse-editions/muse-editions-3-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1555,10 +1538,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/d4u0cAVJif9TVmtaZiDxUs2xQDu2Pkr3dtHGzBZEbzw"
+        "src": "/muse-editions/muse-editions-2-image.jpg"
       }
     ],
-    "thumbnail": "https://arweave.net/d4u0cAVJif9TVmtaZiDxUs2xQDu2Pkr3dtHGzBZEbzw",
+    "thumbnail": "/muse-editions/muse-editions-2-image.jpg",
     "animatedImage": false,
     "provenance": {
       "chain": "base",
@@ -1578,10 +1561,10 @@
     "media": [
       {
         "type": "image",
-        "src": "https://arweave.net/6upTgoDV09P3vMLcZqfyqoS2lN1zU0XVhfheDpO4XpI"
+        "src": "/muse-editions/muse-editions-1-image.gif"
       }
     ],
-    "thumbnail": "https://arweave.net/6upTgoDV09P3vMLcZqfyqoS2lN1zU0XVhfheDpO4XpI",
+    "thumbnail": "/muse-editions/muse-editions-1-image.gif",
     "animatedImage": true,
     "provenance": {
       "chain": "base",
@@ -6586,7 +6569,7 @@
   {
     "slug": "daily-1",
     "title": "Day 1",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Starting a new personal challenge that will last the rest of 2026.\nLets see if i can put out a new render every day...\n\nDay one",
     "year": 2026,
     "media": [
@@ -6604,7 +6587,7 @@
   {
     "slug": "daily-2",
     "title": "Day 2",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 2 render was a lesson. I got a render done, but not until very late and I'm disappointed in the result. The lesson is dont get carried away in arbitrary choices -- focus on the goal at hand.",
     "year": 2026,
     "media": [
@@ -6622,7 +6605,7 @@
   {
     "slug": "daily-3",
     "title": "Day 3",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render day 3 \nToday was all about getting back in the swing of creative hard-surface modeling and non-distructive boolean workflow. I watched some HardOps/Boxcutter vids and am trying to get the keys back into muscle memory!",
     "year": 2026,
     "media": [
@@ -6640,7 +6623,7 @@
   {
     "slug": "daily-4",
     "title": "Day 4",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render day 4, very basic first attempt at some abstract calligraphy driven by geometry nodes.",
     "year": 2026,
     "media": [
@@ -6659,7 +6642,7 @@
   {
     "slug": "daily-5",
     "title": "Day 5",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render Til December Day 5, calligraphy mandala workout in Blender",
     "year": 2026,
     "media": [
@@ -6677,7 +6660,7 @@
   {
     "slug": "daily-6",
     "title": "Day 6",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render 'till December - Day 6, more 3D Calligraphy - plus several alts as I dial in sdxl I2I refinement workflow",
     "year": 2026,
     "media": [
@@ -6707,7 +6690,7 @@
   {
     "slug": "daily-7",
     "title": "Day 7",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render till December - day 7\nGeonodes and procedural shaders",
     "year": 2026,
     "media": [
@@ -6726,7 +6709,7 @@
   {
     "slug": "daily-8",
     "title": "Day 8",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 8 of my self imposed Render 'till December\n\nStep one, goof off in Blender with shapes, arrays and shape keys and stuff.\n\nStep two, new magic I learned in ComfyUI.\n\nThis one is getting minted.",
     "year": 2026,
     "media": [
@@ -6745,7 +6728,7 @@
   {
     "slug": "daily-9",
     "title": "Day 9",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 9 Went in a lot of directions",
     "year": 2026,
     "media": [
@@ -6776,7 +6759,7 @@
   {
     "slug": "daily-10",
     "title": "Day 10",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "day 10 Render till December \nconcentric gyroscopic rings",
     "year": 2026,
     "media": [
@@ -6795,7 +6778,7 @@
   {
     "slug": "daily-11",
     "title": "Day 11",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 11 Love a good tunnel flythrough. This was a lesson in glass shaders and",
     "year": 2026,
     "media": [
@@ -6814,7 +6797,7 @@
   {
     "slug": "daily-12",
     "title": "Day 12",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render till December, Day 12 -- another crazy flythrough. Made with geometry nodes and procedural shader stuff",
     "year": 2026,
     "media": [
@@ -6833,7 +6816,7 @@
   {
     "slug": "daily-13",
     "title": "Day 13",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "day 13 no big deal. just a quick 3d calligraphy. long drive, still have to unpack. no lessons today just a muscle memory exercise.",
     "year": 2026,
     "media": [
@@ -6851,7 +6834,7 @@
   {
     "slug": "daily-14",
     "title": "Day 14",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render till December Day 14 with a little experimentation",
     "year": 2026,
     "media": [
@@ -6869,7 +6852,7 @@
   {
     "slug": "daily-15",
     "title": "Day 15",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "~/blender/render-till-december/day15.mp4 \n\nGeometry nodes, volume to points, glass shaders, SDF experiment. This ones a semi tribute to @tomato.eth's UpOnly https://opensea.io/item/ethereum/0x7de4c4a25a67708a9a5576c492d58d22ad7c890d/5",
     "year": 2026,
     "media": [
@@ -6888,7 +6871,7 @@
   {
     "slug": "daily-16",
     "title": "Day 16",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 16 was all but a fail. I did not make any good scene to render. I didnt compose something awesome. But i spent a lot of time learning about drivers in blender. I should have something nice for it but I dont. So heres a half open box, courtesy of a driver attached to a control somewhere.",
     "year": 2026,
     "media": [
@@ -6906,7 +6889,7 @@
   {
     "slug": "daily-17",
     "title": "Day 17",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 17 of Render Till December, learned about drivers and stuff. Had fun modeling and animating this!",
     "year": 2026,
     "media": [
@@ -6925,7 +6908,7 @@
   {
     "slug": "daily-18",
     "title": "Day 18",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render till December, Day 18\nTodays lesson is being smart and reusing assets from past days. My nebula world shader and irridescent gummy glass came in clutch to make this scene look nice.",
     "year": 2026,
     "media": [
@@ -6943,7 +6926,7 @@
   {
     "slug": "daily-19",
     "title": "Day 19",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "~/Blender/RenderTillDecember/Day19.mp4\n\nMore practice with glass shaders, plus a little fun with mesh displacement",
     "year": 2026,
     "media": [
@@ -6962,7 +6945,7 @@
   {
     "slug": "daily-20",
     "title": "Day 20",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render till December\nDay 20\ngoofin with modifiers and a shader.\nCould have been better but I choose sleep over staying up late dicking around with an abstract 🤣 Yeah idk sometimes you just gotta make a thing. Tomorrow I'll start earlier...",
     "year": 2026,
     "media": [
@@ -6981,7 +6964,7 @@
   {
     "slug": "daily-21",
     "title": "Day 21",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 21 -- Audio-reactive geometry nodes.\n\nThe song is \"B:/Shut Down/Depression\" by Blank Banshee, last track on Blank Banshee 0",
     "year": 2026,
     "media": [
@@ -7000,7 +6983,7 @@
   {
     "slug": "daily-22",
     "title": "Day 22",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render till December\nDay 22",
     "year": 2026,
     "media": [
@@ -7019,7 +7002,7 @@
   {
     "slug": "daily-23",
     "title": "Day 23",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 23 // Render Till December\nmore fun playing with shaders",
     "year": 2026,
     "media": [
@@ -7038,7 +7021,7 @@
   {
     "slug": "daily-24",
     "title": "Day 24",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 24 of my self-imposed Render till December challenge.\n\nThis one's straight out of a Ducky3d tutorial again. Trying to strengthen my weaknesses in shaders and geonodes. Learned a compositor node I hadn't touched too, which gives it that nice grainy effect. \n\nYou can make the same thing from one of his recent tutorials.",
     "year": 2026,
     "media": [
@@ -7057,7 +7040,7 @@
   {
     "slug": "daily-25",
     "title": "Day 25",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 25 of Renders in Blender till December",
     "year": 2026,
     "media": [
@@ -7076,7 +7059,7 @@
   {
     "slug": "daily-26",
     "title": "Day 26",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 26 of Render Till December is another result of a tutorial. Learning every day is vastly more important than being unique right now. I'm stoked to be getting more and more familiar with geometry nodes and how they can work hand in hand with shaders. Made some creative choices and added in some extra compositor nodes (lens distortion & chromatic aberration)",
     "year": 2026,
     "media": [
@@ -7095,7 +7078,7 @@
   {
     "slug": "daily-27",
     "title": "Day 27",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 27 of Blender Renders till December\nToday I learned about SDFs (signed distance fields) because who needs geometry when you've got.... geometry?",
     "year": 2026,
     "media": [
@@ -7114,7 +7097,7 @@
   {
     "slug": "daily-28",
     "title": "Day 28",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Render Till December - Day 28 in the bag. No tutorials today, just trying to apply the things I've recently learned!",
     "year": 2026,
     "media": [
@@ -7133,7 +7116,7 @@
   {
     "slug": "daily-29",
     "title": "Day 29",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 29, learning fluid sim! This was rendered in Cycles 30 seconds on my 5 year old macbook. Shoutout to my Hermes agent which, with Blender MCP, optimized my render settings. That stuff is witchcraft to me!",
     "year": 2026,
     "media": [
@@ -7151,7 +7134,7 @@
   {
     "slug": "daily-30",
     "title": "Day 30",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Today is my last day in this beautiful riverside cottage. Mostly spending the day cleaning and packing. Today's render (day 30!) is a lesson in using cloth-sim for soft-body physics. The sphere is \"rubber\" fabric with outward pressure to simulate a ball.\n\nBlender Renders Till December day 30",
     "year": 2026,
     "media": [
@@ -7170,7 +7153,7 @@
   {
     "slug": "daily-31",
     "title": "Day 31",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 31 was a quickie - major travel day today. I learned at least a little about the blender compositor – plugged radil wave texture into the hue of an HSV node for the left one\n\nOne month down, three to go in my personal roadmap.\nThe remaining curriculum is HEAVY",
     "year": 2026,
     "media": [
@@ -7192,7 +7175,7 @@
   {
     "slug": "daily-32",
     "title": "Day 32",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "day 33 in which i stay up way too late then fall asleep before the render is done, and post the next morning",
     "year": 2026,
     "media": [
@@ -7211,7 +7194,7 @@
   {
     "slug": "daily-33",
     "title": "Day 33",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "33-FINAL-002.b.mp4 (i counted wrong yesterday, which was 32)\n\nI absolutely butchered the keyframes on this seamless loop so i just pingponged it and called it a day because i need sleep. But also i need a ComfyUI v2v to spice it up so im doing that (someone tie me up and throw me in bed)\n\nday 33 renders till december",
     "year": 2026,
     "media": [
@@ -7230,7 +7213,7 @@
   {
     "slug": "daily-34",
     "title": "Day 34",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 34 wherein I play around with volumes a little bit before my first day back at work in 3 weeks",
     "year": 2026,
     "media": [
@@ -7249,7 +7232,7 @@
   {
     "slug": "daily-35",
     "title": "Day 35",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 35 where i made a thing",
     "year": 2026,
     "media": [
@@ -7267,7 +7250,7 @@
   {
     "slug": "daily-36",
     "title": "Day 36",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "on day 36 of making renders in blender, I learned some cool shader tricks and started using grease pencil for those cartoony outlines on the edges",
     "year": 2026,
     "media": [
@@ -7286,7 +7269,7 @@
   {
     "slug": "daily-37",
     "title": "Day 37",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 37 where I rendered a thing",
     "year": 2026,
     "media": [
@@ -7304,7 +7287,7 @@
   {
     "slug": "daily-38",
     "title": "Day 38",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 38 (animated) of renders thru December and onward",
     "year": 2026,
     "media": [
@@ -7323,7 +7306,7 @@
   {
     "slug": "daily-39",
     "title": "Day 39",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 39 making a thing in blender",
     "year": 2026,
     "media": [
@@ -7345,7 +7328,7 @@
   {
     "slug": "daily-40",
     "title": "Day 40",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 40 rendering something in blender",
     "year": 2026,
     "media": [
@@ -7363,7 +7346,7 @@
   {
     "slug": "daily-42",
     "title": "Day 42",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 42 rendered in blender, goin with the flow",
     "year": 2026,
     "media": [
@@ -7385,7 +7368,7 @@
   {
     "slug": "daily-42-2",
     "title": "Day 42",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Final render for the night for day 42. Lots of compositor node practice!",
     "year": 2026,
     "media": [
@@ -7403,7 +7386,7 @@
   {
     "slug": "daily-43",
     "title": "Day 43",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 43, teleporting to 2 AM",
     "year": 2026,
     "media": [
@@ -7421,7 +7404,7 @@
   {
     "slug": "daily-44",
     "title": "Day 44",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 44 of blender renders where I subscribed to ChatGPT and had Astra one-shot a bunch of few scenes 😂 I might make something else before I sleep, i dont know if these count!",
     "year": 2026,
     "media": [
@@ -7440,7 +7423,7 @@
   {
     "slug": "daily-44-2",
     "title": "Day 44",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 44 was productive but not in terms of great 3d compositions. more so blender tools. \nI made a music sequencer app that spits out messages when anything happens (note plays, filter changes frequency etc) and a blender plugin that reads those messages as signals that can be mapped to any parameter.\n\nPictured below is evidence that I still have work to do autosyncing recorded sound to video\n\nand below that is the blender plugin. You can use Supercollider to write music with code that can talk to it.\nhttps://github.com/mxjxn/osc-score-bridge\nhttps://supercollider.github.io/",
     "year": 2026,
     "media": [
@@ -7459,7 +7442,7 @@
   {
     "slug": "daily-45",
     "title": "Day 45",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 45 rendering in blender",
     "year": 2026,
     "media": [
@@ -7478,7 +7461,7 @@
   {
     "slug": "daily-46",
     "title": "Day 46",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 46 testing blender  image. On the right is my scene of an arctic sled team under the northern lights, and on the left, where I asked a generative model to redraw just the sled team",
     "year": 2026,
     "media": [
@@ -7500,7 +7483,7 @@
   {
     "slug": "daily-46-2",
     "title": "Day 46",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "day 46 of renders in blender",
     "year": 2026,
     "media": [
@@ -7518,7 +7501,7 @@
   {
     "slug": "daily-47",
     "title": "Day 47",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Blender daily 47",
     "year": 2026,
     "media": [
@@ -7537,7 +7520,7 @@
   {
     "slug": "daily-49",
     "title": "Day 49",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "BlenderRender day 49",
     "year": 2026,
     "media": [
@@ -7556,7 +7539,7 @@
   {
     "slug": "daily-51",
     "title": "Day 51",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Daily Blender render, day 51",
     "year": 2026,
     "media": [
@@ -7575,7 +7558,7 @@
   {
     "slug": "daily-52",
     "title": "Day 52",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 52 of rendering various things in Blender",
     "year": 2026,
     "media": [
@@ -7593,7 +7576,7 @@
   {
     "slug": "daily-53",
     "title": "Day 53",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 53 of daily blender renders. I liked yesterday's diorama framing so i did it again. Yesterday fluid sim, today cloth sim",
     "year": 2026,
     "media": [
@@ -7611,7 +7594,7 @@
   {
     "slug": "daily-53-2",
     "title": "Day 53",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 53 wherein i do something silly real quick and render it and call it done",
     "year": 2026,
     "media": [
@@ -7630,7 +7613,7 @@
   {
     "slug": "daily-54",
     "title": "Day 54",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 54 of doin a render every day",
     "year": 2026,
     "media": [
@@ -7648,7 +7631,7 @@
   {
     "slug": "daily-55",
     "title": "Day 55",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 55 of daily renders in blender\nChromatic Tunnel\nthis one I whipped up in just a few minutes because today is a big packing + travel day. Getting fast with these flythroughs",
     "year": 2026,
     "media": [
@@ -7667,7 +7650,7 @@
   {
     "slug": "daily-56",
     "title": "Day 56",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 56 with more procedural playtime",
     "year": 2026,
     "media": [
@@ -7686,7 +7669,7 @@
   {
     "slug": "daily-57",
     "title": "Day 57",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Daily render, day 57: the monster under the surface",
     "year": 2026,
     "media": [
@@ -7705,7 +7688,7 @@
   {
     "slug": "daily-58",
     "title": "Day 58",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "A different flavor of flythrough for day 58",
     "year": 2026,
     "media": [
@@ -7724,7 +7707,7 @@
   {
     "slug": "daily-60",
     "title": "Day 60",
-    "series": "render-till-december",
+    "series": "100-days-of-blender",
     "description": "Day 60 of daily renders",
     "year": 2026,
     "media": [
@@ -7739,91 +7722,6 @@
     "source": "https://farcaster.xyz/mxjxn/0xd682890b732b2cc2793da2ab936cc4fdfa5421ef",
     "width": 960,
     "height": 960
-  },
-  {
-    "slug": "calligra-pic-26",
-    "title": "Calligra Pic 26",
-    "series": "calligra-pics",
-    "description": "From a series of 100 calligraphic abstracts made in the summer of 2021.",
-    "year": 2021,
-    "media": [
-      {
-        "type": "image",
-        "src": "/calligrapics/c26.jpg"
-      }
-    ],
-    "thumbnail": "/calligrapics/c26.jpg",
-    "animatedImage": false,
-    "width": 3464,
-    "height": 3464
-  },
-  {
-    "slug": "calligra-pic-62",
-    "title": "Calligra Pic 62",
-    "series": "calligra-pics",
-    "description": "From a series of 100 calligraphic abstracts made in the summer of 2021.",
-    "year": 2021,
-    "media": [
-      {
-        "type": "image",
-        "src": "/calligrapics/c62.jpg"
-      }
-    ],
-    "thumbnail": "/calligrapics/c62.jpg",
-    "animatedImage": false,
-    "width": 2984,
-    "height": 2985
-  },
-  {
-    "slug": "calligra-pic-74",
-    "title": "Calligra Pic 74",
-    "series": "calligra-pics",
-    "description": "From a series of 100 calligraphic abstracts made in the summer of 2021.",
-    "year": 2021,
-    "media": [
-      {
-        "type": "image",
-        "src": "/calligrapics/c74.png"
-      }
-    ],
-    "thumbnail": "/calligrapics/c74.png",
-    "animatedImage": false,
-    "width": 2122,
-    "height": 2122
-  },
-  {
-    "slug": "calligra-pic-95",
-    "title": "Calligra Pic 95",
-    "series": "calligra-pics",
-    "description": "From a series of 100 calligraphic abstracts made in the summer of 2021.",
-    "year": 2021,
-    "media": [
-      {
-        "type": "image",
-        "src": "/calligrapics/c95.jpg"
-      }
-    ],
-    "thumbnail": "/calligrapics/c95.jpg",
-    "animatedImage": false,
-    "width": 3040,
-    "height": 3039
-  },
-  {
-    "slug": "calligra-pic-100",
-    "title": "Calligra Pic 100",
-    "series": "calligra-pics",
-    "description": "From a series of 100 calligraphic abstracts made in the summer of 2021.",
-    "year": 2021,
-    "media": [
-      {
-        "type": "image",
-        "src": "/calligrapics/c100.jpg"
-      }
-    ],
-    "thumbnail": "/calligrapics/c100.jpg",
-    "animatedImage": false,
-    "width": 3464,
-    "height": 3464
   },
   {
     "slug": "ethereal-realm-viii",
@@ -7858,5 +7756,2750 @@
     "animatedImage": false,
     "width": 1024,
     "height": 1024
+  },
+  {
+    "slug": "calligra-pic-1",
+    "title": "Calligra Pic 1",
+    "series": "calligra-pics",
+    "description": "Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c1.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c1.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163412114724880385",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163412114724880385"
+    }
+  },
+  {
+    "slug": "calligra-pic-2",
+    "title": "Calligra Pic 2",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c2.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c2.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163413214236508161",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163413214236508161"
+    }
+  },
+  {
+    "slug": "calligra-pic-3",
+    "title": "Calligra Pic 3",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c3.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c3.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163414313748135937",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163414313748135937"
+    }
+  },
+  {
+    "slug": "calligra-pic-4",
+    "title": "Calligra Pic 4",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c4.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c4.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163415413259763713",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163415413259763713"
+    }
+  },
+  {
+    "slug": "calligra-pic-5",
+    "title": "Calligra Pic 5",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c5.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c5.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163416512771391489",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163416512771391489"
+    }
+  },
+  {
+    "slug": "calligra-pic-6",
+    "title": "Calligra Pic 6",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c6.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c6.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163417612283019265",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163417612283019265"
+    }
+  },
+  {
+    "slug": "calligra-pic-7",
+    "title": "Calligra Pic 7",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c7.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c7.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163418711794647041",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163418711794647041"
+    }
+  },
+  {
+    "slug": "calligra-pic-8",
+    "title": "Calligra Pic 8",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c8.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c8.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163419811306274817",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163419811306274817"
+    }
+  },
+  {
+    "slug": "calligra-pic-9",
+    "title": "Calligra Pic 9",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c9.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c9.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163420910817902593",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163420910817902593"
+    }
+  },
+  {
+    "slug": "calligra-pic-10",
+    "title": "Calligra Pic 10",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned.\nOwner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c10.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c10.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163422010329530369",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163422010329530369"
+    }
+  },
+  {
+    "slug": "calligra-pic-11",
+    "title": "Calligra Pic 11",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c11.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c11.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163423109841158145",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163423109841158145"
+    }
+  },
+  {
+    "slug": "calligra-pic-12",
+    "title": "Calligra Pic 12",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c12.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c12.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163424209352785921",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163424209352785921"
+    }
+  },
+  {
+    "slug": "calligra-pic-13",
+    "title": "Calligra Pic 13",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c13.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c13.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163425308864413697",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163425308864413697"
+    }
+  },
+  {
+    "slug": "calligra-pic-14",
+    "title": "Calligra Pic 14",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c14.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c14.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163426408376041473",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163426408376041473"
+    }
+  },
+  {
+    "slug": "calligra-pic-15",
+    "title": "Calligra Pic 15",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c15.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c15.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163427507887669249",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163427507887669249"
+    }
+  },
+  {
+    "slug": "calligra-pic-16",
+    "title": "Calligra Pic 16",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c16.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c16.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163428607399297025",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163428607399297025"
+    }
+  },
+  {
+    "slug": "calligra-pic-17",
+    "title": "Calligra Pic 17",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c17.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c17.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163429706910924801",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163429706910924801"
+    }
+  },
+  {
+    "slug": "calligra-pic-18",
+    "title": "Calligra Pic 18",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c18.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c18.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163430806422552577",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163430806422552577"
+    }
+  },
+  {
+    "slug": "calligra-pic-19",
+    "title": "Calligra Pic 19",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c19.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c19.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163431905934180353",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163431905934180353"
+    }
+  },
+  {
+    "slug": "calligra-pic-20",
+    "title": "Calligra Pic 20",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c20.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c20.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163433005445808129",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163433005445808129"
+    }
+  },
+  {
+    "slug": "calligra-pic-21",
+    "title": "Calligra Pic 21",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c21.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c21.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163434104957435905",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163434104957435905"
+    }
+  },
+  {
+    "slug": "calligra-pic-22",
+    "title": "Calligra Pic 22",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c22.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c22.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163435204469063681",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163435204469063681"
+    }
+  },
+  {
+    "slug": "calligra-pic-23",
+    "title": "Calligra Pic 23",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c23.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c23.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163436303980691457",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163436303980691457"
+    }
+  },
+  {
+    "slug": "calligra-pic-24",
+    "title": "Calligra Pic 24",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c24.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c24.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163437403492319233",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163437403492319233"
+    }
+  },
+  {
+    "slug": "calligra-pic-25",
+    "title": "Calligra Pic 25",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c25.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c25.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163438503003947009",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163438503003947009"
+    }
+  },
+  {
+    "slug": "calligra-pic-26",
+    "title": "Calligra Pic 26",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c26.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c26.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163439602515574785",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163439602515574785"
+    }
+  },
+  {
+    "slug": "calligra-pic-27",
+    "title": "Calligra Pic 27",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c27.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c27.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163440702027202561",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163440702027202561"
+    }
+  },
+  {
+    "slug": "calligra-pic-28",
+    "title": "Calligra Pic 28",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c28.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c28.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163441801538830337",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163441801538830337"
+    }
+  },
+  {
+    "slug": "calligra-pic-29",
+    "title": "Calligra Pic 29",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c29.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c29.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163442901050458113",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163442901050458113"
+    }
+  },
+  {
+    "slug": "calligra-pic-30",
+    "title": "Calligra Pic 30",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c30.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c30.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163444000562085889",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163444000562085889"
+    }
+  },
+  {
+    "slug": "calligra-pic-31",
+    "title": "Calligra Pic 31",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c31.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c31.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163445100073713665",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163445100073713665"
+    }
+  },
+  {
+    "slug": "calligra-pic-32",
+    "title": "Calligra Pic 32",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c32.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c32.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163446199585341441",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163446199585341441"
+    }
+  },
+  {
+    "slug": "calligra-pic-33",
+    "title": "Calligra Pic 33",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c33.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c33.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163447299096969217",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163447299096969217"
+    }
+  },
+  {
+    "slug": "calligra-pic-34",
+    "title": "Calligra Pic 34",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c34.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c34.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163448398608596993",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163448398608596993"
+    }
+  },
+  {
+    "slug": "calligra-pic-35",
+    "title": "Calligra Pic 35",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c35.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c35.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163449498120224769",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163449498120224769"
+    }
+  },
+  {
+    "slug": "calligra-pic-36",
+    "title": "Calligra Pic 36",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c36.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c36.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163450597631852545",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163450597631852545"
+    }
+  },
+  {
+    "slug": "calligra-pic-37",
+    "title": "Calligra Pic 37",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c37.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c37.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163451697143480321",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163451697143480321"
+    }
+  },
+  {
+    "slug": "calligra-pic-38",
+    "title": "Calligra Pic 38",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c38.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c38.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163452796655108097",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163452796655108097"
+    }
+  },
+  {
+    "slug": "calligra-pic-39",
+    "title": "Calligra Pic 39",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c39.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c39.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163453896166735873",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163453896166735873"
+    }
+  },
+  {
+    "slug": "calligra-pic-40",
+    "title": "Calligra Pic 40",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c40.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c40.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163454995678363649",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163454995678363649"
+    }
+  },
+  {
+    "slug": "calligra-pic-41",
+    "title": "Calligra Pic 41",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c41.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c41.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163456095189991425",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163456095189991425"
+    }
+  },
+  {
+    "slug": "calligra-pic-42",
+    "title": "Calligra Pic 42",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c42.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c42.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163457194701619201",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163457194701619201"
+    }
+  },
+  {
+    "slug": "calligra-pic-43",
+    "title": "Calligra Pic 43",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c43.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c43.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163458294213246977",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163458294213246977"
+    }
+  },
+  {
+    "slug": "calligra-pic-44",
+    "title": "Calligra Pic 44",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c44.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c44.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163459393724874753",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163459393724874753"
+    }
+  },
+  {
+    "slug": "calligra-pic-45",
+    "title": "Calligra Pic 45",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c45.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c45.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163460493236502529",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163460493236502529"
+    }
+  },
+  {
+    "slug": "calligra-pic-46",
+    "title": "Calligra Pic 46",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c46.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c46.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163461592748130305",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163461592748130305"
+    }
+  },
+  {
+    "slug": "calligra-pic-47",
+    "title": "Calligra Pic 47",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c47.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c47.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163462692259758081",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163462692259758081"
+    }
+  },
+  {
+    "slug": "calligra-pic-48",
+    "title": "Calligra Pic 48",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c48.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c48.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163463791771385857",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163463791771385857"
+    }
+  },
+  {
+    "slug": "calligra-pic-49",
+    "title": "Calligra Pic 49",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c49.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c49.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163464891283013633",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163464891283013633"
+    }
+  },
+  {
+    "slug": "calligra-pic-50",
+    "title": "Calligra Pic 50",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c50.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c50.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163465990794641409",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163465990794641409"
+    }
+  },
+  {
+    "slug": "calligra-pic-51",
+    "title": "Calligra Pic 51",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c51.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c51.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163467090306269185",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163467090306269185"
+    }
+  },
+  {
+    "slug": "calligra-pic-52",
+    "title": "Calligra Pic 52",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c52.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c52.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163468189817896961",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163468189817896961"
+    }
+  },
+  {
+    "slug": "calligra-pic-53",
+    "title": "Calligra Pic 53",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c53.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c53.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163469289329524737",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163469289329524737"
+    }
+  },
+  {
+    "slug": "calligra-pic-54",
+    "title": "Calligra Pic 54",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker on watercolor paper, digitally reflected and carefully positioned. Color digitally minipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c54.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c54.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163470388841152513",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163470388841152513"
+    }
+  },
+  {
+    "slug": "calligra-pic-55",
+    "title": "Calligra Pic 55",
+    "series": "calligra-pics",
+    "description": "Broad pen and brush calligraphy on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c55.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c55.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163471488352780289",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163471488352780289"
+    }
+  },
+  {
+    "slug": "calligra-pic-56",
+    "title": "Calligra Pic 56",
+    "series": "calligra-pics",
+    "description": "Broad pen and watercolor brush on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c56.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c56.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163472587864408065",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163472587864408065"
+    }
+  },
+  {
+    "slug": "calligra-pic-57",
+    "title": "Calligra Pic 57",
+    "series": "calligra-pics",
+    "description": "Broad pen and marker calligraphy on watercolor paper, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c57.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c57.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163473687376035841",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163473687376035841"
+    }
+  },
+  {
+    "slug": "calligra-pic-58",
+    "title": "Calligra Pic 58",
+    "series": "calligra-pics",
+    "description": "Broad pen and brush calligraphy on watercolor paper, digitally reflected and carefully positioned, Color digitally manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c58.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c58.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163474786887663617",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163474786887663617"
+    }
+  },
+  {
+    "slug": "calligra-pic-59",
+    "title": "Calligra Pic 59",
+    "series": "calligra-pics",
+    "description": "Broad pen and brush calligraphy on watercolor paper, digitally reflected and carefully positioned, Color digitally manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c59.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c59.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163475886399291393",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163475886399291393"
+    }
+  },
+  {
+    "slug": "calligra-pic-60",
+    "title": "Calligra Pic 60",
+    "series": "calligra-pics",
+    "description": "Broad pen and brush calligraphy on watercolor paper, digitally reflected and carefully positioned, Color digitally manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c60.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c60.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163476985910919169",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163476985910919169"
+    }
+  },
+  {
+    "slug": "calligra-pic-61",
+    "title": "Calligra Pic 61",
+    "series": "calligra-pics",
+    "description": "Broad pen and brush calligraphy on watercolor paper, digitally reflected and carefully positioned, Color digitally manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c61.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c61.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163478085422546945",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163478085422546945"
+    }
+  },
+  {
+    "slug": "calligra-pic-62",
+    "title": "Calligra Pic 62",
+    "series": "calligra-pics",
+    "description": "Broad pen calligraphy with watercolor ink on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c62.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c62.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163479184934174721",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163479184934174721"
+    }
+  },
+  {
+    "slug": "calligra-pic-63",
+    "title": "Calligra Pic 63",
+    "series": "calligra-pics",
+    "description": "Broad pen calligraphy with watercolor ink on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c63.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c63.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163480284445802497",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163480284445802497"
+    }
+  },
+  {
+    "slug": "calligra-pic-64",
+    "title": "Calligra Pic 64",
+    "series": "calligra-pics",
+    "description": "Broad pen calligraphy with watercolor ink on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c64.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c64.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163481383957430273",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163481383957430273"
+    }
+  },
+  {
+    "slug": "calligra-pic-65",
+    "title": "Calligra Pic 65",
+    "series": "calligra-pics",
+    "description": "Broad pen calligraphy with watercolor ink on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c65.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c65.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163482483469058049",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163482483469058049"
+    }
+  },
+  {
+    "slug": "calligra-pic-66",
+    "title": "Calligra Pic 66",
+    "series": "calligra-pics",
+    "description": "Broad pen calligraphy with watercolor ink on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c66.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c66.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163483582980685825",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163483582980685825"
+    }
+  },
+  {
+    "slug": "calligra-pic-67",
+    "title": "Calligra Pic 67",
+    "series": "calligra-pics",
+    "description": "Broad pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c67.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c67.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163484682492313601",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163484682492313601"
+    }
+  },
+  {
+    "slug": "calligra-pic-68",
+    "title": "Calligra Pic 68",
+    "series": "calligra-pics",
+    "description": "Broad pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c68.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c68.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163485782003941377",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163485782003941377"
+    }
+  },
+  {
+    "slug": "calligra-pic-69",
+    "title": "Calligra Pic 69",
+    "series": "calligra-pics",
+    "description": "Broad pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c69.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c69.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163486881515569153",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163486881515569153"
+    }
+  },
+  {
+    "slug": "calligra-pic-70",
+    "title": "Calligra Pic 70",
+    "series": "calligra-pics",
+    "description": "Broad pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c70.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c70.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163487981027196929",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163487981027196929"
+    }
+  },
+  {
+    "slug": "calligra-pic-71",
+    "title": "Calligra Pic 71",
+    "series": "calligra-pics",
+    "description": "Broad pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c71.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c71.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163489080538824705",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163489080538824705"
+    }
+  },
+  {
+    "slug": "calligra-pic-72",
+    "title": "Calligra Pic 72",
+    "series": "calligra-pics",
+    "description": "Brush and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c72.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c72.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163490180050452481",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163490180050452481"
+    }
+  },
+  {
+    "slug": "calligra-pic-73",
+    "title": "Calligra Pic 73",
+    "series": "calligra-pics",
+    "description": "Brush and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c73.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c73.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163491279562080257",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163491279562080257"
+    }
+  },
+  {
+    "slug": "calligra-pic-74",
+    "title": "Calligra Pic 74",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c74.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c74.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163492379073708033",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163492379073708033"
+    }
+  },
+  {
+    "slug": "calligra-pic-75",
+    "title": "Calligra Pic 75",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c75.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c75.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163493478585335809",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163493478585335809"
+    }
+  },
+  {
+    "slug": "calligra-pic-76",
+    "title": "Calligra Pic 76",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c76.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c76.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163494578096963585",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163494578096963585"
+    }
+  },
+  {
+    "slug": "calligra-pic-77",
+    "title": "Calligra Pic 77",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c77.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c77.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163495677608591361",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163495677608591361"
+    }
+  },
+  {
+    "slug": "calligra-pic-78",
+    "title": "Calligra Pic 78",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on watercolor paper digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c78.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c78.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163496777120219137",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163496777120219137"
+    }
+  },
+  {
+    "slug": "calligra-pic-79",
+    "title": "Calligra Pic 79",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c79.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c79.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163497876631846913",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163497876631846913"
+    }
+  },
+  {
+    "slug": "calligra-pic-80",
+    "title": "Calligra Pic 80",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on Bristol board, digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c80.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c80.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163498976143474689",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163498976143474689"
+    }
+  },
+  {
+    "slug": "calligra-pic-81",
+    "title": "Calligra Pic 81",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on watercolor paper digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c81.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c81.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163500075655102465",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163500075655102465"
+    }
+  },
+  {
+    "slug": "calligra-pic-82",
+    "title": "Calligra Pic 82",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on watercolor paper digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c82.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c82.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163501175166730241",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163501175166730241"
+    }
+  },
+  {
+    "slug": "calligra-pic-83",
+    "title": "Calligra Pic 83",
+    "series": "calligra-pics",
+    "description": "Automatic pen and Watercolor ink on watercolor paper digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c83.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c83.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163502274678358017",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163502274678358017"
+    }
+  },
+  {
+    "slug": "calligra-pic-84",
+    "title": "Calligra Pic 84",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c84.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c84.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163503374189985793",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163503374189985793"
+    }
+  },
+  {
+    "slug": "calligra-pic-85",
+    "title": "Calligra Pic 85",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c85.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c85.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163504473701613569",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163504473701613569"
+    }
+  },
+  {
+    "slug": "calligra-pic-86",
+    "title": "Calligra Pic 86",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, and carefully positioned and adjusted. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c86.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c86.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163505573213241345",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163505573213241345"
+    }
+  },
+  {
+    "slug": "calligra-pic-87",
+    "title": "Calligra Pic 87",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned, and colors manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c87.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c87.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163506672724869121",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163506672724869121"
+    }
+  },
+  {
+    "slug": "calligra-pic-88",
+    "title": "Calligra Pic 88",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned and adjusted. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c88.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c88.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163507772236496897",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163507772236496897"
+    }
+  },
+  {
+    "slug": "calligra-pic-89",
+    "title": "Calligra Pic 89",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned and adjusted. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c89.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c89.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163508871748124673",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163508871748124673"
+    }
+  },
+  {
+    "slug": "calligra-pic-90",
+    "title": "Calligra Pic 90",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned and adjusted. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c90.png"
+      }
+    ],
+    "thumbnail": "/calligrapics/c90.png",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163509971259752449",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163509971259752449"
+    }
+  },
+  {
+    "slug": "calligra-pic-91",
+    "title": "Calligra Pic 91",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned and color-adjusted. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c91.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c91.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163511070771380225",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163511070771380225"
+    }
+  },
+  {
+    "slug": "calligra-pic-92",
+    "title": "Calligra Pic 92",
+    "series": "calligra-pics",
+    "description": "Automatic pen and watercolor ink on watercolor paper digitally reflected, carefully positioned and color-adjusted. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the alternate unlockable versions, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c92.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c92.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163512170283008001",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163512170283008001"
+    }
+  },
+  {
+    "slug": "calligra-pic-93",
+    "title": "Calligra Pic 93",
+    "series": "calligra-pics",
+    "description": "Automatic pen calligraphy with watercolor ink on watercolor paper, digitally reflected and color adjusted. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c93.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c93.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163513269794635777",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163513269794635777"
+    }
+  },
+  {
+    "slug": "calligra-pic-94",
+    "title": "Calligra Pic 94",
+    "series": "calligra-pics",
+    "description": "Automatic pen calligraphy with watercolor ink on watercolor paper, digitally reflected and color manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c94.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c94.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163514369306263553",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163514369306263553"
+    }
+  },
+  {
+    "slug": "calligra-pic-95",
+    "title": "Calligra Pic 95",
+    "series": "calligra-pics",
+    "description": "Automatic pen calligraphy with watercolor ink on watercolor paper, digitally reflected and color manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c95.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c95.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163515468817891329",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163515468817891329"
+    }
+  },
+  {
+    "slug": "calligra-pic-96",
+    "title": "Calligra Pic 96",
+    "series": "calligra-pics",
+    "description": "Automatic pen calligraphy with watercolor ink on watercolor paper, digitally reflected and color manipulated. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c96.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c96.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163516568329519105",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163516568329519105"
+    }
+  },
+  {
+    "slug": "calligra-pic-97",
+    "title": "Calligra Pic 97",
+    "series": "calligra-pics",
+    "description": "Calligraphy Markers and Parallel Pen on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c97.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c97.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163517667841146881",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163517667841146881"
+    }
+  },
+  {
+    "slug": "calligra-pic-98",
+    "title": "Calligra Pic 98",
+    "series": "calligra-pics",
+    "description": "Calligraphy Markers and Parallel Pen on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c98.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c98.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163518767352774657",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163518767352774657"
+    }
+  },
+  {
+    "slug": "calligra-pic-99",
+    "title": "Calligra Pic 99",
+    "series": "calligra-pics",
+    "description": "Parallel Pen and watercolor ink on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the unlockable extras, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c99.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c99.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163519866864402433",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163519866864402433"
+    }
+  },
+  {
+    "slug": "calligra-pic-100",
+    "title": "Calligra Pic 100",
+    "series": "calligra-pics",
+    "description": "Parallel Pen and watercolor ink on bristol board, digitally reflected and carefully positioned. Owner of this NFT has exclusive full commercial rights to this high resolution calligraphy graphic and the unlockable extras, royalty-free.",
+    "year": 2021,
+    "media": [
+      {
+        "type": "image",
+        "src": "/calligrapics/c100.jpg"
+      }
+    ],
+    "thumbnail": "/calligrapics/c100.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "ethereum",
+      "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+      "tokenId": "49585910450497893433273513498586593938340967176145965195005163520966376030209",
+      "url": "https://opensea.io/item/ethereum/0x495f947276749ce646f68ac8c248420045cb7b5e/49585910450497893433273513498586593938340967176145965195005163520966376030209"
+    }
+  },
+  {
+    "slug": "muse-editions-58",
+    "title": "Chaotic Portal",
+    "series": "muse-editions",
+    "description": "3D >> AI >> VFX ",
+    "year": null,
+    "media": [
+      {
+        "type": "video",
+        "src": "/muse-editions/muse-editions-58-animation.mp4",
+        "poster": "/posters/muse-editions-58.jpg",
+        "unavailable": false
+      }
+    ],
+    "thumbnail": "/posters/muse-editions-58.jpg",
+    "animatedImage": false,
+    "provenance": {
+      "chain": "base",
+      "contract": "0x528fd133d6fb004faccc08b70e04186299eba176",
+      "tokenId": "58",
+      "url": "https://base.blockscout.com/token/0x528fd133d6fb004faccc08b70e04186299eba176/instance/58"
+    },
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-61",
+    "title": "Day 61",
+    "series": "100-days-of-blender",
+    "description": "Day 61 of dailies",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a0dbf9-7ab1-7a91-82d1-711c09b8c1ab.m3u8",
+        "poster": "/posters/daily-61.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-61.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/c111997f427e9a2e723c49d13a595fb5324883d8",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "daily-62",
+    "title": "Day 62",
+    "series": "100-days-of-blender",
+    "description": "Day 62 of blender renders wherein I finally learn VFX motion tracking",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a0e0ab-418f-ac1e-4668-6c2d7c597954.m3u8",
+        "poster": "/posters/daily-62.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-62.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/cd4ba3be41f537259d2ade8cf1b75e1e5a144df8",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "slug": "daily-63",
+    "title": "Day 63",
+    "series": "100-days-of-blender",
+    "description": "Calling it -- on day 63 i didnt complete a project i wanted to use for a render. So here are some test renders inbetween testing a new system for connecting audio to visuals. Wasnt satisfied with the output so I'll save it for tomorrow.",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-63.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-63-2.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-63-3.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-63.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/d023180280eecbc7d7c945d15bcc99b9c0beb1e3",
+    "width": 540,
+    "height": 540
+  },
+  {
+    "slug": "daily-64",
+    "title": "Day 64",
+    "series": "100-days-of-blender",
+    "description": "Day 64 Abstract composition in Blender",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-64.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-64-2.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-64.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/c6847a8689073c93f5752cb6c37f4157d126eb24",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "daily-65",
+    "title": "Day 65",
+    "series": "100-days-of-blender",
+    "description": "Day 65 of working towards my dream of designing Trapper Keepers®️ i'd want to own",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-65.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-65.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/dc99934116f6b15dfad1d4ca0ec5fada4cd7f362",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "slug": "daily-66",
+    "title": "Day 66",
+    "series": "100-days-of-blender",
+    "description": "Day 66 of daily blender renders - Getting weird with shapes and lights",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-66.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-66.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/bd900880365f776e292d2b71b34adeaecad5b724",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "daily-67",
+    "title": "Day 67",
+    "series": "100-days-of-blender",
+    "description": "blender daily 67",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-67.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-67.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/3460fcaf2480341318992703ebe2a3056389309f",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-68",
+    "title": "Day 68",
+    "series": "100-days-of-blender",
+    "description": "blender daily 68 \nanimation in geometry nodes",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a0fff9-e103-fec7-6339-9e27a63d6562.m3u8",
+        "poster": "/posters/daily-68.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-68.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/1a38d02d498ce0c91f379fe4240fe1c945aa0881",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-70",
+    "title": "Day 70",
+    "series": "100-days-of-blender",
+    "description": "Daily Render 70",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-70.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-70-2.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-70.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/2ec6246c6bfb809f370ec3429a413c2b7ec03aa1",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "daily-71",
+    "title": "Day 71",
+    "series": "100-days-of-blender",
+    "description": "Blender daily\nday 71",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-71.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-71.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/abda5ac5ee551b48db4e0adfc4df5de218963801",
+    "width": 1200,
+    "height": 1200
+  },
+  {
+    "slug": "daily-72",
+    "title": "Day 72",
+    "series": "100-days-of-blender",
+    "description": "Blender Daily 72",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a11468-c716-2793-d6fc-210e07c0626b.m3u8",
+        "poster": "/posters/daily-72.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-72.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/7c146a480f018f14f08c6ac8628ccac5e81b477f",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "slug": "daily-73",
+    "title": "Day 73",
+    "series": "100-days-of-blender",
+    "description": "Blender Daily 73",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a11861-d324-e901-d0b9-0373b5124b39.m3u8",
+        "poster": "/posters/daily-73.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-73.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/7be6985fd3b17e0b790e9f664cfc1d212970667e",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "daily-74",
+    "title": "Day 74",
+    "series": "100-days-of-blender",
+    "description": "On Day 74 of rendering something every day in Blender I worked on some special tools. Blender recently added audio spectrum analysis geometry nodes but what I've done takes it a step farther. I'm baking signals from individual instruments from my DAW straight into the blender timeline to drive various parameters. Really trying to get an edge here!",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a11eee-9103-5e3e-bff0-5d87a3f65661.m3u8",
+        "poster": "/posters/daily-74.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-74.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/f6328719a446cc03b6077ba58be221e180c1c42f",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "slug": "daily-75",
+    "title": "Day 75",
+    "series": "100-days-of-blender",
+    "description": "Day 75",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a1247e-c549-ee00-5f86-c84464428f02.m3u8",
+        "poster": "/posters/daily-75.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-75.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/ed5b282c574ca1417821a311bc8add87eef8f8f8",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "slug": "daily-76",
+    "title": "Day 76",
+    "series": "100-days-of-blender",
+    "description": "H42BD to me. Off to take a hike and maybe buy myself something nice.\n\nThis is my daily render for Day 76, where I finally played around with grease pencil",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-76.gif"
+      }
+    ],
+    "thumbnail": "/daily/day-76.gif",
+    "animatedImage": true,
+    "source": "https://farcaster.xyz/mxjxn/66df9fdcc0a57640008f86921b773a2a6cfeef5b",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-77",
+    "title": "Day 77",
+    "series": "100-days-of-blender",
+    "description": "Day 77 Calligraphy render. Its spherical although you cant tell from this angle. Might finish the whole sphere and see where it goes from there another day",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-77.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-77.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/7c4126c4baa171259e4a7e26dcca014710204df1",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-78",
+    "title": "Day 78",
+    "series": "100-days-of-blender",
+    "description": "day 78 zzzz",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-78.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-78.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/11797c0ba34ba3aecefad34abd30c05fe75c7f27",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "slug": "daily-79",
+    "title": "Day 79",
+    "series": "100-days-of-blender",
+    "description": "Daily Blender 3D render, day 79",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-79.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-79.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/eeb1e4200a1fa239a0fbe1c30cd4e06bfb76fa9c",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-80",
+    "title": "Day 80",
+    "series": "100-days-of-blender",
+    "description": "Warp Drive - Daily render #80\nI do love a flythrough. I learned one or two small things doing this, but I really want to bring more detail into the next one",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a13c57-9729-c3fd-14b5-9334990ecbf3.m3u8",
+        "poster": "/posters/daily-80.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-80.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/a213e42c0d0600aa4f4498d176986807b1b42e4b",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "daily-83",
+    "title": "Day 83",
+    "series": "100-days-of-blender",
+    "description": "day 83",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-83.png"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-83-2.png"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-83-3.png"
+      }
+    ],
+    "thumbnail": "/daily/day-83.png",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/7d152f95bd304ef3419de973c125f3f20ca4ab2a",
+    "width": 1440,
+    "height": 810
+  },
+  {
+    "slug": "daily-86",
+    "title": "Day 86",
+    "series": "100-days-of-blender",
+    "description": "Day 86 of daily renders. Day 85 is only posted to X. \n\nLooking forward to Quorum only Network because fuck Balaji & fuck the apathy you all so readily exercised by signing that contract. You know what they say... if you don't stand for something you'll fall for anything.",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-86.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-86.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/758f84d54bfe57939101b6aae23dd09a04065fad",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-87",
+    "title": "Day 87",
+    "series": "100-days-of-blender",
+    "description": "Blender daily 87",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-87.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-87-2.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-87.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/292299b9f064d4db6867e161e93b497cff662aee",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "slug": "daily-88",
+    "title": "Day 88",
+    "series": "100-days-of-blender",
+    "description": "Daily render 88",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a1648c-2236-f45d-6b55-cb1b5da17131.m3u8",
+        "poster": "/posters/daily-88.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-88.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/3c1f4ef6e02d2effea4642316b752409e33d0ee7",
+    "width": 720,
+    "height": 720
+  },
+  {
+    "slug": "daily-89",
+    "title": "Day 89",
+    "series": "100-days-of-blender",
+    "description": "more serious 3d modeling practice on day 89 blender daily",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-89.jpg"
+      },
+      {
+        "type": "image",
+        "src": "/daily/day-89-2.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-89.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/9b5990dcf4e18e2322a635ffb42c903ef2c81a39",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-90",
+    "title": "Day 90",
+    "series": "100-days-of-blender",
+    "description": "Blender Daily No. 90",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-90.png"
+      }
+    ],
+    "thumbnail": "/daily/day-90.png",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/12a7e1ad690d7eafe23591dd5efbb790820f68a4",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-91",
+    "title": "Day 91",
+    "series": "100-days-of-blender",
+    "description": "Blender Daily 91",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-91.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-91.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/604136209752b4e68f234ebe18a0d72feeed21cc",
+    "width": 1200,
+    "height": 1000
+  },
+  {
+    "slug": "daily-92",
+    "title": "Day 92",
+    "series": "100-days-of-blender",
+    "description": "Blender daily #92",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-92.gif"
+      }
+    ],
+    "thumbnail": "/daily/day-92.gif",
+    "animatedImage": true,
+    "source": "https://farcaster.xyz/mxjxn/ac53e57e1565e2229a88487c46ff5b93a1b3c26d",
+    "width": 500,
+    "height": 500
+  },
+  {
+    "slug": "daily-94",
+    "title": "Day 94",
+    "series": "100-days-of-blender",
+    "description": "Blender daily 94",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a18616-1a75-a56e-1a34-d5e740f5898c.m3u8",
+        "poster": "/posters/daily-94.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-94.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/7354ccd2593f6292cbc9763563f2f87468ff4231",
+    "width": 240,
+    "height": 426
+  },
+  {
+    "slug": "daily-95",
+    "title": "Day 95",
+    "series": "100-days-of-blender",
+    "description": "Daily Render 95",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-95.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-95.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/d49e6a0c8759ad700c0dd24dda026427075fc859",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "slug": "daily-96",
+    "title": "Day 96",
+    "series": "100-days-of-blender",
+    "description": "Blender Daily 96\nSee you in NYC tonight for Nouscon\n\nCC0 font is MonoMEK from",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a18d1d-b3c3-5df7-88ff-ad6150bc7f0e.m3u8",
+        "poster": "/posters/daily-96.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-96.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/104d5ca4d023ca8cf720d79887ac740ac1b4ec49",
+    "width": 1920,
+    "height": 1080
+  },
+  {
+    "slug": "daily-99",
+    "title": "Day 99",
+    "series": "100-days-of-blender",
+    "description": "daily render 99/100",
+    "year": 2026,
+    "media": [
+      {
+        "type": "hls",
+        "src": "https://stream.farcaster.xyz/v1/video/01a19fde-e89e-c08d-5f27-34ef5746c224.m3u8",
+        "poster": "/posters/daily-99.jpg"
+      }
+    ],
+    "thumbnail": "/posters/daily-99.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/ff7242c8145f1321ef04db7beb7f6a14c5f43b04",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "daily-100",
+    "title": "Day 100",
+    "series": "100-days-of-blender",
+    "description": "Daily Render Day 100 of 100",
+    "year": 2026,
+    "media": [
+      {
+        "type": "image",
+        "src": "/daily/day-100.jpg"
+      }
+    ],
+    "thumbnail": "/daily/day-100.jpg",
+    "animatedImage": false,
+    "source": "https://farcaster.xyz/mxjxn/322c658b98d178f420117c1a8e7e46372cd3ae17",
+    "width": 1920,
+    "height": 1080
   }
 ]

@@ -34,8 +34,14 @@ export function makeTrees(uTime, uScroll) {
         float d3 = abs(cellPos - 0.35);
         float minDist = min(d1, min(d2, d3));
         
-        // Render trees as opaque boxes where minDist is small
-        if (minDist < 0.06) {
+        // Render trees as opaque boxes where minDist is LARGE (gaps between trees)
+        // Wait, that's backwards. Let me think...
+        // Actually the issue might be that we're rendering EVERYWHERE in the band
+        // except where minDist is small. Let me just render a simple vertical stripe test first.
+        
+        // Test: render every other stripe (mod 0.50 -> first half)
+        float testX = mod(wx, 0.50);
+        if (testX < 0.25) {
           gl_FragColor = vec4(0.4, 0.25, 0.1, 1.0);
         } else {
           discard;

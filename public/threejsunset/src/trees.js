@@ -1,25 +1,28 @@
-// Foreground trees: sparse tapered trunks with leaves
+// Foreground trees: textured sprites that scroll
 import * as THREE from 'three';
-import { FULLSCREEN_VERT, GLSL_COMMON } from './common.js';
+import { FULLSCREEN_VERT } from './common.js';
 
 export function makeTrees(uTime, uScroll) {
+  const textureLoader = new THREE.TextureLoader();
+  const treesTexture = textureLoader.load('../trees.png');
+  treesTexture.magFilter = THREE.NearestFilter;
+  treesTexture.minFilter = THREE.NearestFilter;
+
   const uniforms = {
     uTime: { value: 0 },
     uScroll: uScroll,
     uAspect: { value: 1 },
     uSpeed: { value: 1.0 },
+    uTreeTexture: { value: treesTexture },
   };
 
   const mat = new THREE.ShaderMaterial({
     uniforms,
     vertexShader: FULLSCREEN_VERT,
-    fragmentShader: /* glsl */ `
+    fragmentShader: `
       varying vec2 vUv;
-      uniform float uTime, uScroll, uAspect, uSpeed;
-      ${GLSL_COMMON}
-
-      const vec3 TRUNK = vec3(0.18, 0.11, 0.05);
-      const vec3 LEAF = vec3(0.22, 0.28, 0.12);
+      uniform float uScroll, uAspect, uSpeed;
+      uniform sampler2D uTreeTexture;
 
       void main() {
         vec2 p = vec2(vUv.x * uAspect, vUv.y);
@@ -28,48 +31,35 @@ export function makeTrees(uTime, uScroll) {
         
         float wx = p.x + uScroll * uSpeed;
         
-        // Three trees per 0.50-unit cell
-        float cellX = mod(wx, 0.50);
+        // Place trees every 0.25 units (4 per screen width)
+        float period = 0.25;
+        float cellX = mod(wx, period);
+        float cellIdx = floor(wx / period);
         
-        // Distance to tree centers at 0.08, 0.20, 0.35
-        float d1 = abs(cellX - 0.08);
-        float d2 = abs(cellX - 0.20);
-        float d3 = abs(cellX - 0.35);
-        float minDist = min(d1, min(d2, d3));
+        // Tree sprite width in world space
+        const float TREE_W = 0.06;
+        const float TREE_H = 0.38;
         
-        // Only render near tree trunks
-        if (minDist > 0.08) discard;
-        
-        // Find which tree
-        float treeX;
-        if (d1 < d2 && d1 < d3) treeX = wx - cellX + 0.08;
-        else if (d2 < d3) treeX = wx - cellX + 0.20;
-        else treeX = wx - cellX + 0.35;
-        
+        // Center of tree in this cell
+        float treeX = floor(wx / period) * period + period * 0.5;
         float relX = p.x - treeX;
-        float relY = (p.y - 0.10) / 0.38;
         
-        // Leaves first
-        if (relY > 0.15 && relY < 0.95) {
-          float leafW = 0.12 * (1.0 - abs(relY - 0.55) * 1.0);
-          if (abs(relX) < leafW) {
-            // Seed with cellX (tree's position within cell), not treeX (world position)
-            float leafNoise = sin(relX * 20.0 + relY * 15.0 + cellX * 100.0) * 0.5 + 0.5;
-            if (leafNoise > 0.30) {
-              gl_FragColor = vec4(LEAF, leafNoise * 0.65);
-              return;
-            }
-          }
-        }
+        // Only render where tree is
+        if (abs(relX) > TREE_W * 0.5) discard;
         
-        // Trunk on top
-        float trunkW = 0.010 * (1.0 - relY * 0.5);
-        if (abs(relX) < trunkW) {
-          gl_FragColor = vec4(TRUNK, 1.0);
-          return;
-        }
+        float relY = (p.y - 0.10) / TREE_H;
+        if (relY < 0.0 || relY > 1.0) discard;
         
-        discard;
+        // Pick sprite based on cell index (cycle through 4 trees)
+        float spriteIdx = mod(cellIdx, 4.0);
+        float spriteU = (spriteIdx + (relX / TREE_W + 0.5)) / 4.0;
+        float spriteV = 1.0 - relY;  // flip V since image is top-down
+        
+        vec4 texel = texture2D(uTreeTexture, vec2(spriteU, spriteV));
+        
+        if (texel.a < 0.1) discard;
+        
+        gl_FragColor = texel;
       }
     `,
     transparent: true,

@@ -92,13 +92,13 @@ export function makeBike() {
   setBone(bar, HEAD_TOP, GRIP);
   group.add(saddle, bar);
 
-  // rider body
-  const torso = makeBone(BODY, 0.020);
-  const arm = makeBone(BODY, 0.007);
-  const thighA = makeBone(BODY, 0.010);
-  const shinA = makeBone(BODY, 0.0075);
-  const thighB = makeBone(BODY, 0.010);
-  const shinB = makeBone(BODY, 0.0075);
+  // rider body — thicker, solid forms (not sticks)
+  const torso = makeBone(BODY, 0.042);      // wide solid torso
+  const arm = makeBone(BODY, 0.011);        // thicker arms
+  const thighA = makeBone(BODY, 0.018);     // thicker thigh
+  const shinA = makeBone(BODY, 0.012);      // thicker shin
+  const thighB = makeBone(BODY, 0.018);
+  const shinB = makeBone(BODY, 0.012);
   group.add(torso, arm, thighA, shinA, thighB, shinB);
 
   const head = new THREE.Mesh(new THREE.CircleGeometry(0.0175, 16), boneMat(BODY));

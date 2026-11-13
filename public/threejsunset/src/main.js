@@ -6,7 +6,7 @@ import { makeSky } from './sky.js';
 import { makeBand } from './hills.js';
 import { makeWater } from './water.js';
 import { makeGround } from './ground.js';
-import { makeReeds } from './reeds.js';
+import { makeTrees } from './trees.js';
 import { makeBike } from './bike.js';
 import { makePost } from './post.js';
 import { SCROLL, LINES } from './common.js';
@@ -53,7 +53,7 @@ const farBank = addLayer(makeBand({
   strip: 0.48,
 }, uTime, uScroll), 'farBank');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
-const reeds = addLayer(makeReeds(uTime, uScroll), 'reeds');
+const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));

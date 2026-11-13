@@ -92,7 +92,7 @@ export function makeWater(uTime, uScroll, sunX) {
   });
 
   const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), mat);
-  mesh.renderOrder = 3;
+  mesh.renderOrder = 4;  // behind trees (5), after ground/bike
   mesh.frustumCulled = false;
 
   return { mesh, uniforms };

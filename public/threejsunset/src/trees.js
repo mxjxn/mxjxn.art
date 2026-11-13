@@ -97,7 +97,7 @@ export function makeTrees(uTime, uScroll) {
   });
 
   const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), mat);
-  mesh.renderOrder = 3;
+  mesh.renderOrder = 5;  // AFTER water (4) so trees render in front
   mesh.frustumCulled = false;
 
   return { mesh, uniforms };

@@ -16,7 +16,6 @@ export function makeTrees(uTime, uScroll) {
     fragmentShader: /* glsl */ `
       varying vec2 vUv;
       uniform float uTime, uScroll, uAspect, uSpeed;
-      ${GLSL_COMMON}
 
       const vec3 TRUNK = vec3(0.18, 0.11, 0.05);
       const vec3 LEAF = vec3(0.22, 0.28, 0.12);

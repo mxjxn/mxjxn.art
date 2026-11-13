@@ -53,7 +53,8 @@ export function makeTrees(uTime, uScroll) {
         if (relY > 0.15 && relY < 0.95) {
           float leafW = 0.12 * (1.0 - abs(relY - 0.55) * 1.0);
           if (abs(relX) < leafW) {
-            float leafNoise = sin(relX * 20.0 + relY * 15.0 + treeX * 100.0) * 0.5 + 0.5;
+            // Seed with cellX (tree's position within cell), not treeX (world position)
+            float leafNoise = sin(relX * 20.0 + relY * 15.0 + cellX * 100.0) * 0.5 + 0.5;
             if (leafNoise > 0.30) {
               gl_FragColor = vec4(LEAF, leafNoise * 0.65);
               return;

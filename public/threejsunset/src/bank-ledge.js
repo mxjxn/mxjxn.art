@@ -33,7 +33,7 @@ export function makeBankLedge(uTime, uScroll) {
         float wx = p.x + uScroll * uSpeed;
         
         // Simple organic texture: noise-based grass tufts
-        float noise = fnoise(vec2(wx * 8.0, p.y * 20.0));
+        float noise = fbm(vec2(wx * 8.0, p.y * 20.0));
         float tex = smoothstep(0.3, 0.7, noise);
         
         // Blend earth and grass

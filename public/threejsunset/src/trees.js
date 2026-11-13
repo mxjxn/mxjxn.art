@@ -46,19 +46,40 @@ export function makeTrees(uTime, uScroll) {
         }
         
         // Branches at 30%, 60%, 90%
-        for (float i = 0.3; i < 1.0; i += 0.3) {
-          float branchY = i;
-          float distY = abs(relY - branchY);
-          if (distY < 0.06) {
-            float angle = sin(i * 3.14159 + seed) * 0.12;
-            float len = (1.0 - i) * 0.08;
-            float branchX = len * angle;
-            float distX = abs(relX - branchX);
-            float branchW = 0.003 * (1.0 - distY / 0.06);
-            if (distX < branchW) {
-              return 0.6;
-            }
-          }
+        // Branch 1 at 30%
+        float branchY1 = 0.3;
+        float distY1 = abs(relY - branchY1);
+        if (distY1 < 0.06) {
+          float angle1 = sin(0.3 * 3.14159 + seed) * 0.12;
+          float len1 = 0.7 * 0.08;
+          float branchX1 = len1 * angle1;
+          float distX1 = abs(relX - branchX1);
+          float branchW1 = 0.003 * (1.0 - distY1 / 0.06);
+          if (distX1 < branchW1) return 0.6;
+        }
+        
+        // Branch 2 at 60%
+        float branchY2 = 0.6;
+        float distY2 = abs(relY - branchY2);
+        if (distY2 < 0.06) {
+          float angle2 = sin(0.6 * 3.14159 + seed) * 0.12;
+          float len2 = 0.4 * 0.08;
+          float branchX2 = len2 * angle2;
+          float distX2 = abs(relX - branchX2);
+          float branchW2 = 0.003 * (1.0 - distY2 / 0.06);
+          if (distX2 < branchW2) return 0.6;
+        }
+        
+        // Branch 3 at 90%
+        float branchY3 = 0.9;
+        float distY3 = abs(relY - branchY3);
+        if (distY3 < 0.06) {
+          float angle3 = sin(0.9 * 3.14159 + seed) * 0.12;
+          float len3 = 0.1 * 0.08;
+          float branchX3 = len3 * angle3;
+          float distX3 = abs(relX - branchX3);
+          float branchW3 = 0.003 * (1.0 - distY3 / 0.06);
+          if (distX3 < branchW3) return 0.6;
         }
         
         return 0.0;

@@ -32,12 +32,12 @@ export function makeTrees(uTime, uScroll) {
 
       void main() {
         vec2 p = vec2(vUv.x * uAspect, vUv.y);
-        if (p.y < 0.11 || p.y > 0.63) discard;
+        if (p.y < 0.11 || p.y > 0.70) discard;
 
         float wx  = p.x + uScroll * uSpeed;
         vec2  pw  = vec2(wx, p.y);  // world-space pixel — used for ALL geometry tests
 
-        float period  = 0.55;
+        float period  = 0.35;
         float cellIdx = floor(wx / period);
         float cellX   = mod(wx, period);
 
@@ -53,7 +53,7 @@ export function makeTrees(uTime, uScroll) {
         float h8 = hash11(cellIdx * 8.421 + 0.99);
         float h9 = hash11(cellIdx * 2.718 + 0.05);
 
-        if (h0 < 0.18) discard;  // skip ~18% of cells
+        if (h0 < 0.08) discard;  // skip ~8% of cells
 
         // Tree root — world x
         float treeX = cellIdx * period + period * (0.15 + h1 * 0.70);
@@ -61,8 +61,8 @@ export function makeTrees(uTime, uScroll) {
         float treeH = 0.28 + h2 * 0.22;  // height 0.28..0.50
         float topY  = rootY + treeH;
 
-        // Coarse cull using world x
-        if (abs(wx - treeX) > 0.22 || p.y > topY + 0.02) discard;
+        // Coarse cull using world x — generous to avoid edge clipping
+        if (abs(wx - treeX) > 0.30 || p.y > topY + 0.06) discard;
 
         // Trunk geometry in world space
         float lean = (h3 - 0.5) * 0.06;

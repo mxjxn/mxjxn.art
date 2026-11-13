@@ -45,7 +45,7 @@ if (window.location.hash === '#debug') {
 const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, -10, 10); // z=0 geometry sits mid-volume (near 0 clips it)
 
 const uTime = { value: 0 };
-const uScroll = { value: 0.2 };  // Start with trees already visible on screen
+const uScroll = { value: 0 };
 
 const layers = [];
 function addLayer(layer, name) { layer.mesh.userData.name = name; layers.push(layer); scene.add(layer.mesh); return layer; }

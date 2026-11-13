@@ -5,14 +5,15 @@
 // units are square (1 unit = half a screen height). Ground line is local y = 0.
 import * as THREE from 'three';
 
-const BODY = 0x170a12;      // warm near-black plum
-const ACCENT = 0x7d2130;    // dark scarf red
+const BODY = 0xc87941;      // warm amber — visible against dark ground
+const ACCENT = 0xd63a2a;    // bright red scarf
 
 const WHEEL_R = 0.052;
 const WHEEL_X = 0.115;
 const BB = { x: -0.010, y: 0.075 };       // bottom bracket
 const SADDLE = { x: -0.058, y: 0.168 };
 const HEAD_TOP = { x: 0.075, y: 0.158 };  // head tube top
+const HEAD_BOT = { x: 0.082, y: 0.118 };  // head tube bottom (fork crown)
 const GRIP = { x: 0.093, y: 0.168 };
 const HIP = { x: -0.056, y: 0.182 };
 const SHOULDER = { x: -0.018, y: 0.240 };
@@ -82,6 +83,7 @@ export function makeBike() {
     makeBone(BODY, F), makeBone(BODY, F), makeBone(BODY, F),
     makeBone(BODY, F * 0.8), makeBone(BODY, F * 0.8),
     makeBone(BODY, F * 0.8), makeBone(BODY, F),
+    makeBone(BODY, F),  // head tube
   ];
   group.add(...frame);
 
@@ -146,13 +148,14 @@ export function makeBike() {
     setBone(arm, sh, GRIP);
 
     // frame static
-    setBone(frame[0], BB, SADDLE);
-    setBone(frame[1], SADDLE, HEAD_TOP);
-    setBone(frame[2], BB, HEAD_TOP);
-    setBone(frame[3], BB, { x: -WHEEL_X, y: WHEEL_R });
-    setBone(frame[4], SADDLE, { x: -WHEEL_X, y: WHEEL_R });
-    setBone(frame[5], HEAD_TOP, { x: WHEEL_X, y: WHEEL_R });
-    setBone(frame[6], HEAD_TOP, GRIP);
+    setBone(frame[0], BB, SADDLE);                              // seat tube
+    setBone(frame[1], SADDLE, HEAD_TOP);                        // top tube
+    setBone(frame[2], BB, HEAD_BOT);                            // down tube → fork crown
+    setBone(frame[3], BB, { x: -WHEEL_X, y: WHEEL_R });        // chain stay
+    setBone(frame[4], SADDLE, { x: -WHEEL_X, y: WHEEL_R });    // seat stay
+    setBone(frame[5], HEAD_BOT, { x: WHEEL_X, y: WHEEL_R });   // fork
+    setBone(frame[6], HEAD_TOP, GRIP);                          // stem/handlebar post
+    setBone(frame[7], HEAD_TOP, HEAD_BOT);                      // head tube
 
     // scarf flutters off the neck
     let px = HEAD_C.x - 0.014, py = HEAD_C.y + 0.002;

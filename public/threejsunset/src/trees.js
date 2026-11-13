@@ -1,4 +1,4 @@
-// Foreground trees: procedurally generated trunks with branches and organic leaf clouds.
+// Foreground trees: tapered trunks with leaves
 import * as THREE from 'three';
 import { FULLSCREEN_VERT, GLSL_COMMON } from './common.js';
 
@@ -18,152 +18,57 @@ export function makeTrees(uTime, uScroll) {
       uniform float uTime, uScroll, uAspect, uSpeed;
       ${GLSL_COMMON}
 
-      const vec3 TRUNK_COLOR = vec3(0.18, 0.11, 0.05);
-      const vec3 LEAF_COLOR = vec3(0.22, 0.28, 0.12);
-
-      // Draw trunk with taper and branches
-      float drawTrunk(vec2 p, float trunkX, float seed) {
-        const float BASE_Y = 0.12;
-        const float TOP_Y = 0.45;
-        
-        float relY = (p.y - BASE_Y) / (TOP_Y - BASE_Y);
-        if (relY < 0.0 || relY > 1.0) return 0.0;
-        
-        float relX = p.x - trunkX;
-        
-        // Tapered trunk: wider at base, narrower at top
-        float baseWidth = 0.010;
-        float taperingWidth = baseWidth * (1.0 - relY * 0.6);
-        
-        // Wobble using sine waves
-        float wobble = sin(relY * 6.28 + seed * 10.0) * 0.002;
-        taperingWidth += wobble;
-        
-        // Main trunk
-        float dist = abs(relX);
-        if (dist < taperingWidth) {
-          return 1.0 - (dist / taperingWidth) * 0.3;
-        }
-        
-        // Branches at 30%, 60%, 90%
-        // Branch 1 at 30%
-        float branchY1 = 0.3;
-        float distY1 = abs(relY - branchY1);
-        if (distY1 < 0.06) {
-          float angle1 = sin(0.3 * 3.14159 + seed) * 0.12;
-          float len1 = 0.7 * 0.08;
-          float branchX1 = len1 * angle1;
-          float distX1 = abs(relX - branchX1);
-          float branchW1 = 0.003 * (1.0 - distY1 / 0.06);
-          if (distX1 < branchW1) return 0.6;
-        }
-        
-        // Branch 2 at 60%
-        float branchY2 = 0.6;
-        float distY2 = abs(relY - branchY2);
-        if (distY2 < 0.06) {
-          float angle2 = sin(0.6 * 3.14159 + seed) * 0.12;
-          float len2 = 0.4 * 0.08;
-          float branchX2 = len2 * angle2;
-          float distX2 = abs(relX - branchX2);
-          float branchW2 = 0.003 * (1.0 - distY2 / 0.06);
-          if (distX2 < branchW2) return 0.6;
-        }
-        
-        // Branch 3 at 90%
-        float branchY3 = 0.9;
-        float distY3 = abs(relY - branchY3);
-        if (distY3 < 0.06) {
-          float angle3 = sin(0.9 * 3.14159 + seed) * 0.12;
-          float len3 = 0.1 * 0.08;
-          float branchX3 = len3 * angle3;
-          float distX3 = abs(relX - branchX3);
-          float branchW3 = 0.003 * (1.0 - distY3 / 0.06);
-          if (distX3 < branchW3) return 0.6;
-        }
-        
-        return 0.0;
-      }
-
-      // Draw leaf cloud
-      float drawLeaves(vec2 p, float trunkX, float seed) {
-        const float BASE_Y = 0.12;
-        const float TOP_Y = 0.45;
-        
-        float relY = (p.y - BASE_Y) / (TOP_Y - BASE_Y);
-        if (relY < 0.2 || relY > 0.95) return 0.0;
-        
-        float relX = p.x - trunkX;
-        
-        // Canopy centered around 0.6 of trunk height
-        float centerY = 0.60;
-        float distY = abs(relY - centerY);
-        if (distY > 0.30) return 0.0;
-        
-        // Canopy width tapers
-        float canopyW = 0.12 * (1.0 - distY * 1.5);
-        if (abs(relX) > canopyW) return 0.0;
-        
-        // Simple noise-like pattern using sine waves
-        float noise = sin(relX * 20.0 + relY * 15.0 + seed * 100.0);
-        float leaves = smoothstep(-0.3, 0.5, noise);
-        leaves *= smoothstep(canopyW, 0.0, abs(relX));
-        leaves *= smoothstep(0.35, 0.0, distY);
-        
-        return leaves * 0.6;
-      }
+      const vec3 TRUNK = vec3(0.18, 0.11, 0.05);
+      const vec3 LEAF = vec3(0.22, 0.28, 0.12);
 
       void main() {
         vec2 p = vec2(vUv.x * uAspect, vUv.y);
         
-        // Render ONLY in tree band
+        // Only in tree band
         if (p.y < 0.10 || p.y > 0.48) discard;
         
         float wx = p.x + uScroll * uSpeed;
         float cellPos = mod(wx, 0.50);
         
-        // Three tree positions per 0.50 cell
-        vec3 col = vec3(0.0);
-        float bestDist = 1e6;
-        float treeSeed = 0.0;
-        float treeX = 0.0;
-        
-        // Find closest tree
+        // Three tree positions per cell
         float d1 = abs(cellPos - 0.08);
-        if (d1 < 0.12 && d1 < bestDist) {
-          bestDist = d1;
-          treeX = wx - cellPos + 0.08;
-          treeSeed = mod(floor(wx / 0.50) * 37.5, 1.0);
-        }
-        
         float d2 = abs(cellPos - 0.20);
-        if (d2 < 0.12 && d2 < bestDist) {
-          bestDist = d2;
-          treeX = wx - cellPos + 0.20;
-          treeSeed = mod(floor(wx / 0.50) * 73.1, 1.0);
-        }
-        
         float d3 = abs(cellPos - 0.35);
-        if (d3 < 0.12 && d3 < bestDist) {
-          bestDist = d3;
-          treeX = wx - cellPos + 0.35;
-          treeSeed = mod(floor(wx / 0.50) * 91.7, 1.0);
+        
+        float minDist = min(d1, min(d2, d3));
+        if (minDist > 0.12) discard;
+        
+        // Find which tree
+        float treeX;
+        if (d1 < d2 && d1 < d3) treeX = wx - cellPos + 0.08;
+        else if (d2 < d3) treeX = wx - cellPos + 0.20;
+        else treeX = wx - cellPos + 0.35;
+        
+        float relX = p.x - treeX;
+        float relY = (p.y - 0.12) / 0.33;
+        
+        if (relY < 0.0 || relY > 1.0) discard;
+        
+        // Tapered trunk
+        float trunkW = 0.010 * (1.0 - relY * 0.6);
+        if (abs(relX) < trunkW) {
+          gl_FragColor = vec4(TRUNK, 1.0);
+          return;
         }
         
-        // Draw trunk
-        float trunk = drawTrunk(p, treeX, treeSeed);
-        if (trunk > 0.1) {
-          col = TRUNK_COLOR * (0.6 + trunk * 0.4);
-        } else {
-          // Draw leaves
-          float leaves = drawLeaves(p, treeX, treeSeed);
-          if (leaves > 0.05) {
-            col = LEAF_COLOR * leaves;
+        // Leaves: fuzzy cloud
+        if (relY > 0.2 && relY < 0.9) {
+          float leafW = 0.12 * (1.0 - abs(relY - 0.6) * 1.5);
+          if (abs(relX) < leafW) {
+            float noise = sin(relX * 20.0 + relY * 15.0) * 0.5 + 0.5;
+            if (noise > 0.3) {
+              gl_FragColor = vec4(LEAF, noise * 0.7);
+              return;
+            }
           }
         }
         
-        if (length(col) < 0.01) discard;
-        gl_FragColor = vec4(col, 1.0);
+        discard;
       }
     `,
     transparent: true,

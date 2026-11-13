@@ -39,9 +39,11 @@ export function makeTrees(uTime, uScroll) {
         // Actually the issue might be that we're rendering EVERYWHERE in the band
         // except where minDist is small. Let me just render a simple vertical stripe test first.
         
-        // Test: render every other stripe (mod 0.50 -> first half)
-        float testX = mod(wx, 0.50);
-        if (testX < 0.25) {
+        // Trees should be narrow — render only near tree center positions
+        // minDist is in the 0.50-unit world space, not UV space
+        // So 0.006 in world space should be narrow trunks
+        const float TRUNK_WIDTH = 0.006;
+        if (minDist < TRUNK_WIDTH) {
           gl_FragColor = vec4(0.4, 0.25, 0.1, 1.0);
         } else {
           discard;

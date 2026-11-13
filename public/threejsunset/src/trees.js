@@ -1,4 +1,4 @@
-// DEBUG: solid tree band to verify mesh is rendering
+// DEBUG: visualize uScroll value in real-time
 import * as THREE from 'three';
 import { FULLSCREEN_VERT } from './common.js';
 
@@ -7,7 +7,6 @@ export function makeTrees(uTime, uScroll) {
     uTime: { value: 0 },
     uScroll: uScroll,
     uAspect: { value: 1 },
-    uSpeed: { value: 1.0 },
   };
 
   const mat = new THREE.ShaderMaterial({
@@ -15,11 +14,17 @@ export function makeTrees(uTime, uScroll) {
     vertexShader: FULLSCREEN_VERT,
     fragmentShader: `
       varying vec2 vUv;
+      uniform float uScroll;
 
       void main() {
-        // Just render a solid band at y 0.10-0.48 with NO discard
         if (vUv.y < 0.10 || vUv.y > 0.48) discard;
-        gl_FragColor = vec4(0.5, 0.3, 0.1, 0.8);  // solid brown with alpha
+        
+        // Color based on uScroll value: should change over time
+        // uScroll goes from 0 upward
+        // Map it cyclically: mod(uScroll * 3.0, 1.0) gives repeating color
+        float cycle = mod(uScroll * 3.0, 1.0);
+        
+        gl_FragColor = vec4(cycle, 0.3, 0.1, 0.8);  // R channel = scroll cycle
       }
     `,
     transparent: true,

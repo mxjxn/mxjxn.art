@@ -1,75 +1,68 @@
-// Foreground trees: textured sprites that scroll
+// Foreground trees: rendered as individual mesh instances
 import * as THREE from 'three';
-import { FULLSCREEN_VERT } from './common.js';
 
 export function makeTrees(uTime, uScroll) {
-  const textureLoader = new THREE.TextureLoader();
-  const treesTexture = textureLoader.load('../trees.png');
-  treesTexture.magFilter = THREE.NearestFilter;
-  treesTexture.minFilter = THREE.NearestFilter;
+  const group = new THREE.Group();
+  group.renderOrder = 5;
+  group.frustumCulled = false;
 
-  const uniforms = {
-    uTime: { value: 0 },
-    uScroll: uScroll,
-    uAspect: { value: 1 },
-    uSpeed: { value: 1.0 },
-    uTreeTexture: { value: treesTexture },
+  // Create one tree geometry
+  function createTree() {
+    const g = new THREE.Group();
+    
+    // Trunk: simple tapered cylinder
+    const trunkGeom = new THREE.ConeGeometry(0.02, 0.3, 8);
+    const trunkMat = new THREE.MeshBasicMaterial({ color: 0x2d1c0d });
+    const trunk = new THREE.Mesh(trunkGeom, trunkMat);
+    trunk.position.y = 0.15;
+    g.add(trunk);
+    
+    // Leaves: sphere
+    const leafGeom = new THREE.IcosahedronGeometry(0.08, 3);
+    const leafMat = new THREE.MeshBasicMaterial({ color: 0x384a1e, transparent: true, opacity: 0.7 });
+    const leaves = new THREE.Mesh(leafGeom, leafMat);
+    leaves.position.y = 0.15;
+    leaves.scale.y = 1.3;
+    g.add(leaves);
+    
+    return g;
+  }
+
+  // Spawn trees at regular intervals
+  const treeSpacing = 0.3;
+  const numTrees = 20;  // enough to cover screen + buffer
+  const trees = [];
+  
+  for (let i = 0; i < numTrees; i++) {
+    const tree = createTree();
+    const worldX = (i - numTrees / 2) * treeSpacing;
+    tree.position.x = worldX;
+    tree.position.y = 0;
+    tree.position.z = 0;
+    group.add(tree);
+    trees.push({ mesh: tree, baseX: worldX });
+  }
+
+  // Update function: called each frame
+  const update = (elapsed, dt, v) => {
+    const scrollDist = v * elapsed;
+    
+    trees.forEach(t => {
+      // Position based on scroll
+      let x = t.baseX - scrollDist;
+      
+      // Wrap around
+      if (x < -2) x += treeSpacing * numTrees;
+      if (x > 2) x -= treeSpacing * numTrees;
+      
+      t.mesh.position.x = x;
+      
+      // Only render if in viewport
+      t.mesh.visible = x > -1.2 && x < 1.2;
+    });
   };
 
-  const mat = new THREE.ShaderMaterial({
-    uniforms,
-    vertexShader: FULLSCREEN_VERT,
-    fragmentShader: `
-      varying vec2 vUv;
-      uniform float uScroll, uAspect, uSpeed;
-      uniform sampler2D uTreeTexture;
-
-      void main() {
-        vec2 p = vec2(vUv.x * uAspect, vUv.y);
-        
-        if (p.y < 0.10 || p.y > 0.48) discard;
-        
-        float wx = p.x + uScroll * uSpeed;
-        
-        // Place trees every 0.25 units (4 per screen width)
-        float period = 0.25;
-        float cellX = mod(wx, period);
-        float cellIdx = floor(wx / period);
-        
-        // Tree sprite width in world space
-        const float TREE_W = 0.06;
-        const float TREE_H = 0.38;
-        
-        // Center of tree in this cell
-        float treeX = floor(wx / period) * period + period * 0.5;
-        float relX = p.x - treeX;
-        
-        // Only render where tree is
-        if (abs(relX) > TREE_W * 0.5) discard;
-        
-        float relY = (p.y - 0.10) / TREE_H;
-        if (relY < 0.0 || relY > 1.0) discard;
-        
-        // Pick sprite based on cell index (cycle through 4 trees)
-        float spriteIdx = mod(cellIdx, 4.0);
-        float spriteU = (spriteIdx + (relX / TREE_W + 0.5)) / 4.0;
-        float spriteV = 1.0 - relY;  // flip V since image is top-down
-        
-        vec4 texel = texture2D(uTreeTexture, vec2(spriteU, spriteV));
-        
-        if (texel.a < 0.1) discard;
-        
-        gl_FragColor = texel;
-      }
-    `,
-    transparent: true,
-    depthTest: false,
-    depthWrite: false,
-  });
-
-  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), mat);
-  mesh.renderOrder = 5;
-  mesh.frustumCulled = false;
-
-  return { mesh, uniforms };
+  group.userData.update = update;
+  
+  return group;
 }

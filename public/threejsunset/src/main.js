@@ -55,8 +55,9 @@ const farBank = addLayer(makeBand({
 }, uTime, uScroll), 'farBank');
 const bankLedge = addLayer(makeBankLedge(uTime, uScroll), 'bankLedge');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
-const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
-console.log('Trees created, visible:', trees.mesh.visible, 'uniforms.uScroll ref:', trees.uniforms.uScroll === uScroll);
+const trees = makeTrees(uTime, uScroll);
+trees.userData.name = 'trees';
+scene.add(trees);
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));
@@ -117,8 +118,10 @@ function frame(now) {
   }
   
   if (elapsed < 0.5) {
-    console.log(`t=${elapsed.toFixed(3)}: uScroll=${uScroll.value.toFixed(3)}, ground.uScroll=${ground.uniforms.uScroll.value.toFixed(3)}, trees.uScroll=${trees.uniforms.uScroll.value.toFixed(3)}`);
+    console.log(`t=${elapsed.toFixed(3)}: v=${v.toFixed(3)}`);
   }
+  
+  trees.userData.update(elapsed, dt, v);
   bike.group.userData.update(elapsed, dt, v);
 
   renderer.setRenderTarget(post.rt);

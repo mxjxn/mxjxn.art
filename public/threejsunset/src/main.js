@@ -27,21 +27,6 @@ renderer.setPixelRatio(1);
 renderer.toneMapping = THREE.NoToneMapping;
 
 const scene = new THREE.Scene();
-const errorLog = [];
-window.addEventListener('error', (e) => {
-  errorLog.push(`[JS Error] ${e.message} @ ${e.lineno}:${e.colno}`);
-  console.error(e);
-});
-
-if (window.location.hash === '#debug') {
-  const dbgDiv = document.createElement('div');
-  dbgDiv.style.cssText = 'position:fixed;top:0;left:0;z-index:9999;background:#000;color:#0f0;font-size:11px;font-family:monospace;max-height:50vh;overflow:auto;white-space:pre-wrap;word-wrap:break-word;width:400px;padding:5px;';
-  document.body.appendChild(dbgDiv);
-  
-  setInterval(() => {
-    dbgDiv.textContent = `Trees visible: ${trees?.mesh?.visible}\nTrees renderOrder: ${trees?.mesh?.renderOrder}\nErrors: ${errorLog.join('\n')}\nScroll: ${uScroll.value.toFixed(3)}\n`;
-  }, 100);
-}
 const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, -10, 10); // z=0 geometry sits mid-volume (near 0 clips it)
 
 const uTime = { value: 0 };
@@ -70,8 +55,7 @@ const farBank = addLayer(makeBand({
 }, uTime, uScroll), 'farBank');
 const bankLedge = addLayer(makeBankLedge(uTime, uScroll), 'bankLedge');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
-//const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
-//console.log('Trees layer created:', trees.mesh.visible, trees.mesh.renderOrder);
+const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));
@@ -130,12 +114,6 @@ function frame(now) {
   for (const L of layers) {
     if (L.uniforms.uTime) L.uniforms.uTime.value = elapsed;
   }
-  
-  // DEBUG: Check trees visibility
-  if (elapsed < 0.5 && trees.mesh.visible === false) {
-    console.warn('Trees mesh became invisible!');
-  }
-  
   bike.group.userData.update(elapsed, dt, v);
 
   renderer.setRenderTarget(post.rt);

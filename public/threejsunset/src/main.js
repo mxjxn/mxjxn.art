@@ -49,9 +49,7 @@ const midRidge = addLayer(makeBand({
 }, uTime, uScroll), 'midRidge');
 const water = addLayer(makeWater(uTime, uScroll, SUN_X_UV * 1), 'water');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
-const trees = makeTrees(uTime, uScroll);
-trees.userData.name = 'trees';
-scene.add(trees);
+const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));
@@ -108,7 +106,6 @@ function frame(now) {
     console.log(`t=${elapsed.toFixed(3)}: v=${v.toFixed(3)}`);
   }
   
-  trees.userData.update(elapsed, dt, v);
   bike.group.userData.update(elapsed, dt, v);
 
   renderer.setRenderTarget(post.rt);

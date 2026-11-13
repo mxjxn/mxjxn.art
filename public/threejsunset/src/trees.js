@@ -73,23 +73,25 @@ export function makeTrees(uTime, uScroll) {
       vec3 forestLine(vec2 p) {
         float wx = p.x + uScroll * uSpeed;
         
-        // Sparse trees: one tree per ~0.30 screen-widths
-        float cellWidth = 0.30;
+        // Sparse trees: one tree per ~0.40 screen-widths (sparser)
+        float cellWidth = 0.40;
         float cellIdx = floor(wx / cellWidth);
         
-        // Hash-based sparsity: 60% gaps, 40% trees
-        float seed = hash11(cellIdx * 23.5);
-        if (seed < 0.60) return vec3(0.0);  // 60% empty space between trees
+        // Hash-based: only ~35% of cells have trees
+        float seed = fract(sin(cellIdx * 0.317) * 43758.5453);
+        if (seed > 0.35) return vec3(0.0);  // 65% gaps
         
-        // Position within cell: ±40% offset for natural irregularity
-        float trunkX = (cellIdx + 0.5 + (seed - 0.5) * 0.8) * cellWidth;
+        // Position within cell: centered with ±50% random offset
+        float offset = (fract(sin(cellIdx * 0.917) * 43758.5453) - 0.5) * cellWidth;
+        float trunkX = (cellIdx + 0.5) * cellWidth + offset;
         
         vec3 col = singleTree(p, trunkX, seed * 100.0);
         
-        // Check neighbor cell for seamless coverage
-        float neighborSeed = hash11((cellIdx + 1.0) * 23.5);
-        if (neighborSeed >= 0.60) {
-          float neighborX = ((cellIdx + 1.0) + 0.5 + (neighborSeed - 0.5) * 0.8) * cellWidth;
+        // Also check adjacent cell
+        float neighborSeed = fract(sin((cellIdx + 1.0) * 0.317) * 43758.5453);
+        if (neighborSeed <= 0.35) {
+          float neighborOffset = (fract(sin((cellIdx + 1.0) * 0.917) * 43758.5453) - 0.5) * cellWidth;
+          float neighborX = ((cellIdx + 1.0) + 0.5) * cellWidth + neighborOffset;
           col = max(col, singleTree(p, neighborX, neighborSeed * 100.0));
         }
         

@@ -19,27 +19,31 @@ export function makeGround(uTime, uScroll) {
       uniform float uTime, uScroll, uAspect, uSpeed;
       ${GLSL_COMMON}
 
-      const vec3 EARTH = vec3(0.12, 0.08, 0.04);      // warm earth brown
-      const vec3 DIRT = vec3(0.16, 0.11, 0.06);       // lighter path
+      const vec3 EARTH = vec3(0.12, 0.08, 0.04);
+      const vec3 DIRT  = vec3(0.16, 0.11, 0.06);
+      const vec3 GRASS = vec3(0.13, 0.17, 0.05);  // dark grass at crest
 
       void main() {
         vec2 p = vec2(vUv.x * uAspect, vUv.y);
         float wx = p.x + uScroll * uSpeed;
 
-        // Ground band: y from 0.0 (bottom) to 0.12 (where trees start)
-        if (p.y < 0.0 || p.y > 0.12) discard;
+        // Rolling horizon: gentle hills, same ridgeFbm as the distant bands
+        float horizon = 0.10 + 0.028 * ridgeFbm(vec2(wx * 1.4, 1.7));
 
-        // Textured earth: darker base + lighter streaks
+        // Fill everything below the horizon
+        if (p.y > horizon) discard;
+
+        // Textured earth
         float noise = fbm(vec2(wx * 6.0, p.y * 20.0));
-        float texture = smoothstep(0.2, 0.7, noise);
-        vec3 col = mix(EARTH, DIRT, texture * 0.4);
+        float tex = smoothstep(0.2, 0.7, noise);
+        vec3 col = mix(EARTH, DIRT, tex * 0.4);
 
-        // Tire tracks / worn path effect
-        float tracks = sin(wx * 8.0) * 0.5 + 0.5;
-        col *= 0.92 + tracks * 0.08;
+        // Grass tint near the crest
+        float crest = smoothstep(horizon - 0.012, horizon, p.y);
+        col = mix(col, GRASS, crest * 0.7);
 
-        // Slight darkening at top edge (where trees are rooted)
-        col *= 0.85 + 0.15 * smoothstep(0.125, 0.105, p.y);
+        // Darken at very bottom
+        col *= 0.80 + 0.20 * smoothstep(0.0, 0.06, p.y);
 
         gl_FragColor = vec4(col, 1.0);
       }

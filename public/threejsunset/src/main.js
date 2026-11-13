@@ -48,11 +48,6 @@ const midRidge = addLayer(makeBand({
   colorTop: 0x3a1440, colorBottom: 0x1d0c30, treeAmp: 0.014, treeFreq: 26, order: 2,
 }, uTime, uScroll), 'midRidge');
 const water = addLayer(makeWater(uTime, uScroll, SUN_X_UV * 1), 'water');
-const farBank = addLayer(makeBand({
-  speed: SCROLL.farBank, base: 0.505, amp: 0.008, freq: 9.0, seed: 5.1,
-  colorTop: 0x1c0b2a, colorBottom: 0x120720, treeAmp: 0.018, treeFreq: 42, order: 4,
-  strip: 0.48,
-}, uTime, uScroll), 'farBank');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
 const trees = makeTrees(uTime, uScroll);
 trees.userData.name = 'trees';

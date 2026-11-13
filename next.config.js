@@ -32,6 +32,8 @@ const nextConfig = {
     return [
       { source: "/wheelgen/app", destination: "/wheelgen/app/index.html" },
       { source: "/wheelgen/app/", destination: "/wheelgen/app/index.html" },
+      { source: "/threejsunset", destination: "/threejsunset/index.html" },
+      { source: "/threejsunset/", destination: "/threejsunset/index.html" },
     ];
   },
 };

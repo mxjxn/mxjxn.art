@@ -40,11 +40,11 @@ const HIDE = new URLSearchParams(location.search).get('hide');
 
 const sky = addLayer(makeSky(uTime, uScroll), 'sky');
 const farRidge = addLayer(makeBand({
-  speed: SCROLL.farRidge, base: 0.585, amp: 0.035, freq: 3.0, seed: 1.3,
-  colorTop: 0x5a2050, colorBottom: 0x331348, treeAmp: 0.004, treeFreq: 60, order: 1,
+  speed: SCROLL.farRidge, base: 0.585, amp: 0.035, freq: 3.0, seed: 2.1,
+  colorTop: 0x2a1548, colorBottom: 0x0d0515, treeAmp: 0.020, treeFreq: 18, order: 0,
 }, uTime, uScroll), 'farRidge');
 const midRidge = addLayer(makeBand({
-  speed: SCROLL.midRidge, base: 0.545, amp: 0.030, freq: 4.0, seed: 2.7,
+  speed: SCROLL.midRidge, base: 0.545, amp: 0.030, freq: 4.0, seed: 3.1,
   colorTop: 0x3a1440, colorBottom: 0x1d0c30, treeAmp: 0.014, treeFreq: 26, order: 2,
 }, uTime, uScroll), 'midRidge');
 const water = addLayer(makeWater(uTime, uScroll, SUN_X_UV * 1), 'water');
@@ -54,8 +54,10 @@ const farBank = addLayer(makeBand({
   strip: 0.48,
 }, uTime, uScroll), 'farBank');
 const bankLedge = addLayer(makeBankLedge(uTime, uScroll), 'bankLedge');
-const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
+const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
+// Position bike on the ground band (y 0.0-0.12), centered vertically
+bike.group.userData.baseY = 0.06 * 2 - 1;  // center of ground band in NDC
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));

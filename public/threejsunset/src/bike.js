@@ -170,6 +170,9 @@ export function makeBike() {
     group.rotation.z = 0.008 * Math.sin(t * 2.6 + 1.2);
   };
 
+  group.frustumCulled = false;
+  group.renderOrder = 2;
+
   return { group };
 }
 

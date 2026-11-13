@@ -4,6 +4,7 @@
 import * as THREE from 'three';
 import { FULLSCREEN_VERT, GLSL_COMMON } from './common.js';
 
+// CACHE BUST 2026-11-13 v2
 export function makeBankLedge(uTime, uScroll) {
   const uniforms = {
     uTime: { value: 0 },

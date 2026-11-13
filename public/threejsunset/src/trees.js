@@ -3,7 +3,10 @@ import { FULLSCREEN_VERT } from './common.js';
 
 export function makeTrees(uTime, uScroll) {
   const uniforms = {
+    uTime: { value: 0 },
     uScroll: uScroll,
+    uAspect: { value: 1 },
+    uSpeed: { value: 2.2 },
   };
 
   const mat = new THREE.ShaderMaterial({
@@ -11,10 +14,11 @@ export function makeTrees(uTime, uScroll) {
     vertexShader: FULLSCREEN_VERT,
     fragmentShader: /* glsl */ `
       varying vec2 vUv;
-      uniform float uScroll;
+      uniform float uTime, uScroll, uAspect, uSpeed;
 
       void main() {
-        if (vUv.y < 0.10 || vUv.y > 0.48) discard;
+        vec2 p = vec2(vUv.x * uAspect, vUv.y);
+        if (p.y < 0.10 || p.y > 0.48) discard;
         gl_FragColor = vec4(0.2, 0.15, 0.05, 1.0);
       }
     `,

@@ -1,6 +1,6 @@
-// DEBUG: use wx to offset a repeating pattern — should scroll
+// Foreground trees: sparse tapered trunks with leaves
 import * as THREE from 'three';
-import { FULLSCREEN_VERT } from './common.js';
+import { FULLSCREEN_VERT, GLSL_COMMON } from './common.js';
 
 export function makeTrees(uTime, uScroll) {
   const uniforms = {
@@ -13,23 +13,62 @@ export function makeTrees(uTime, uScroll) {
   const mat = new THREE.ShaderMaterial({
     uniforms,
     vertexShader: FULLSCREEN_VERT,
-    fragmentShader: `
+    fragmentShader: /* glsl */ `
       varying vec2 vUv;
-      uniform float uScroll, uAspect, uSpeed;
+      uniform float uTime, uScroll, uAspect, uSpeed;
+      ${GLSL_COMMON}
+
+      const vec3 TRUNK = vec3(0.18, 0.11, 0.05);
+      const vec3 LEAF = vec3(0.22, 0.28, 0.12);
 
       void main() {
         vec2 p = vec2(vUv.x * uAspect, vUv.y);
         
         if (p.y < 0.10 || p.y > 0.48) discard;
         
-        // World x coordinate
         float wx = p.x + uScroll * uSpeed;
         
-        // Simple repeating pattern every 0.50 units
-        float pattern = mod(wx * 2.0, 1.0);  // 0-1 repeats every 0.50 units
+        // Three trees per 0.50-unit cell
+        float cellX = mod(wx, 0.50);
         
-        // Should see vertical stripes that scroll left-to-right
-        gl_FragColor = vec4(pattern, 0.3, 0.1, 0.8);
+        // Distance to tree centers at 0.08, 0.20, 0.35
+        float d1 = abs(cellX - 0.08);
+        float d2 = abs(cellX - 0.20);
+        float d3 = abs(cellX - 0.35);
+        float minDist = min(d1, min(d2, d3));
+        
+        // Only render near tree trunks
+        if (minDist > 0.08) discard;
+        
+        // Find which tree
+        float treeX;
+        if (d1 < d2 && d1 < d3) treeX = wx - cellX + 0.08;
+        else if (d2 < d3) treeX = wx - cellX + 0.20;
+        else treeX = wx - cellX + 0.35;
+        
+        float relX = p.x - treeX;
+        float relY = (p.y - 0.10) / 0.38;
+        
+        // Leaves first
+        if (relY > 0.15 && relY < 0.95) {
+          float leafW = 0.12 * (1.0 - abs(relY - 0.55) * 1.0);
+          if (abs(relX) < leafW) {
+            float leafNoise = sin(relX * 20.0 + relY * 15.0 + treeX * 100.0) * 0.5 + 0.5;
+            if (leafNoise > 0.30) {
+              gl_FragColor = vec4(LEAF, leafNoise * 0.65);
+              return;
+            }
+          }
+        }
+        
+        // Trunk on top
+        float trunkW = 0.010 * (1.0 - relY * 0.5);
+        if (abs(relX) < trunkW) {
+          gl_FragColor = vec4(TRUNK, 1.0);
+          return;
+        }
+        
+        discard;
       }
     `,
     transparent: true,

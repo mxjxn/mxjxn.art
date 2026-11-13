@@ -1,4 +1,4 @@
-// DEBUG: visualize uScroll value in real-time
+// DEBUG: use wx to offset a repeating pattern — should scroll
 import * as THREE from 'three';
 import { FULLSCREEN_VERT } from './common.js';
 
@@ -7,6 +7,7 @@ export function makeTrees(uTime, uScroll) {
     uTime: { value: 0 },
     uScroll: uScroll,
     uAspect: { value: 1 },
+    uSpeed: { value: 1.0 },
   };
 
   const mat = new THREE.ShaderMaterial({
@@ -14,17 +15,21 @@ export function makeTrees(uTime, uScroll) {
     vertexShader: FULLSCREEN_VERT,
     fragmentShader: `
       varying vec2 vUv;
-      uniform float uScroll;
+      uniform float uScroll, uAspect, uSpeed;
 
       void main() {
-        if (vUv.y < 0.10 || vUv.y > 0.48) discard;
+        vec2 p = vec2(vUv.x * uAspect, vUv.y);
         
-        // Color based on uScroll value: should change over time
-        // uScroll goes from 0 upward
-        // Map it cyclically: mod(uScroll * 3.0, 1.0) gives repeating color
-        float cycle = mod(uScroll * 3.0, 1.0);
+        if (p.y < 0.10 || p.y > 0.48) discard;
         
-        gl_FragColor = vec4(cycle, 0.3, 0.1, 0.8);  // R channel = scroll cycle
+        // World x coordinate
+        float wx = p.x + uScroll * uSpeed;
+        
+        // Simple repeating pattern every 0.50 units
+        float pattern = mod(wx * 2.0, 1.0);  // 0-1 repeats every 0.50 units
+        
+        // Should see vertical stripes that scroll left-to-right
+        gl_FragColor = vec4(pattern, 0.3, 0.1, 0.8);
       }
     `,
     transparent: true,

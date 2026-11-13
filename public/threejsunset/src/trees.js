@@ -7,7 +7,7 @@ export function makeTrees(uTime, uScroll) {
     uTime: { value: 0 },
     uScroll: uScroll,
     uAspect: { value: 1 },
-    uSpeed: { value: 2.2 },
+    uSpeed: { value: 1.0 },
   };
 
   const mat = new THREE.ShaderMaterial({

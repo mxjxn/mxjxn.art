@@ -73,29 +73,32 @@ export function makeTrees(uTime, uScroll) {
       vec3 forestLine(vec2 p) {
         float wx = p.x + uScroll * uSpeed;
         
-        // Sparse trees: one tree per ~0.40 screen-widths (sparser)
-        float cellWidth = 0.40;
-        float cellIdx = floor(wx / cellWidth);
+        // Explicit sparse pattern: trees appear in specific positions
+        // Pattern: XOOXOXOOXOXOO... (X=tree, O=gap) repeating every 0.50 units
+        // This gives ~40% tree coverage, 60% gaps
+        float periodX = 0.50;
+        float localX = mod(wx, periodX);
+        float period = floor(wx / periodX);
         
-        // Hash-based: only ~35% of cells have trees
-        float seed = fract(sin(cellIdx * 0.317) * 43758.5453);
-        if (seed > 0.35) return vec3(0.0);  // 65% gaps
+        // Within period, place trees at: 0.05, 0.20, 0.32 (leaving gaps between)
+        float treePosA = 0.05;
+        float treePosB = 0.20;
+        float treePosC = 0.32;
         
-        // Position within cell: centered with ±50% random offset
-        float offset = (fract(sin(cellIdx * 0.917) * 43758.5453) - 0.5) * cellWidth;
-        float trunkX = (cellIdx + 0.5) * cellWidth + offset;
+        float distA = abs(localX - treePosA);
+        float distB = abs(localX - treePosB);
+        float distC = abs(localX - treePosC);
         
-        vec3 col = singleTree(p, trunkX, seed * 100.0);
+        float minDist = min(distA, min(distB, distC));
         
-        // Also check adjacent cell
-        float neighborSeed = fract(sin((cellIdx + 1.0) * 0.317) * 43758.5453);
-        if (neighborSeed <= 0.35) {
-          float neighborOffset = (fract(sin((cellIdx + 1.0) * 0.917) * 43758.5453) - 0.5) * cellWidth;
-          float neighborX = ((cellIdx + 1.0) + 0.5) * cellWidth + neighborOffset;
-          col = max(col, singleTree(p, neighborX, neighborSeed * 100.0));
-        }
+        // Only render trees if we're close to one of the three positions
+        if (minDist > 0.08) return vec3(0.0);  // 0.08 screen-width margin from tree center
         
-        return col;
+        // Choose the closest tree, use period for seed variation
+        float seed = mod(period * 37.5, 1.0);
+        float trunkX = wx - localX + (distA < distB ? treePosA : (distB < distC ? treePosB : treePosC));
+        
+        return singleTree(p, trunkX, seed);
       }
 
       void main() {

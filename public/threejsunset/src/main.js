@@ -89,15 +89,8 @@ function resize() {
 window.addEventListener('resize', resize);
 resize();
 
-// ---- input: hold pointer / space to push harder ----
+// ---- input: disabled ----
 let boost = 1, boostTarget = 1;
-const press = () => { boostTarget = BOOST; };
-const release = () => { boostTarget = 1; };
-window.addEventListener('pointerdown', press);
-window.addEventListener('pointerup', release);
-window.addEventListener('pointercancel', release);
-window.addEventListener('keydown', (e) => { if (e.code === 'Space') press(); });
-window.addEventListener('keyup', (e) => { if (e.code === 'Space') release(); });
 
 // ---- loop ----
 let last = performance.now();

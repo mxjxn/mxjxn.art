@@ -56,8 +56,6 @@ const farBank = addLayer(makeBand({
 const bankLedge = addLayer(makeBankLedge(uTime, uScroll), 'bankLedge');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
 const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
-// Position bike on the ground band (y 0.0-0.12), centered vertically
-bike.group.userData.baseY = 0.06 * 2 - 1;  // center of ground band in NDC
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));
@@ -68,7 +66,7 @@ const bike = makeBike();
 if (HIDE && HIDE.split(',').includes('bike')) bike.group.visible = false;
 bike.group.traverse((o) => { o.renderOrder = 6; o.frustumCulled = false; });
 bike.group.position.set(BIKE_X_UV * 2 - 1, LINES.bankTop * 2 - 1, 0); // left third, on the bank line
-bike.group.userData.baseY = LINES.bankTop * 2 - 1;
+bike.group.userData.baseY = 0.06 * 2 - 1;  // center of ground band in NDC
 scene.add(bike.group);
 
 const post = makePost();

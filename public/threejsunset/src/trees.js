@@ -1,6 +1,6 @@
-// Foreground trees: sparse, tall trunks rooted at the near bank edge (where bike path is).
-// Procedural leaf texture via GLSL — leaves are organic noise clouds, trunks are thin dark lines.
-// Scrolls past at the ground speed (1.0) so trees stay planted at the bank line.
+// Foreground trees: rooted on the bank ledge, scrolling fast (close parallax).
+// Distinct brown trunks with organic, semi-transparent leaf clouds.
+// Big gaps between trees so you see the river/landscape through them.
 import * as THREE from 'three';
 import { FULLSCREEN_VERT, GLSL_COMMON } from './common.js';
 
@@ -9,7 +9,7 @@ export function makeTrees(uTime, uScroll) {
     uTime: { value: 0 },
     uScroll: uScroll,
     uAspect: { value: 1 },
-    uSpeed: { value: 1.0 },  // same as ground — stays rooted at bank
+    uSpeed: { value: 1.8 },  // fast parallax — close to camera
   };
 
   const mat = new THREE.ShaderMaterial({
@@ -20,67 +20,69 @@ export function makeTrees(uTime, uScroll) {
       uniform float uTime, uScroll, uAspect, uSpeed;
       ${GLSL_COMMON}
 
-      // Trunk color: dark brown
-      const vec3 TRUNK = vec3(0.12, 0.08, 0.04);
-      // Leaf color: dark green
-      const vec3 LEAF = vec3(0.08, 0.16, 0.06);
+      const vec3 TRUNK = vec3(0.14, 0.08, 0.04);     // dark brown
+      const vec3 LEAF = vec3(0.18, 0.24, 0.10);      // dark olive green
 
-      // Signed distance to a line segment (for trunk)
-      float sdSegment(vec2 p, vec2 a, vec2 b) {
-        vec2 ba = b - a, pa = p - a;
-        float h = clamp(dot(pa, ba) / dot(ba, ba), 0.0, 1.0);
-        return length(pa - ba * h);
+      // Signed distance to vertical line segment
+      float sdTrunk(vec2 p, float x, float y0, float y1) {
+        float dx = abs(p.x - x);
+        float clamped_y = clamp(p.y, y0, y1);
+        float dy = abs(p.y - clamped_y);
+        return sqrt(dx * dx + dy * dy);
       }
 
-      // Organic leaf cloud: Perlin-like noise
-      float leafNoise(vec2 p) {
-        return fbm(p * 3.5 + vec2(0.0, 0.1));
-      }
-
-      // One tree: sparse trunk + organic leaves above it
-      vec3 tree(vec2 p, float treeX, float seed) {
-        // Trunk: thin vertical line from rootY to tipY
-        const float TRUNK_W = 0.0035;
-        const float ROOT_Y = 0.0;
-        const float TIP_Y = 0.35;
+      // One tree: trunk + leaf cloud
+      vec3 singleTree(vec2 p, float trunkX, float seed) {
+        const float TRUNK_W = 0.008;        // thin brown trunk
+        const float TRUNK_Y0 = 0.475;       // rooted at bank ledge
+        const float TRUNK_Y1 = 0.70;        // tall, reaching up
         
-        vec2 root = vec2(treeX, ROOT_Y);
-        vec2 tip = vec2(treeX, TIP_Y);
-        float trunkDist = sdSegment(p, root, tip);
-        float trunk = smoothstep(TRUNK_W, TRUNK_W * 0.3, trunkDist);
-
-        // Leaves: organic noise cloud, centered above mid-trunk, taper with height
-        float py = p.y - 0.15;  // center leaf mass at mid-height
-        float lx = (p.x - treeX) / (0.08 + 0.08 * abs(py / 0.15));  // wider at base, narrower at top
-        float noiseVal = leafNoise(vec2(lx * 2.0, py * 4.0) + vec2(seed, 0.0));
-        float leaves = smoothstep(-0.1, 0.3, noiseVal) * smoothstep(0.05, -0.08, py + 0.15) * smoothstep(-0.05, -0.25, py);
+        // Trunk: thin vertical line
+        float trunkDist = sdTrunk(p, trunkX, TRUNK_Y0, TRUNK_Y1);
+        float trunk = smoothstep(TRUNK_W, TRUNK_W * 0.2, trunkDist);
         
-        // Trunk opaque, leaves semi-transparent
-        return mix(vec3(0.0), TRUNK, trunk) + mix(vec3(0.0), LEAF, leaves * 0.7);
+        // Leaves: organic noise cloud around upper trunk
+        vec2 leafP = p - vec2(trunkX, 0.60);  // center cloud at mid-trunk height
+        float leafX = leafP.x / 0.12;  // scale horizontally
+        float leafY = (leafP.y + 0.05) / 0.20;  // scale vertically, slight upward bias
+        
+        float noiseVal = fbm(vec2(leafX * 2.0 + seed * 10.0, leafY * 3.0 + seed * 7.0));
+        float leafCloud = smoothstep(-0.1, 0.4, noiseVal) 
+                        * smoothstep(0.15, -0.20, abs(leafP.x) / 0.12)  // taper edges
+                        * smoothstep(-0.08, 0.15, leafY);  // taper top and bottom
+        
+        // Combine trunk (opaque) + leaves (semi-transparent)
+        vec3 col = vec3(0.0);
+        if (trunk > 0.1) {
+          col = TRUNK;
+        } else if (leafCloud > 0.05) {
+          col = mix(vec3(0.0), LEAF, leafCloud * 0.6);  // semi-transparent leaves
+        }
+        return col;
       }
 
-      // Procedural tree grid: hash-spaced trees along the bank
       vec3 treeLine(vec2 p) {
-        float wx = p.x + uScroll * uSpeed;  // scroll in world space
+        float wx = p.x + uScroll * uSpeed;
         
-        // One tree per ~0.15 screen-widths, scattered horizontally
-        float cells = wx * 6.67;  // ~0.15 screen-widths per tree
-        float treeIdx = floor(cells);
-        float fracCell = fract(cells);
+        // One tree per ~0.25 screen-widths, widely spaced
+        float cellWidth = 0.25;
+        float cellCount = wx / cellWidth;
+        float cellIdx = floor(cellCount);
         
-        // Seed this cell's tree
-        float seed = hash11(treeIdx * 13.7);
-        if (seed < 0.55) return vec3(0.0);  // 55% gaps (sparse forest)
+        float seed = hash11(cellIdx * 17.3);
+        if (seed < 0.70) return vec3(0.0);  // 70% gaps (sparse forest)
         
-        // Tree position within cell: random offset ±20% of cell width
-        float cellWidth = 1.0 / 6.67;
-        float treeX = (treeIdx + 0.5 + (seed - 0.5) * 0.4) * cellWidth;
+        // Tree position: random offset ±30% of cell width
+        float trunkX = (cellIdx + 0.5 + (seed - 0.5) * 0.6) * cellWidth;
         
-        // Merge this tree
-        vec3 col = tree(p, treeX, seed * 100.0);
+        vec3 col = singleTree(p, trunkX, seed * 100.0);
         
-        // Optional: check neighboring cells for trees near edges (smooth seams)
-        // (kept simple for now — slight pop-in at cell boundaries is acceptable)
+        // Optional: check neighboring cells
+        float neighborSeed = hash11((cellIdx + 1.0) * 17.3);
+        if (neighborSeed >= 0.70) {
+          float neighborX = ((cellIdx + 1.0) + 0.5 + (neighborSeed - 0.5) * 0.6) * cellWidth;
+          col = max(col, singleTree(p, neighborX, neighborSeed * 100.0));
+        }
         
         return col;
       }
@@ -88,8 +90,8 @@ export function makeTrees(uTime, uScroll) {
       void main() {
         vec2 p = vec2(vUv.x * uAspect, vUv.y);
         
-        // Trees only render in the ground/near-bank zone (bottom ~15% of screen)
-        if (p.y > 0.15) discard;
+        // Trees only in the foreground zone (above bank ledge, below far ridges)
+        if (p.y < 0.475 || p.y > 0.75) discard;
         
         vec3 col = treeLine(p);
         if (length(col) < 0.01) discard;
@@ -103,7 +105,7 @@ export function makeTrees(uTime, uScroll) {
   });
 
   const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), mat);
-  mesh.renderOrder = 5.5;  // after water/bank, before reeds
+  mesh.renderOrder = 5;  // after bank ledge (4.5), before bike (6)
   mesh.frustumCulled = false;
 
   return { mesh, uniforms };

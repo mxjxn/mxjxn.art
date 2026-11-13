@@ -5,8 +5,9 @@ import * as THREE from 'three';
 import { makeSky } from './sky.js';
 import { makeBand } from './hills.js';
 import { makeWater } from './water.js';
-import { makeGround } from './ground.js';
+import { makeBankLedge } from './bank-ledge.js';
 import { makeTrees } from './trees.js';
+import { makeGround } from './ground.js';
 import { makeBike } from './bike.js';
 import { makePost } from './post.js';
 import { SCROLL, LINES } from './common.js';
@@ -52,8 +53,9 @@ const farBank = addLayer(makeBand({
   colorTop: 0x1c0b2a, colorBottom: 0x120720, treeAmp: 0.018, treeFreq: 42, order: 4,
   strip: 0.48,
 }, uTime, uScroll), 'farBank');
-const ground = addLayer(makeGround(uTime, uScroll), 'ground');
+const bankLedge = addLayer(makeBankLedge(uTime, uScroll), 'bankLedge');
 const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
+const ground = addLayer(makeGround(uTime, uScroll), 'ground');
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));

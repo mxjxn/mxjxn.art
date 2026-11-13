@@ -70,8 +70,8 @@ const farBank = addLayer(makeBand({
 }, uTime, uScroll), 'farBank');
 const bankLedge = addLayer(makeBankLedge(uTime, uScroll), 'bankLedge');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
-const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
-console.log('Trees layer created:', trees.mesh.visible, trees.mesh.renderOrder);
+//const trees = addLayer(makeTrees(uTime, uScroll), 'trees');
+//console.log('Trees layer created:', trees.mesh.visible, trees.mesh.renderOrder);
 
 if (HIDE) {
   const hideSet = new Set(HIDE.split(','));

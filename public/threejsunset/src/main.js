@@ -53,7 +53,6 @@ const farBank = addLayer(makeBand({
   colorTop: 0x1c0b2a, colorBottom: 0x120720, treeAmp: 0.018, treeFreq: 42, order: 4,
   strip: 0.48,
 }, uTime, uScroll), 'farBank');
-const bankLedge = addLayer(makeBankLedge(uTime, uScroll), 'bankLedge');
 const ground = addLayer(makeGround(uTime, uScroll), 'ground');
 const trees = makeTrees(uTime, uScroll);
 trees.userData.name = 'trees';

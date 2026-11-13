@@ -3,7 +3,8 @@ import * as THREE from 'three';
 
 export function makeTrees(uTime, uScroll) {
   const group = new THREE.Group();
-  group.renderOrder = 5;
+  group.position.set(0, 0.06 * 2 - 1, 0);  // Positioned at ground level in NDC
+  group.scale.set(1, 1, 1);
   group.frustumCulled = false;
 
   // Create one tree geometry

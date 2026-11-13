@@ -21,76 +21,75 @@ export function makeTrees(uTime, uScroll) {
       const vec3 TRUNK_COLOR = vec3(0.18, 0.11, 0.05);
       const vec3 LEAF_COLOR = vec3(0.22, 0.28, 0.12);
 
-      // Generate a single tree at world position trunkX
-      vec3 drawTree(vec2 p, float trunkX, float seed) {
-        const float TRUNK_BASE = 0.12;
-        const float TRUNK_HEIGHT = 0.33;
-        const float TRUNK_TOP = TRUNK_BASE + TRUNK_HEIGHT;
+      // Draw trunk with taper and branches
+      float drawTrunk(vec2 p, float trunkX, float seed) {
+        const float BASE_Y = 0.12;
+        const float TOP_Y = 0.45;
         
-        // Normalize position relative to trunk base
-        float relY = (p.y - TRUNK_BASE) / TRUNK_HEIGHT;
-        if (relY < 0.0 || relY > 1.0) return vec3(0.0);
+        float relY = (p.y - BASE_Y) / (TOP_Y - BASE_Y);
+        if (relY < 0.0 || relY > 1.0) return 0.0;
         
         float relX = p.x - trunkX;
         
-        // Trunk taper and noise: thinner as we go up
+        // Tapered trunk: wider at base, narrower at top
         float baseWidth = 0.010;
         float taperingWidth = baseWidth * (1.0 - relY * 0.6);
         
-        // Add organic wobble to trunk edges
-        float trunkNoise = fbm(vec3(trunkX * 7.0, relY * 4.0, seed * 13.0));
-        taperingWidth *= (0.8 + trunkNoise * 0.3);
+        // Wobble using sine waves
+        float wobble = sin(relY * 6.28 + seed * 10.0) * 0.002;
+        taperingWidth += wobble;
         
-        // Draw main trunk
-        float trunkDist = abs(relX);
-        if (trunkDist < taperingWidth) {
-          return mix(TRUNK_COLOR * 0.7, TRUNK_COLOR, trunkNoise);
+        // Main trunk
+        float dist = abs(relX);
+        if (dist < taperingWidth) {
+          return 1.0 - (dist / taperingWidth) * 0.3;
         }
         
-        // Branches: appear at 30%, 60%, 90% of trunk height
-        float branchStrength = 0.0;
+        // Branches at 30%, 60%, 90%
         for (float i = 0.3; i < 1.0; i += 0.3) {
           float branchY = i;
-          float distToBranch = abs(relY - branchY);
-          if (distToBranch < 0.08) {
-            // Branch angle based on height
-            float branchAngle = sin(i * 3.14159) * 0.15;
-            float branchLen = (1.0 - i) * 0.12;
-            float branchX = branchLen * branchAngle;
-            float distAlongBranch = abs(relX - branchX);
-            float branchWidth = 0.004 * (1.0 - distToBranch / 0.08);
-            if (distAlongBranch < branchWidth) {
-              branchStrength = max(branchStrength, 1.0 - distToBranch / 0.08);
+          float distY = abs(relY - branchY);
+          if (distY < 0.06) {
+            float angle = sin(i * 3.14159 + seed) * 0.12;
+            float len = (1.0 - i) * 0.08;
+            float branchX = len * angle;
+            float distX = abs(relX - branchX);
+            float branchW = 0.003 * (1.0 - distY / 0.06);
+            if (distX < branchW) {
+              return 0.6;
             }
           }
         }
         
-        if (branchStrength > 0.1) {
-          return mix(TRUNK_COLOR * 0.6, TRUNK_COLOR * 0.8, branchStrength);
-        }
+        return 0.0;
+      }
+
+      // Draw leaf cloud
+      float drawLeaves(vec2 p, float trunkX, float seed) {
+        const float BASE_Y = 0.12;
+        const float TOP_Y = 0.45;
         
-        // Leaf cloud: fuzzy canopy around upper 2/3 of trunk
-        if (relY > 0.2) {
-          float leafCenterY = 0.65;
-          float canopyDist = abs(relY - leafCenterY);
-          if (canopyDist < 0.35) {
-            // Width varies with height (wider in middle)
-            float heightInCanopy = (relY - 0.2) / 0.6;
-            float canopyWidth = 0.14 * (1.0 - abs(heightInCanopy - 0.5) * 1.2);
-            
-            // Organic leaf noise
-            float leafNoise = fbm(vec3(relX * 3.0 + seed * 2.0, relY * 2.5, trunkX * 5.0));
-            float leafDensity = smoothstep(-0.2, 0.4, leafNoise);
-            leafDensity *= smoothstep(canopyWidth, canopyWidth * -0.8, abs(relX));
-            leafDensity *= smoothstep(0.40, -0.15, canopyDist);
-            
-            if (leafDensity > 0.05) {
-              return mix(LEAF_COLOR * 0.8, LEAF_COLOR, leafDensity) * leafDensity;
-            }
-          }
-        }
+        float relY = (p.y - BASE_Y) / (TOP_Y - BASE_Y);
+        if (relY < 0.2 || relY > 0.95) return 0.0;
         
-        return vec3(0.0);
+        float relX = p.x - trunkX;
+        
+        // Canopy centered around 0.6 of trunk height
+        float centerY = 0.60;
+        float distY = abs(relY - centerY);
+        if (distY > 0.30) return 0.0;
+        
+        // Canopy width tapers
+        float canopyW = 0.12 * (1.0 - distY * 1.5);
+        if (abs(relX) > canopyW) return 0.0;
+        
+        // Simple noise-like pattern using sine waves
+        float noise = sin(relX * 20.0 + relY * 15.0 + seed * 100.0);
+        float leaves = smoothstep(-0.3, 0.5, noise);
+        leaves *= smoothstep(canopyW, 0.0, abs(relX));
+        leaves *= smoothstep(0.35, 0.0, distY);
+        
+        return leaves * 0.6;
       }
 
       void main() {
@@ -102,27 +101,44 @@ export function makeTrees(uTime, uScroll) {
         float wx = p.x + uScroll * uSpeed;
         float cellPos = mod(wx, 0.50);
         
-        // Three trees per cell at fixed positions
-        float d1 = abs(cellPos - 0.08);
-        float d2 = abs(cellPos - 0.20);
-        float d3 = abs(cellPos - 0.35);
-        
+        // Three tree positions per 0.50 cell
         vec3 col = vec3(0.0);
-        float minDist = 1e6;
+        float bestDist = 1e6;
         float treeSeed = 0.0;
+        float treeX = 0.0;
         
-        // Check which tree is closest
-        if (d1 < d2 && d1 < d3 && d1 < 0.12) {
-          col = drawTree(p, wx - cellPos + 0.08, mod(floor(wx / 0.50) * 37.5, 1.0));
-          minDist = d1;
+        // Find closest tree
+        float d1 = abs(cellPos - 0.08);
+        if (d1 < 0.12 && d1 < bestDist) {
+          bestDist = d1;
+          treeX = wx - cellPos + 0.08;
+          treeSeed = mod(floor(wx / 0.50) * 37.5, 1.0);
         }
-        if (d2 < d1 && d2 < d3 && d2 < 0.12) {
-          col = drawTree(p, wx - cellPos + 0.20, mod(floor(wx / 0.50) * 73.1, 1.0));
-          minDist = d2;
+        
+        float d2 = abs(cellPos - 0.20);
+        if (d2 < 0.12 && d2 < bestDist) {
+          bestDist = d2;
+          treeX = wx - cellPos + 0.20;
+          treeSeed = mod(floor(wx / 0.50) * 73.1, 1.0);
         }
-        if (d3 < d1 && d3 < d2 && d3 < 0.12) {
-          col = drawTree(p, wx - cellPos + 0.35, mod(floor(wx / 0.50) * 91.7, 1.0));
-          minDist = d3;
+        
+        float d3 = abs(cellPos - 0.35);
+        if (d3 < 0.12 && d3 < bestDist) {
+          bestDist = d3;
+          treeX = wx - cellPos + 0.35;
+          treeSeed = mod(floor(wx / 0.50) * 91.7, 1.0);
+        }
+        
+        // Draw trunk
+        float trunk = drawTrunk(p, treeX, treeSeed);
+        if (trunk > 0.1) {
+          col = TRUNK_COLOR * (0.6 + trunk * 0.4);
+        } else {
+          // Draw leaves
+          float leaves = drawLeaves(p, treeX, treeSeed);
+          if (leaves > 0.05) {
+            col = LEAF_COLOR * leaves;
+          }
         }
         
         if (length(col) < 0.01) discard;
